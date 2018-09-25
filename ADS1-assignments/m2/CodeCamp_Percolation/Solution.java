@@ -18,6 +18,7 @@ class Percolation {
 	}
 	// open site (row, col) if it is not open already
    public void open(int row, int col) {
+   			if (grid[row][col]) return;
    			grid[row][col] = true;
    			count++;
    			if (row  == 0) {
