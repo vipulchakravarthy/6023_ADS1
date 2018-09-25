@@ -59,11 +59,11 @@ class Percolation {
                 obj.union(oneDarray(row, col),
                     oneDarray(row, col + 1));
             }
-            if ( row -1 >= 0 && isOpen(row - 1, col)) {
+            if (row - 1 >= 0 && isOpen(row - 1, col)) {
                 obj.union(oneDarray(row, col),
                     oneDarray(row - 1, col));
             }
-            if ((row + 1< gridSize && isOpen(row + 1, col))) {
+            if ((row + 1 < gridSize && isOpen(row + 1, col))) {
                 obj.union(oneDarray(row, col),
                     oneDarray(row + 1, col));
             }
@@ -76,7 +76,7 @@ class Percolation {
      *
      * @return     index in 1-dimensional array
      */
-    public int oneDarray(final int row , final int col) {
+    public int oneDarray(final int row, final int col) {
         return ((gridSize * (row)) + col);
     }
     /**
@@ -95,7 +95,7 @@ class Percolation {
      *
      * @return    count to give the number of open sires.
      */
-   public  int numberOfOpenSites(){
+   public  int numberOfOpenSites() {
     return count;
    }
 /**
@@ -110,18 +110,18 @@ class Percolation {
  /**
   * this is solution class which contains main method.
   */
-class Solution {
+final class Solution {
     /**
      * this is empty constrcutor.
      */
     private Solution() {
     }
     /**
-     * the main method
+     * the main method.
      *
      * @param      args  The arguments
      */
-   public static void main(String[] args) {
+   public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);
     String arraySize = scan.nextLine();
     Percolation percolatesObj = new Percolation(
