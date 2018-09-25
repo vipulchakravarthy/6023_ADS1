@@ -9,7 +9,8 @@ class Percolation {
     private int count;
     int gridSize;
     WeightedQuickUnionUF obj;
-   public Percolation(int n) {
+   public Percolation(String n1) {
+   	int n = Integer.parseInt(n1);
    	grid = new boolean[n][n];
    	count = 0;
    	gridSize = n;
@@ -70,11 +71,11 @@ class Solution {
    public static void main(String[] args) {
    	Scanner scan = new Scanner(System.in);
    	String arraySize = scan.nextLine();
-   	Percolation percolatesObj = new Percolation(Integer.parseInt(arraySize));
+   	Percolation percolatesObj = new Percolation(arraySize);
    	while (scan.hasNext()) {
    		String line = scan.nextLine();
    		String[] tokens = line.split(" ");
-   		percolatesObj.open(Integer.parseInt(tokens[0]) - 1, Integer.parseInt(tokens[1]) - 1);
+   		percolatesObj.open(Integer.parseInt(tokens[0]) , Integer.parseInt(tokens[1]) );
    	}
    	System.out.println(percolatesObj.percolates());
    }
