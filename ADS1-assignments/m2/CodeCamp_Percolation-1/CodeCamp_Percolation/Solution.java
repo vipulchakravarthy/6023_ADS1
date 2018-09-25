@@ -1,14 +1,30 @@
 import java.util.Scanner;
-import java.util.Arrays;
+/**
+ * the percolation class is to identify.
+ * there is a path or not
+ */
 class Percolation {
-    // create n-by-n grid, with all sites blocked
+	/**
+	 * the boolean grid of 2-Dimensional.
+	 */
     private boolean[][] grid;
+    /** this is virtual node.
+    */
     private int top;
+   	/** this is virtual node.
+   	*/
     private int bottom;
-    private int size;
+    /** to give the number of opensites.
+    */
     private int count;
+    /** to indicate the grid size.
+    */
     int gridSize;
+    /** object for quick union class.
+    */
     WeightedQuickUnionUF obj;
+    /** this is a constructor to initialize
+    */
    public Percolation(String n1) {
    	int n = Integer.parseInt(n1);
    	grid = new boolean[n][n];
@@ -18,10 +34,11 @@ class Percolation {
    	bottom = top + 1;
    	obj = new WeightedQuickUnionUF((n * n) + 2);
 	}
-	// open site (row, col) if it is not open already
-   public void open(int row, int col) {
-   			row  -= 1;
-   			col -= 1;
+	/**open site (row, col) if it is not open already.
+	*@param row to determine the row
+	*@param col to determine the col
+	*/
+   public void open(final int row, final int col) {
    			if (grid[row][col]) return;
    			grid[row][col] = true;
    			count++;
@@ -44,32 +61,59 @@ class Percolation {
    				obj.union(oneDarray(row, col), oneDarray(row + 1, col));
    			}
    	}
-   	public int oneDarray(int i , int j) {
-   		return ((gridSize * (i)) + j);
+   	/**
+   	 * the method is to determine the 2-Dimensional array.
+   	 * in form of 1-Dimensional array.
+   	 * @param     row     row value
+   	 * @param      col     column value
+   	 *
+   	 * @return     index in 1-dimensional array
+   	 */
+   	public int oneDarray(final int row , final int col) {
+   		return ((gridSize * (row)) + col);
    	}
-
- 	// is site (row, col) open?
-   public boolean isOpen(int row, int col)  {
+   	/**
+   	 * is site (row, col) open?
+   	 * @param     row     row value
+   	 * @param      col     column value
+   	 *
+   	 * @return     boolean
+   	 */
+   public boolean isOpen(final int row, final int col)  {
    	return	 grid[row][col];
 
    }
-   // public boolean isFull(int row, int col)  // is site (row, col) full?
-   //      // number of open sites
+	/**
+	 * to give the number of open sites.
+	 *
+	 * @return    count to give the number of open sires.
+	 */
    public  int numberOfOpenSites(){
    	return count;
    }
-    // does the system percolate?
+/**
+ * whether system percolates or not.
+ *
+ * @return boolean value
+ */
    public boolean percolates() {
-   	// for (int i = 0; i < gridSize; i++) {
-   	// 		System.out.println(Arrays.toString(grid[i]));
-
-   	// }
    	return obj.connected(top, bottom);
    }
  }
+ /**
+  * this is solution class which contains main method.
+  */
 class Solution {
+	/**
+	 * this is empty constrcutor.
+	 */
 	Solution() {
 	}
+	/**
+	 * the main method
+	 *
+	 * @param      args  The arguments
+	 */
    public static void main(String[] args) {
    	Scanner scan = new Scanner(System.in);
    	String arraySize = scan.nextLine();
@@ -77,7 +121,8 @@ class Solution {
    	while (scan.hasNext()) {
    		String line = scan.nextLine();
    		String[] tokens = line.split(" ");
-   		percolatesObj.open(Integer.parseInt(tokens[0]) , Integer.parseInt(tokens[1]) );
+   		percolatesObj.open(Integer.parseInt(tokens[0]) - 1,
+   			Integer.parseInt(tokens[1]) - 1);
    	}
    	System.out.println(percolatesObj.percolates());
    }
