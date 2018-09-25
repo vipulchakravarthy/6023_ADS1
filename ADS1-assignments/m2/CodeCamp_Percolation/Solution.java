@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 class Percolation {
     // create n-by-n grid, with all sites blocked
     private boolean[][] grid;
@@ -56,6 +57,10 @@ class Percolation {
    }
     // does the system percolate?
    public boolean percolates() {
+   	// for (int i = 0; i < gridSize; i++) {
+   	// 		System.out.println(Arrays.toString(grid[i]));
+
+   	// }
    	return obj.connected(top, bottom);
    }
  }
