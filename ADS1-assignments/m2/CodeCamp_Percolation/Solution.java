@@ -2,18 +2,18 @@ import java.util.Scanner;
 class Percolation {
     // create n-by-n grid, with all sites blocked
     private boolean[][] grid;
-    private int start;
-    private int end;
+    private int top;
+    private int bottom;
     private int size;
     private int count;
     int gridSize;
     WeightedQuickUnionUF obj;
    public Percolation(int n) {
    	grid = new boolean[n][n];
-   	start = n * n;
-   	end = (n * n) + 1;
    	count = 0;
    	gridSize = n;
+   	top = n * n ;
+   	bottom = top + 1;
    	obj = new WeightedQuickUnionUF((n * n) + 2);
 	}
 	// open site (row, col) if it is not open already
@@ -22,10 +22,10 @@ class Percolation {
    			grid[row][col] = true;
    			count++;
    			if (row  == 0) {
-   				obj.union(oneDarray(row, col), start);
+   				obj.union(oneDarray(row, col), top);
    			}
    			if (row == gridSize - 1) {
-   				obj.union(oneDarray(row, col), end);
+   				obj.union(oneDarray(row, col), bottom);
    			}
    			if (col - 1  >=  0 && isOpen(row, col - 1)   ) {
    				obj.union(oneDarray(row, col), oneDarray(row, col - 1));
@@ -41,7 +41,7 @@ class Percolation {
    			}
    	}
    	public int oneDarray(int i , int j) {
-   		return (gridSize * (i)) + j;
+   		return ((gridSize * (i)) + j);
    	}
 
  	// is site (row, col) open?
@@ -56,7 +56,7 @@ class Percolation {
    }
     // does the system percolate?
    public boolean percolates() {
-   	return obj.connected(start, end);
+   	return obj.connected(top, bottom);
    }
  }
 class Solution {
