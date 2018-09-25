@@ -70,6 +70,7 @@ class Solution {
    		String[] tokens = line.split(" ");
    		percolatesObj.open(Integer.parseInt(tokens[0]) - 1, Integer.parseInt(tokens[1]) - 1);
    	}
+   	System.out.println(percolatesObj.percolates());
    }
   }
 
