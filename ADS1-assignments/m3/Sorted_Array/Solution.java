@@ -13,11 +13,13 @@ class Solution {
 		Scanner scan = new Scanner(System.in);
 		int[] arrayOne = new int[scan.nextInt()];
 		int[] arrayTwo = new int[scan.nextInt()];
+		String lineOne = scan.nextLine();
+		String lineTwo = scan.nextLine();
 		if (arrayOne.length != 0) {
-		arrayOne = integerArray(scan.nextLine());
+		arrayOne = integerArray(lineOne);
 		}
 		if (arrayTwo.length != 0) {
-		arrayTwo = integerArray(scan.nextLine());
+		arrayTwo = integerArray(lineTwo);
 		}
 		int total = arrayOne.length + arrayTwo.length;
 		int[] result = new int[total];
