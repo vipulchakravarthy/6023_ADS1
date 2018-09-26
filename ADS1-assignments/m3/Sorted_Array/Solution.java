@@ -13,8 +13,8 @@ class Solution {
 		Scanner scan = new Scanner(System.in);
 		int[] arrayOne = new int[scan.nextInt()];
 		int[] arrayTwo = new int[scan.nextInt()];
-		String lineOne = scan.nextLine();
-		String lineTwo = scan.nextLine();
+		String lineOne = scan.next();
+		String lineTwo = scan.next();
 		if (arrayOne.length != 0) {
 		arrayOne = integerArray(lineOne);
 		}
