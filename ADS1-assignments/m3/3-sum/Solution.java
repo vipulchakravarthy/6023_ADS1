@@ -1,21 +1,22 @@
 import java.util.Scanner;
+import java.util.Arrays;
 class ThreeSum {
 	ThreeSum() {
 
 	}
 	public int calculate(long[] array) {
+		Arrays.sort(array);
 		int count = 0;
+		int k = 0;
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i + 1; j < array.length; j++) {
-				for (int k = j + 1; k < array.length; k++) {
-					if (array[i] + array[j] + array[k] == 0) {
+					k = Arrays.binarySearch(array, -(array[i]+ array[j]));
+					if(k > j) {
 						count++;
 					}
-				}
 			}
 		}
-		System.out.println(count);
-	return count;
+		return count;
 }
 }
 final class Solution {
