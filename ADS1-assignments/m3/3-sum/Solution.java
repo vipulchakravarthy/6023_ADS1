@@ -4,21 +4,32 @@ class ThreeSum {
 	ThreeSum() {
 
 	}
-	public int calculate(long[] array) {
+	public int calculate(final long[] array) {
 		Arrays.sort(array);
 		int count = 0;
-		int k = 0;
+		long first = 0;
+		long next = 0;
+		long last = 0;
 		for (int i = 0; i < array.length; i++) {
-			for (int j = i + 1; j < array.length; j++) {
-					k = Arrays.binarySearch(array, -(array[i]+ array[j]));
-					if(k > j) {
-						count++;
-					}
+			first = array[i];
+			next = array[i + 1];
+			last = array[array.length - 1];
+			while (next < last) {
+				if ((first + next + last) == 0) {
+					count++;
+					last--;
+					next++;
+				} else if ((first + next + last) < 0) {
+					next++;
+				} else {
+					last--;
+				}
 			}
 		}
 		return count;
 }
 }
+
 final class Solution {
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
