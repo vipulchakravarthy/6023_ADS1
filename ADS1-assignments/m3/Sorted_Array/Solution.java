@@ -13,14 +13,12 @@ class Solution {
 		Scanner scan = new Scanner(System.in);
 		int[] arrayOne = new int[scan.nextInt()];
 		int[] arrayTwo = new int[scan.nextInt()];
-		String lineOne = scan.next();
-		String lineTwo = scan.next();
 		if (arrayOne.length != 0) {
-		arrayOne = integerArray(lineOne);
+		arrayOne = integerArray(scan.next());
 		}
-		if (arrayTwo.length != 0) {
-		arrayTwo = integerArray(lineTwo);
-		}
+		// if (arrayTwo.length != 0) {
+		arrayTwo = integerArray(scan.next());
+		// }
 		int[] result = new int[arrayOne.length + arrayTwo.length];
 		System.arraycopy(arrayOne, 0, result, 0, arrayOne.length);
 		System.arraycopy(arrayTwo, 0, result, arrayOne.length, arrayTwo.length);
