@@ -12,7 +12,7 @@ final class Solution {
 	}
 	/** this method changes the.
 	*string to integer array.
-	 *@param String str
+	 *@param Str string
 	*/
 	public static int[] integerArray(final String str) {
 		return Arrays.stream(str.split(","))
@@ -20,8 +20,8 @@ final class Solution {
 	}
 	/** the main method is to read the.
 	*input and print the output.
-	 *@param String args
-	*/
+	 *@param args string
+	 */
 	public static void main(final String args[]) {
 		Scanner scan = new Scanner(System.in);
 		int[] arrayOne = new int[scan.nextInt()];
