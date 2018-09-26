@@ -8,21 +8,23 @@ class ThreeSum {
 		Arrays.sort(array);
 		int count = 0;
 		long first = 0;
-		long next = 0;
-		long last = 0;
-		for (int i = 0; i < array.length; i++) {
+		int next = 0;
+		int last = 0;
+		for (int i = 0; i < array.length - 2; i++) {
 			first = array[i];
-			next = array[i + 1];
-			last = array[array.length - 1];
+			next = i + 1;
+			last = array.length - 1;
 			while (next < last) {
-				if ((first + next + last) == 0) {
+				long termTwo = array[next];
+				long termThree = array[last];
+				if ((first + termTwo + termThree) == 0) {
 					count++;
 					last--;
 					next++;
-				} else if ((first + next + last) < 0) {
-					next++;
-				} else {
+				} else if ((first + termTwo + termThree) > 0) {
 					last--;
+				} else {
+					next++;
 				}
 			}
 		}
