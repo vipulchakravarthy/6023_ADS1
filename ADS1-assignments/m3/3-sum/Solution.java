@@ -14,6 +14,7 @@ class ThreeSum {
 				}
 			}
 		}
+		System.out.println(count);
 	return count;
 }
 }
