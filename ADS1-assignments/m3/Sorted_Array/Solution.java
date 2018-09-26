@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.*;
 class Solution {
 	Solution() {
 	}
@@ -16,9 +15,7 @@ class Solution {
 		if (arrayOne.length != 0) {
 		arrayOne = integerArray(scan.next());
 		}
-		// if (arrayTwo.length != 0) {
 		arrayTwo = integerArray(scan.next());
-		// }
 		int[] result = new int[arrayOne.length + arrayTwo.length];
 		System.arraycopy(arrayOne, 0, result, 0, arrayOne.length);
 		System.arraycopy(arrayTwo, 0, result, arrayOne.length, arrayTwo.length);
