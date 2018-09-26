@@ -5,13 +5,14 @@ import java.util.Arrays;
  * main method two combine
  *  two arrays
  */
-class Solution {
+final class Solution {
 	/** an empty constructor.
 	*/
-	Solution() {
+	private Solution() {
 	}
 	/** this method changes the.
 	*string to integer array.
+	 *@param String str
 	*/
 	public static int[] integerArray(final String str) {
 		return Arrays.stream(str.split(","))
@@ -19,6 +20,7 @@ class Solution {
 	}
 	/** the main method is to read the.
 	*input and print the output.
+	 *@param String args
 	*/
 	public static void main(final String args[]) {
 		Scanner scan = new Scanner(System.in);
@@ -51,7 +53,8 @@ class Solution {
 			result[i] = arrayOne[start];
 			start++;
 		}
-		System.out.println(Arrays.toString(result).replace("[", "").replace("]", "").replace(" ", ""));
+		System.out.println(Arrays.toString(
+			result).replace("[", "").replace("]", "").replace(" ", ""));
 		}
 	}
 
