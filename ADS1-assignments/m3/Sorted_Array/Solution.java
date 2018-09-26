@@ -29,18 +29,27 @@ class Solution {
 		}
 		arrayTwo = integerArray(scan.next());
 		int[] result = new int[arrayOne.length + arrayTwo.length];
-		System.arraycopy(arrayOne, 0, result, 0, arrayOne.length);
-		System.arraycopy(arrayTwo, 0, result, arrayOne.length, arrayTwo.length);
-		// Arrays.sort(result);
-		int temp = 0;
-		for (int i = 0; i < result.length; i++) {
-			for (int j = i + 1; j < result.length; j++) {
-				if (result[i] > result[j]) {
-					temp = result[i];
-					result[i] = result[j];
-					result[j] = temp;
-				}
+		int start = 0;
+		int begin = 0;
+		int i = 0;
+		while ((start < arrayOne.length && begin < arrayTwo.length)) {
+			if (arrayOne[start] < arrayTwo[begin]) {
+				result[i] = arrayOne[start];
+				start++;
+			} else {
+				result[i] = arrayTwo[begin];
+				begin++;
 			}
+			i++;
+		}
+		while (begin < arrayTwo.length) {
+			result[i] = arrayTwo[begin];
+			begin++;
+			i++;
+		}
+		while (start < arrayOne.length) {
+			result[i] = arrayOne[start];
+			start++;
 		}
 		System.out.println(Arrays.toString(result).replace("[", "").replace("]", "").replace(" ", ""));
 		}
