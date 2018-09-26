@@ -23,7 +23,7 @@ final class Solution {
 		int length = scan.nextInt();
 		int[] array = new int[length];
 		ThreeSum obj = new ThreeSum();
-		for (int i = 0; i < array.length; i++) {
+		for (int i = 0; i < length; i++) {
 			array[i] = scan.nextInt();
 		}
 		System.out.println(obj.calculate(array));
