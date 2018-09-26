@@ -25,6 +25,6 @@ class Solution {
 		System.arraycopy(arrayOne, 0, result, 0, arrayOne.length);
 		System.arraycopy(arrayTwo, 0, result, arrayOne.length, arrayTwo.length);
 		Arrays.sort(result);
-		System.out.println(result);
+		System.out.println(Arrays.toString(result).replace("[", "").replace("]", "").replace(" ", ""));
 		}
 	}
