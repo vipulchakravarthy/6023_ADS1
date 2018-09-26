@@ -34,7 +34,7 @@ class Solution {
 		// Arrays.sort(result);
 		int temp = 0;
 		for (int i = 0; i < result.length; i++) {
-			for (int j = 1; j < result.length; j++) {
+			for (int j = i + 1; j < result.length; j++) {
 				if (result[i] > result[j]) {
 					temp = result[i];
 					result[i] = result[j];
