@@ -5,6 +5,7 @@ class Solution {
 	Solution() {
 	}
 	public static int[] integerArray(String str) {
+		if (str.equals("")) return null;
 		return Arrays.stream(str.split(","))
 		.mapToInt(Integer::parseInt).toArray();
 	}
