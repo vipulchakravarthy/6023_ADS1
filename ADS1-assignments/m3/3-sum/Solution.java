@@ -1,9 +1,23 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ *the three sum class is.
+ *to calculate the count.
+ */
 class ThreeSum {
+	/**
+	 * the empty contructor.
+	 */
 	ThreeSum() {
 
 	}
+	/**
+	 * the method to calcualte the.
+	 * number of times the three elements
+	 * make the sum as zero.
+	 * @param      array  The array
+	 * @return  count integer variable
+	 */
 	public int calculate(final long[] array) {
 		Arrays.sort(array);
 		int count = 0;
@@ -31,8 +45,18 @@ class ThreeSum {
 		return count;
 }
 }
-
+/**
+ * the solution class for main method.
+ */
 final class Solution {
+	private Solution() {
+
+	}
+	/**
+	 * the main method to.
+	 * take the input from user.
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int length = scan.nextInt();
