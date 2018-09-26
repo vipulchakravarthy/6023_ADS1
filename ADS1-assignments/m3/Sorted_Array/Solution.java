@@ -54,7 +54,7 @@ final class Solution {
 			start++;
 		}
 		System.out.println(Arrays.toString(
-			result).replace("[", "").replace("]", "").replace(" ", ""));
+		result).replace("[", "").replace("]", "").replace(" ", ""));
 		}
 	}
 
