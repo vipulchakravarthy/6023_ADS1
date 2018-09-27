@@ -23,14 +23,17 @@ class Stack {
 	}
 }
 class Solution {
+	String response;
 	Solution() {}
 	public static void balParanthesis(String s) {
 		Stack stackObj = new Stack(s.length());
 		char result = ' ';
+		String response="YES";
 		for (int i = 0; i < s.length(); i++) {
 			if ((s.charAt(i) == '{') || (s.charAt(i) == '[') || (s.charAt(i) == '(')) {
 				stackObj.push(s.charAt(i));
 			}
+			if(s.charAt(0)=='}'||s.charAt(0)==']'||s.charAt(0)==')') response = "NO";
 			if ((s.charAt(i) == '}') || (s.charAt(i) == ']') || (s.charAt(i) == ')')) {
 				stackObj.pop();
 				// if (result == '{' && s.charAt(i) == '}') {
@@ -43,7 +46,7 @@ class Solution {
 			}
 		}
 		if (stackObj.top == 0) {
-			System.out.println("YES");
+			System.out.println(response);
 		} else {
 			System.out.println("NO");
 		}
