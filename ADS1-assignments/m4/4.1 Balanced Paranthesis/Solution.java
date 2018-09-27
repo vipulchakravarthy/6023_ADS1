@@ -29,6 +29,7 @@ class Solution {
 		char result = ' ';
 		int flag = 0;
 		for (int i = 0; i < s.length(); i++) {
+			flag = 0;
 			if ((s.charAt(i) == '{') || (s.charAt(i) == '[') || (s.charAt(i) == '(')) {
 				stackObj.push(s.charAt(i));
 			} else {
