@@ -9,12 +9,11 @@ class Stack {
 	public void push(char c) {
 		stack[top++] = c;
 	}
-	public void pop() {
-		if(top!=0) {
-			top--;
-		}
-		// return stack[top-1];
-	}
+	public char pop() {
+		if (top!=0) {
+		return stack[top-1];
+	} return ' ';
+}
 	public boolean isEmpty() {
 		if (top == 0) {
 			return true;
@@ -28,25 +27,30 @@ class Solution {
 	public static void balParanthesis(String s) {
 		Stack stackObj = new Stack(s.length());
 		char result = ' ';
-		String response="YES";
+		int flag = 0;
 		for (int i = 0; i < s.length(); i++) {
 			if ((s.charAt(i) == '{') || (s.charAt(i) == '[') || (s.charAt(i) == '(')) {
 				stackObj.push(s.charAt(i));
+			} else {
+				 result = stackObj.pop();
+				 if (result == ' ') {
+				 	flag = 1;
+				 	break;
+				 }
+				 if (result == '{' && s.charAt(i) == '}') {
+				 	continue;
+				 } else if (result == '[' && s.charAt(i) == ']') {
+					continue;
+				 } else if (result == '(' && s.charAt(i) == ')') {
+				 	continue;
+				 } else {
+				 	flag = 1;
+				 	break;
+				 }
 			}
-			if(s.charAt(0)=='}'||s.charAt(0)==']'||s.charAt(0)==')') response = "NO";
-			if ((s.charAt(i) == '}') || (s.charAt(i) == ']') || (s.charAt(i) == ')')) {
-				stackObj.pop();
-				// if (result == '{' && s.charAt(i) == '}') {
-				// 	continue;
-				// } else if (result == '[' && s.charAt(i) == ']') {
-				// 	continue;
-				// } else if (result == '(' && s.charAt(i) == ')') {
-				// 	continue;
-				// }
 			}
-		}
-		if (stackObj.top == 0) {
-			System.out.println(response);
+		if (stackObj.top == 0 && flag == 0) {
+			System.out.println("YES");
 		} else {
 			System.out.println("NO");
 		}
