@@ -1,0 +1,1 @@
+stack contains only "it" as a element.
