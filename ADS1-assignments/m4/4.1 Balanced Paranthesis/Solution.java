@@ -16,18 +16,21 @@ final class Solution {
      * @param      str   The string
      */
     public static void balParanthesis(final String str) {
-        String[] s = str.split("", str.length());
+        String[] tokens = str.split("", str.length());
         String[] stack = new String[str.length()];
         int size = 0;
-        for (int i = 0; i < s.length; i++) {
-            if (s[i].equals("{") || s[i].equals("[") || s[i].equals("(")) {
-                stack[size++] = s[i];
+        for (int i = 0; i < tokens.length; i++) {
+            if (tokens[i].equals("{")
+                || tokens[i].equals("[") || tokens[i].equals("(")) {
+                stack[size++] = tokens[i];
             } else if (size > 0) {
-                if (s[i].equals("}") && stack[size - 1].equals("{")) {
+                if (tokens[i].equals("}") && stack[size - 1].equals("{")) {
                     size--;
-                 } else if (s[i].equals("]") && stack[size - 1].equals("[")) {
+                 } else if (tokens[i].equals(
+                    "]") && stack[size - 1].equals("[")) {
                     size--;
-                 } else if (s[i].equals(")") && stack[size - 1].equals("(")) {
+                 } else if (tokens[i].equals(
+                    ")") && stack[size - 1].equals("(")) {
                     size--;
                 }
             }
