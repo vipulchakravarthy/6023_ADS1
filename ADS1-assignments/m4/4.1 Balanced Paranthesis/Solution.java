@@ -11,7 +11,7 @@ class Stack {
 	}
 	public char pop() {
 		if (top!=0) {
-		return stack[top-1];
+		return stack[top--];
 	} return ' ';
 }
 	public boolean isEmpty() {
