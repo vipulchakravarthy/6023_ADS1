@@ -9,11 +9,11 @@ class Stack {
 	public void push(char c) {
 		stack[top++] = c;
 	}
-	public char pop() {
+	public void pop() {
 		if(top!=0) {
 			top--;
 		}
-		return stack[top-1];
+		// return stack[top-1];
 	}
 	public boolean isEmpty() {
 		if (top == 0) {
@@ -32,7 +32,7 @@ class Solution {
 				stackObj.push(s.charAt(i));
 			}
 			if ((s.charAt(i) == '}') || (s.charAt(i) == ']') || (s.charAt(i) == ')')) {
-				result = stackObj.pop();
+				stackObj.pop();
 				// if (result == '{' && s.charAt(i) == '}') {
 				// 	continue;
 				// } else if (result == '[' && s.charAt(i) == ']') {
