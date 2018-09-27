@@ -50,7 +50,8 @@ class Solution {
 				 }
 			}
 			}
-		if (stackObj.top == 0 && flag == 0) {
+			// System.out.println(stackObj.top + "    " +flag);
+		if (stackObj.top == 1 && flag == 1) {
 			System.out.println("YES");
 		} else {
 			System.out.println("NO");
