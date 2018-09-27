@@ -3,11 +3,11 @@ import java.util.Scanner;
  *the class for main method and.
  * perform the balanced paranthesis.
  */
-class Solution {
+final class Solution {
     /**
      * the empty constructor.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * this method is to.
