@@ -7,7 +7,7 @@ class Deque {
     /**the queueObj is for.
     *implement queue operations.
     */
-    Operations queueObj;
+    private Operations queueObj;
     /**
      * the constructor to initialize.
      */
@@ -37,25 +37,24 @@ class Deque {
     /**
      *insert the element at start.
      *
-     * @param int item to be added
+     * @param item to be added
      */
-    public void pushLeft(int item) {
+    public void pushLeft(final int item) {
         queueObj.insertStart(item);
         print();
     }
     /**
      *insert the element at end.
      *
-     * @param int item to be added
+     * @param item to be added
      */
-    public void pushRight(int item) {
+    public void pushRight(final int item) {
         queueObj.insertEnd(item);
         print();
     }
     /**
      *delete the element at start.
      *
-     * @param int item to be deleted
      */
     public void popLeft() {
         if (queueObj.size == 0) {
@@ -68,7 +67,6 @@ class Deque {
     /**
      *delete the element at end.
      *
-     * @param int item to be deleted
      */
     public void popRight() {
         if (queueObj.size == 0) {
@@ -92,7 +90,7 @@ public class Solution {
     /**
      * empty constructor.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * the main method to.
