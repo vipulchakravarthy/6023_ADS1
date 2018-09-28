@@ -86,7 +86,7 @@ class Deque {
 /**
  * the class for main method.
  */
-public class Solution {
+final class Solution {
     /**
      * empty constructor.
      */
