@@ -80,13 +80,16 @@ class Operations {
 	public String print() {
 		String str = "[";
 		Node temp = head;
-		// if (size > -1) {
+		if (size == 0) {
+			return "[]";
+		}
+		if (size > 0) {
 			while (temp.next != null) {
 				str += temp.data + ", ";
 				temp = temp.getAddress();
 		}
 		str += temp.data + "]";
-	// }
+	}
 		return str;
 	}
 }
