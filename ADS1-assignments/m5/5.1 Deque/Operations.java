@@ -82,7 +82,7 @@ class Operations {
 		Node temp = head;
 		// if (size > -1) {
 			while (temp.next != null) {
-				str += temp.data + ",";
+				str += temp.data + ", ";
 				temp = temp.getAddress();
 		}
 		str += temp.data + "]";

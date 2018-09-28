@@ -22,10 +22,18 @@ class Deque {
 		print();
 	}
 	public void popLeft() {
+		if (queueObj.size == 0) {
+			System.out.println("Deck is empty");
+			return;
+		}
 		queueObj.deleteStart();
 		print();
 	}
 	public void popRight() {
+		if (queueObj.size == 0) {
+			System.out.println("Deck is empty");
+			return;
+		}
 		queueObj.deleteEnd();
 		print();
 	}
