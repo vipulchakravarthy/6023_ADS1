@@ -6,7 +6,7 @@ class AddLargeNumbers {
     	obj = new LinkedList();
     	String[] tokens = number.split("", number.length());
     	for (int i = 0; i < tokens.length; i++) {
-    		obj.insertEnd(Integer.parseInt(tokens[i]));
+    		obj.insertStart(Integer.parseInt(tokens[i]));
     	}
        	return obj;
     }
