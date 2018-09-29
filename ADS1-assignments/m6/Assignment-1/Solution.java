@@ -1,21 +1,19 @@
 import java.util.Scanner;
 class AddLargeNumbers {
-
+    static LinkedList obj = new LinkedList();
     public static LinkedList numberToDigits(String number) {
-    	LinkedList obj = new LinkedList();
     	String[] tokens = number.split("", number.length());
     	for (int i = 0; i < tokens.length; i++) {
     		obj.insertEnd(Integer.parseInt(tokens[i]));
     	}
-    	System.out.println(obj.print());
+    	// System.out.println(obj.print());
        	return obj;
     }
 
     public static String digitsToNumber(LinkedList list) {
-    	LinkedList obj = new LinkedList();
     	String str = "";
     	while (obj.size != 0) {
-    		str += obj.deleteStart();
+    		str += list.deleteStart();
     	}
     	return str;
     }
