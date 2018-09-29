@@ -28,9 +28,10 @@ class CircularQueue {
 		obj.deleteStart();
 		}
 		// arr[index++] = temp.data;
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < length - 1; i++) {
 			System.out.print(arr[i] + " ");
 		}
+		System.out.println(arr[length - 1]);
 	}
 }
 class Solution {
