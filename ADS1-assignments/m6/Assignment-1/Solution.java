@@ -20,7 +20,7 @@ class AddLargeNumbers {
     	obj = new LinkedList();
     	int sum = 0;
     	while (list1.size != 0 && list2.size != 0) {
-    		int temp = list1.deleteEnd() + list2.deleteEnd();
+    		int temp = list1.deleteStart() + list2.deleteStart();
     		obj.insertStart(temp);
     	}
     	return obj;
