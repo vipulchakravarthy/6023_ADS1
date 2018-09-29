@@ -22,17 +22,18 @@ class AddLargeNumbers {
     	int temp = 0;
     	int temp1 = 0;
     	int temp2 = 0;
-    	while (list1.size != 0 || list2.size != 0) {
-    		temp = list1.deleteEnd() + list2.deleteEnd() + temp;
+    	while (list1.size != 0 && list2.size != 0) {
+    		temp = list1.deleteEnd() + list2.deleteEnd() + temp1;
     		if (temp < 10) {
     		stack.insertStart(temp);
     		} else {
     			temp2 = temp%10;
     			stack.insertStart(temp2);
     			temp = temp / 10;
+    			temp1 = temp;
     		}
     	}
-    	stack.insertStart(temp);
+    	stack.insertStart(temp1);
     	return stack;
     }
 }
