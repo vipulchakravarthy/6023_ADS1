@@ -19,8 +19,10 @@ class AddLargeNumbers {
     }
     public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
     	stack = new LinkedList();
+    	int sum = 0;
     	while (list1.size != 0 && list2.size != 0) {
-    		stack.insertStart(list1.deleteEnd() + list2.deleteEnd());
+    		int temp = list1.deleteEnd() + list2.deleteEnd();
+    		stack.insertStart(temp);
     	}
     	return stack;
     }
