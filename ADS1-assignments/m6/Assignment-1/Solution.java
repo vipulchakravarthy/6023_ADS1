@@ -6,7 +6,7 @@ class AddLargeNumbers {
     	obj = new LinkedList();
     	String[] tokens = number.split("", number.length());
     	for (int i = 0; i < tokens.length; i++) {
-    		obj.insertStart(Integer.parseInt(tokens[i]));
+    		obj.insertEnd(Integer.parseInt(tokens[i]));
     	}
        	return obj;
     }
@@ -23,7 +23,7 @@ class AddLargeNumbers {
     	int temp1 = 0;
     	int temp2 = 0;
     	while (list1.size != 0 && list2.size != 0) {
-    		temp = list1.deleteEnd() + list2.deleteEnd() + temp1;
+    		temp = list1.deleteStart() + list2.deleteStart() + temp1;
     		if (temp < 10) {
     		stack.insertStart(temp);
     		} else {
