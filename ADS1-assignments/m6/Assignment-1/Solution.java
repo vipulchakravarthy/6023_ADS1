@@ -28,7 +28,7 @@ class AddLargeNumbers {
     			stack.insertStart(temp%10);
     		}
     	}
-    	return obj;
+    	return stack;
     }
 }
 
