@@ -60,11 +60,10 @@ final class AddLargeNumbers {
         final LinkedList list1, final LinkedList list2) {
         stack = new LinkedList();
         final int ten = 10;
-        int temp = 0;
         int temp1 = 0;
         int temp2 = 0;
         while (list1.size != 0 && list2.size != 0) {
-            temp = list1.deleteEnd()
+           int temp = list1.deleteEnd()
                    + list2.deleteEnd() + temp1;
             if (temp < ten) {
                 stack.insertStart(temp);
