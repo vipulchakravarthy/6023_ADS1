@@ -6,7 +6,6 @@ class AddLargeNumbers {
     	for (int i = 0; i < tokens.length; i++) {
     		obj.insertEnd(Integer.parseInt(tokens[i]));
     	}
-    	// System.out.println(obj.print());
        	return obj;
     }
 
