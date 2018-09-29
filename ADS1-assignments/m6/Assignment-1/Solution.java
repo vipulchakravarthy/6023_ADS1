@@ -3,7 +3,7 @@ import java.util.Scanner;
  * the class to do addition of.
  * two large number.
  */
-class AddLargeNumbers {
+final class AddLargeNumbers {
     /**
      * object for linked list class.
      */
