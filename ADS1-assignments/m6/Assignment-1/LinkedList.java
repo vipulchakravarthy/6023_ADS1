@@ -67,7 +67,8 @@ class LinkedList{
 		size--;
 		return data;
 	}
-	public void deleteEnd() {
+	public int deleteEnd() {
+		int data = head.data;
 		Node temp = head;
 		while (temp.next.next != null) {
 			temp = temp.getAddress();
@@ -75,6 +76,7 @@ class LinkedList{
 		tail = temp;
 		temp.next = null;
 		size--;
+		return data;
 	}
 	public void deleteAfter(int a) {
 		Node temp = head;
@@ -84,17 +86,17 @@ class LinkedList{
 		temp.setAddress(temp.getAddress().getAddress());
 	}
 	public String print() {
-		String str = "[";
+		String str = "";
 		Node temp = head;
 		if (size == 0) {
-			return "[]";
+			return " ";
 		}
 		if (size > 0) {
 			while (temp.next != null) {
-				str += temp.data + ", ";
+				str += temp.data;
 				temp = temp.getAddress();
 			}
-			str += temp.data + "]";
+			str += temp.data;
 		}
 		return str;
 	}

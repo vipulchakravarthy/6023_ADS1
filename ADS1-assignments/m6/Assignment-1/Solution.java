@@ -5,16 +5,17 @@ class AddLargeNumbers {
     	LinkedList obj = new LinkedList();
     	String[] tokens = number.split("", number.length());
     	for (int i = 0; i < tokens.length; i++) {
-    		obj.insertEnd(Integer.parseInt(tokens[i]));
+    		obj.insertStart(Integer.parseInt(tokens[i]));
     	}
-    	return obj;
+    	System.out.println(obj.print());
+       	return obj;
     }
 
     public static String digitsToNumber(LinkedList list) {
     	LinkedList obj = new LinkedList();
     	String str = "";
     	while (obj.size != 0) {
-    		str += obj.deleteStart();
+    		str += obj.deleteEnd();
     	}
     	return str;
     }
@@ -39,9 +40,9 @@ public class Solution {
                 break;
 
             case "addLargeNumbers":
-                LinkedList pqDigits = AddLargeNumbers.numberToDigits(p);
-                LinkedList qpDigits = AddLargeNumbers.numberToDigits(q);
-                LinkedList result = AddLargeNumbers.addLargeNumbers(pqDigits, qpDigits);
+                pDigits = AddLargeNumbers.numberToDigits(p);
+                qDigits = AddLargeNumbers.numberToDigits(q);
+                LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
                 System.out.println(AddLargeNumbers.digitsToNumber(result));
                 break;
         }
