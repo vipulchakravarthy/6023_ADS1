@@ -5,17 +5,16 @@ class CircularQueue {
 		obj = new Operations();
 	}
 	public void push(int number) {
-		for (int i = 0; i <= number; i++) {
+		for (int i = 0; i < number; i++) {
 			obj.insertEnd(i);
 		}
 	}
 	public void pop(int number, int length) {
-		System.out.println(length);
 		int[] arr = new int[length];
 		Node temp = obj.head;
 		int range = number;
 		int counter = 0;
-		int element = 0;
+		int index = 0;
 		while (obj.size != 0) {
 			while (counter != range - 1) {
 				obj.insertEnd(temp.data);
@@ -23,12 +22,12 @@ class CircularQueue {
 				obj.deleteStart();
 				counter++;
 			}
-		arr[element++] = temp.data;
-		counter = 0;
+		arr[index++] = temp.data;
 		temp = temp.next;
+		counter = 0;
 		obj.deleteStart();
 		}
-		arr[element++] = temp.data;
+		// arr[index++] = temp.data;
 		for (int i = 0; i < length; i++) {
 			System.out.print(arr[i] + " ");
 		}
