@@ -7,11 +7,16 @@ class AddLargeNumbers {
     /**
      * object for linked list class.
      */
-    static LinkedList obj;
+    private static LinkedList obj;
     /**
      * object for linkedlist class.
      */
-    static LinkedList stack;
+    private static LinkedList stack;
+    /**
+     * an empty constructor.
+     */
+    private AddLargeNumbers() {
+    }
     /**
      * the method to convert the.
      *string into linked list
@@ -54,18 +59,19 @@ class AddLargeNumbers {
     public static LinkedList addLargeNumbers(
         final LinkedList list1, final LinkedList list2) {
         stack = new LinkedList();
+        final int ten = 10;
         int temp = 0;
         int temp1 = 0;
         int temp2 = 0;
         while (list1.size != 0 && list2.size != 0) {
             temp = list1.deleteEnd()
                    + list2.deleteEnd() + temp1;
-            if (temp < 10) {
+            if (temp < ten) {
                 stack.insertStart(temp);
             } else {
-                temp2 = temp % 10;
+                temp2 = temp % ten;
                 stack.insertStart(temp2);
-                temp = temp / 10;
+                temp = temp / ten;
                 temp1 = temp;
             }
         }
@@ -76,7 +82,12 @@ class AddLargeNumbers {
 /**
  * the class for main method.
  */
-public class Solution {
+public final class Solution {
+    /**
+     * an empty constructor.
+     */
+    private Solution() {
+    }
     /**
      * the main to perform operation.
      *
