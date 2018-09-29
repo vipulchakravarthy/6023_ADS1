@@ -23,7 +23,6 @@ class LinkedList{
  LinkedList() {
 		size = 0;
 	}
-
 	public void insertStart(int e) {
 		Node obj = new Node(e);
 		if (head == null) {
@@ -68,7 +67,7 @@ class LinkedList{
 		return data;
 	}
 	public int deleteEnd() {
-		int data = head.data;
+		int data = tail.data;
 		Node temp = head;
 		while (temp.next.next != null) {
 			temp = temp.getAddress();
