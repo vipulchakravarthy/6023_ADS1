@@ -1,7 +1,8 @@
 import java.util.Scanner;
 class AddLargeNumbers {
-    static LinkedList obj = new LinkedList();
+    static LinkedList obj;
     public static LinkedList numberToDigits(String number) {
+    	obj = new LinkedList();
     	String[] tokens = number.split("", number.length());
     	for (int i = 0; i < tokens.length; i++) {
     		obj.insertEnd(Integer.parseInt(tokens[i]));
