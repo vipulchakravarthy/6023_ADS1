@@ -25,12 +25,8 @@ class AddLargeNumbers {
     		if (temp < 10) {
     		stack.insertStart(temp);
     		} else {
-    			int i = 0;
-    			while (i < 1) {
     			temp = temp%10;
     			stack.insertStart(temp);
-    			i++;
-    			}
     		}
     	}
     	return stack;
