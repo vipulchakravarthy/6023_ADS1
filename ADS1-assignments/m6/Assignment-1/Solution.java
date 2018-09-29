@@ -5,7 +5,7 @@ class AddLargeNumbers {
     	LinkedList obj = new LinkedList();
     	String[] tokens = number.split("", number.length());
     	for (int i = 0; i < tokens.length; i++) {
-    		obj.insertStart(Integer.parseInt(tokens[i]));
+    		obj.insertEnd(Integer.parseInt(tokens[i]));
     	}
     	System.out.println(obj.print());
        	return obj;
@@ -15,7 +15,7 @@ class AddLargeNumbers {
     	LinkedList obj = new LinkedList();
     	String str = "";
     	while (obj.size != 0) {
-    		str += obj.deleteEnd();
+    		str += obj.deleteStart();
     	}
     	return str;
     }
