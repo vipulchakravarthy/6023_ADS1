@@ -11,7 +11,7 @@ class AddLargeNumbers {
 
     public static String digitsToNumber(LinkedList list) {
     	String str = "";
-    	while (obj.size != 0) {
+    	while (list.size != 0) {
     		str += list.deleteStart();
     	}
     	return str;
