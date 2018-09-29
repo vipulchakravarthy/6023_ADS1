@@ -69,7 +69,7 @@ class LinkedList{
 	public int deleteEnd() {
 		int data = tail.data;
 		Node temp = head;
-		while (temp.next.next != null) {
+		while (temp.next != null) {
 			temp = temp.getAddress();
 		}
 		tail = temp;
