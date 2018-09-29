@@ -1,6 +1,7 @@
 import java.util.Scanner;
 class AddLargeNumbers {
     static LinkedList obj;
+    static LinkedList stack;
     public static LinkedList numberToDigits(final String number) {
     	obj = new LinkedList();
     	String[] tokens = number.split("", number.length());
@@ -17,11 +18,15 @@ class AddLargeNumbers {
     	return str;
     }
     public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
-    	obj = new LinkedList();
-    	int sum = 0;
+    	stack = new LinkedList();
     	while (list1.size != 0 && list2.size != 0) {
     		int temp = list1.deleteStart() + list2.deleteStart();
-    		obj.insertStart(temp);
+    		if (temp < 10) {
+    		stack.insertStart(temp);
+    		} else {
+    			stack.insertStart(temp%10);
+    			stack.insertStart(temp%10);
+    		}
     	}
     	return obj;
     }
