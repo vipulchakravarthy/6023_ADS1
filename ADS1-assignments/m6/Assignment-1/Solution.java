@@ -20,13 +20,15 @@ class AddLargeNumbers {
     public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
     	stack = new LinkedList();
     	int temp = 0;
+    	int temp1 = 0;
     	while (list1.size != 0 && list2.size != 0) {
-    		temp = list1.deleteStart() + list2.deleteStart() + temp;
+    		temp = list1.deleteStart() + list2.deleteStart() + temp1;
     		if (temp < 10) {
     		stack.insertStart(temp);
     		} else {
     			temp = temp%10;
     			stack.insertStart(temp);
+    			temp1 = temp;
     		}
     	}
     	return stack;
