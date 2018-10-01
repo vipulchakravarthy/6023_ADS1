@@ -42,10 +42,12 @@ class Steque{
 		if (size == 0) {
 			tail = obj;
 			head = obj;
+			size++;
+
 		} else {
 			tail.next = obj;
 			tail = obj;
-			size--;
+			size++;
 		}
 		print();
 		}
