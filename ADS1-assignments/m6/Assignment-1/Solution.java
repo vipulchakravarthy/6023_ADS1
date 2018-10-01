@@ -67,6 +67,7 @@ final class AddLargeNumbers {
                    + list2.deleteEnd() + temp1;
             if (temp < ten) {
                 stack.insertStart(temp);
+                temp1 = 0;
             } else {
                 temp2 = temp % ten;
                 stack.insertStart(temp2);
