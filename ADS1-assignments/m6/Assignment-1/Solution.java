@@ -60,25 +60,25 @@ final class AddLargeNumbers {
         final LinkedList list1, final LinkedList list2) {
         stack = new LinkedList();
         final int ten = 10;
+        int temp = 0;
         int temp1 = 0;
         int temp2 = 0;
         while (list1.size != 0 && list2.size != 0) {
-           int temp = list1.deleteEnd()
+           temp = list1.deleteEnd()
                    + list2.deleteEnd() + temp1;
             if (temp < ten) {
                 stack.insertStart(temp);
                 temp1 = 0;
-                System.out.println("Temp ======> " + temp );
-
             } else {
                 temp2 = temp % ten;
                 stack.insertStart(temp2);
                 temp = temp / ten;
                 temp1 = temp;
-                System.out.println("Temp ======> " + temp );
             }
         }
+        if (temp > 0) {
         stack.insertStart(temp1);
+        }
         return stack;
     }
 }

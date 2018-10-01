@@ -68,13 +68,15 @@ class LinkedList{
 		return data;
 	}
 	public int deleteEnd() {
-		int data = tail.data;
-		if (size == 0) {
-			return 0;
-		}
-	if(size > 0) {
+	int data = tail.data;
+	if (size == 1) {
+		tail = null;
+		head = null;
+		size--;
+	}
+	if (size > 1) {
 		Node temp = head;
-		while (temp.next != null) {
+		while (temp.next.next != null) {
 			temp = temp.getAddress();
 		}
 		tail = temp;
