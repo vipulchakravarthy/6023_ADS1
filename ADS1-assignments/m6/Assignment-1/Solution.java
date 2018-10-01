@@ -63,21 +63,36 @@ final class AddLargeNumbers {
         int temp = 0;
         int temp1 = 0;
         int temp2 = 0;
-        while (list1.size != 0 && list2.size != 0) {
-           temp = list1.deleteEnd()
-                   + list2.deleteEnd() + temp1;
-            if (temp < ten) {
-                stack.insertStart(temp);
-                temp1 = 0;
-            } else {
-                temp2 = temp % ten;
-                stack.insertStart(temp2);
-                temp = temp / ten;
-                temp1 = temp;
+        int diff = 0;
+        if (list1.size > list2.size) {
+            diff = list1.size - list2.size;
+            for (int i = 0; i < diff; i++) {
+                list1.insertStart(0);
             }
         }
-        if (temp > 0) {
-        stack.insertStart(temp1);
+        if (list2.size > list1.size) {
+            diff = list2.size - list1.size;
+            for (int i = 0; i < diff; i++) {
+                list2.insertStart(0);
+            }
+        }
+        if (list1.size == list2.size) {
+            while (list1.size != 0 && list2.size != 0) {
+               temp = list1.deleteEnd()
+                       + list2.deleteEnd() + temp1;
+                if (temp < ten) {
+                    stack.insertStart(temp);
+                    temp1 = 0;
+                } else {
+                    temp2 = temp % ten;
+                    stack.insertStart(temp2);
+                    temp = temp / ten;
+                    temp1 = temp;
+                }
+            }
+            if (temp > 0) {
+            stack.insertStart(temp1);
+            }
         }
         return stack;
     }
