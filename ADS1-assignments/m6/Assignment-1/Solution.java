@@ -76,8 +76,7 @@ final class AddLargeNumbers {
                 list2.insertEnd(0);
             }
         }
-        if (list1.size == list2.size) {
-            while (list1.size != 0 && list2.size != 0) {
+        while (list1.size != 0 && list2.size != 0) {
                temp = list1.deleteEnd()
                        + list2.deleteEnd() + temp1;
                 if (temp < ten) {
@@ -93,7 +92,6 @@ final class AddLargeNumbers {
             if (temp > 0) {
             stack.insertStart(temp1);
             }
-        }
         return stack;
     }
 }
@@ -139,6 +137,5 @@ public final class Solution {
         default : break;
         }
     }
-
 }
 
