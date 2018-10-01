@@ -67,13 +67,13 @@ final class AddLargeNumbers {
         if (list1.size > list2.size) {
             diff = list1.size - list2.size;
             for (int i = 0; i < diff; i++) {
-                list1.insertEnd(0);
+                list2.insertStart(0);
             }
         }
         if (list2.size > list1.size) {
             diff = list2.size - list1.size;
             for (int i = 0; i < diff; i++) {
-                list2.insertEnd(0);
+                list1.insertStart(0);
             }
         }
         while (list1.size != 0 && list2.size != 0) {
