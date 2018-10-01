@@ -28,6 +28,10 @@ class Steque{
 	}
 
 	public void pop() {
+		if (size == 0) {
+			System.out.println("Steque is empty");
+			return;
+		}
 		Node temp = head;
 		head = temp.next;
 		size--;
@@ -49,7 +53,7 @@ class Steque{
 			String str = "";
 			Node temp = head;
 			while ( temp.next != null) {
-				str += temp.data + ",";
+				str += temp.data + ", ";
 				temp = temp.next;
 			}
 			str += temp.data;
