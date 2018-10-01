@@ -66,7 +66,15 @@ class Steque{
 			System.out.println(str);
 		}
 	}
+		public void clear() {
+			while (size > 0) {
+				pop();
+				size--;
+			}
+			System.out.println();
+		}
 	}
+
 
 class Solution {
 	Solution() {
@@ -76,7 +84,10 @@ class Solution {
 		Steque object = new Steque();
 		while (scan.hasNext()) {
 			String line = scan.nextLine();
-
+			if (line.length() == 0) {
+				object.clear();
+				break;
+			}
 			String[] tokens = line.split(" ");
 			switch(tokens[0]) {
 				case "push":
