@@ -45,20 +45,20 @@ class LinkedList{
 		}
 		size++;
 	}
-	public void insertAfter(int a, int b) {
-		Node obj = new Node(b);
-		Node temp = head;
-		while (temp != null) {
-			temp = temp.getAddress();
-			if (temp.getData() == a) {
-				Node temp1 = temp.getAddress();
-				temp.setAddress(obj);
-				obj.setAddress(temp1);
-				size++;
-				break;
-			}
-		}
-	}
+	// public void insertAfter(int a, int b) {
+	// 	Node obj = new Node(b);
+	// 	Node temp = head;
+	// 	while (temp != null) {
+	// 		temp = temp.getAddress();
+	// 		if (temp.getData() == a) {
+	// 			Node temp1 = temp.getAddress();
+	// 			temp.setAddress(obj);
+	// 			obj.setAddress(temp1);
+	// 			size++;
+	// 			break;
+	// 		}
+	// 	}
+	// }
 	public int deleteStart() {
 		int data = head.data;
 		Node temp = head;
@@ -69,7 +69,7 @@ class LinkedList{
 	public int deleteEnd() {
 		int data = tail.data;
 		Node temp = head;
-		while (temp.next.next != null) {
+		while (temp.next != null) {
 			temp = temp.getAddress();
 		}
 		tail = temp;
