@@ -27,13 +27,12 @@ class Steque{
 	}
 
 	public void pop() {
-		if (size == 0) {
-			System.out.println("Steque is empty.");
-			return;
-		} else {
+		if (size > 0) {
 		Node temp = head;
 		head = temp.next;
 		size--;
+		} else {
+			return;
 		}
 	}
 	public void enqueue(int data)  {
