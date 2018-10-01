@@ -53,6 +53,7 @@ class Steque{
 		print();
 		}
 		public void print() {
+		if (size > 0) {
 			String str = "";
 			Node temp = head;
 			while ( temp.next != null) {
@@ -62,6 +63,7 @@ class Steque{
 			str += temp.data;
 			System.out.println(str);
 		}
+	}
 	}
 
 class Solution {
