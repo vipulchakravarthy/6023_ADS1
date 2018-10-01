@@ -4,11 +4,20 @@ import java.util.Scanner;
  *every element data.
  */
 class Node {
-    public  int data;
-    public  Node next;
+    private  int data;
+    private  Node next;
     Node(int e) {
         this.data = e;
         next = null;
+    }
+    public void setAddress(Node obj) {
+        next = obj;
+    }
+    public int getData() {
+        return this.data;
+    }
+    public Node getAddress() {
+        return this.next;
     }
 }
 /**
@@ -47,7 +56,7 @@ class Steque {
             head = obj;
             tail = obj;
         } else {
-            obj.next = head;
+            obj.setAddress(head);
             head = obj;
         }
         size++;
@@ -59,7 +68,7 @@ class Steque {
     public void pop() {
         if (size > 0) {
             Node temp = head;
-            head = temp.next;
+            head = temp.getAddress();
             size--;
         } else {
             return;
@@ -79,7 +88,7 @@ class Steque {
             size++;
 
         } else {
-            tail.next = obj;
+            tail.setAddress(obj);
             tail = obj;
             size++;
         }
@@ -94,11 +103,11 @@ class Steque {
         } else if (size > 0) {
             String str = "";
             Node temp = head;
-            while ( temp.next != null) {
-                str += temp.data + ", ";
-                temp = temp.next;
+            while ( temp.getAddress() != null) {
+                str += temp.getData() + ", ";
+                temp = temp.getAddress();
             }
-            str += temp.data;
+            str += temp.getData();
             System.out.println(str);
         }
     }
