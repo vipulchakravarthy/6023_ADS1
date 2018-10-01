@@ -68,11 +68,14 @@ final class AddLargeNumbers {
             if (temp < ten) {
                 stack.insertStart(temp);
                 temp1 = 0;
+                System.out.println("Temp ======> " + temp );
+
             } else {
                 temp2 = temp % ten;
                 stack.insertStart(temp2);
                 temp = temp / ten;
                 temp1 = temp;
+                System.out.println("Temp ======> " + temp );
             }
         }
         stack.insertStart(temp1);

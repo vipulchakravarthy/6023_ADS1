@@ -62,21 +62,27 @@ class LinkedList{
 	public int deleteStart() {
 		int data = head.data;
 		Node temp = head;
-		head = temp.next;
+		head = head.next;
+		temp.setAddress(null);
 		size--;
 		return data;
 	}
 	public int deleteEnd() {
 		int data = tail.data;
+		if (size == 0) {
+			return 0;
+		}
+	if(size > 0) {
 		Node temp = head;
 		while (temp.next != null) {
 			temp = temp.getAddress();
 		}
 		tail = temp;
-		temp.next = null;
+		tail.next = null;
 		size--;
-		return data;
 	}
+	return data;
+}
 	public void deleteAfter(int a) {
 		Node temp = head;
 		while (temp.data != a) {
