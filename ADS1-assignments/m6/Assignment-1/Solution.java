@@ -89,7 +89,7 @@ final class AddLargeNumbers {
                     temp1 = temp;
                 }
             }
-            if (temp > 0) {
+            if (temp1 > 0) {
             stack.insertStart(temp1);
             }
         return stack;
