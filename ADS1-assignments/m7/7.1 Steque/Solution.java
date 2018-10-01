@@ -53,7 +53,9 @@ class Steque{
 		print();
 		}
 		public void print() {
-		if (size > 0) {
+		if (size == 0) {
+			System.out.println("Steque is empty");
+		} else if (size > 0) {
 			String str = "";
 			Node temp = head;
 			while ( temp.next != null) {
@@ -74,6 +76,7 @@ class Solution {
 		Steque object = new Steque();
 		while (scan.hasNext()) {
 			String line = scan.nextLine();
+
 			String[] tokens = line.split(" ");
 			switch(tokens[0]) {
 				case "push":
