@@ -4,18 +4,49 @@ import java.util.Scanner;
  *every element data.
  */
 class Node {
+    /**
+     * the data variable is.
+     * to store element info.
+     * with private specifier.
+     */
     private  int data;
+    /**
+     *the next variable is to store.
+     *address of next element.
+     */
     private  Node next;
-    Node(int e) {
-        this.data = e;
+    /**
+     *the constructor to initialize the.
+     *data.
+     * @param element data which is to be.
+     * added to steque
+     */
+    Node(final int element) {
+        this.data = element;
         next = null;
     }
-    public void setAddress(Node obj) {
+    /**
+     * this is to set the address.
+     *
+     * @param      obj   The object
+     */
+    public void setAddress(
+        final Node obj) {
         next = obj;
     }
+    /**
+     * this is to get the element.
+     * @return  The data part.
+     * of particular node.
+     */
     public int getData() {
         return this.data;
     }
+    /**
+     *this is to get the address.
+     * @return     The address.
+     * at that node
+     */
     public Node getAddress() {
         return this.next;
     }
@@ -127,11 +158,11 @@ class Steque {
  * this is the solution class.
  * to take the input.
  */
-class Solution {
+public final class Solution {
     /**
      *this is empty constructor.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * the main method is to take.
