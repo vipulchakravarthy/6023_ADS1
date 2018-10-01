@@ -108,6 +108,9 @@ class Steque {
     /**
      *to insert the element at end.
      *the time complexiety will be O(N).
+     *to insert the element at end.
+     *we have to iterate through out the
+     *steque so the complexiety is O(N).
      *here N is size of steque.
      * @param      data  The data
      */
@@ -127,6 +130,9 @@ class Steque {
     /**
      *this is to print the steque.
      *time complexiety will be O(N)
+     *we have to print all the elements
+     *in steque it iterates thorugh out
+     *steque.
      */
     public void print() {
         if (size == 0) {
@@ -145,6 +151,8 @@ class Steque {
     /**
      *this is to clear the steque.
      *time complexiety will be O(N).
+     *to clear all the elements, it iterate
+     *through out steque.
      */
     public void clear() {
         while (size > 0) {
