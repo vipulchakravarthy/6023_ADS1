@@ -134,7 +134,7 @@ class Steque {
         } else if (size > 0) {
             String str = "";
             Node temp = head;
-            while ( temp.getAddress() != null) {
+            while (temp.getAddress() != null) {
                 str += temp.getData() + ", ";
                 temp = temp.getAddress();
             }
