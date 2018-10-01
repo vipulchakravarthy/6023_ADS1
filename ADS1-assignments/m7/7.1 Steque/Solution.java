@@ -86,8 +86,7 @@ class Solution {
 			String line = scan.nextLine();
 			if (line.length() == 0) {
 				object.clear();
-				break;
-			}
+			} else if (line.length() > 0) {
 			String[] tokens = line.split(" ");
 			switch(tokens[0]) {
 				case "push":
@@ -103,5 +102,5 @@ class Solution {
 			}
 		}
 	}
-
+}
 }
