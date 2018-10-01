@@ -29,7 +29,7 @@ class Steque{
 
 	public void pop() {
 		if (size == 0) {
-			System.out.println("Steque is empty");
+			System.out.println("Steque is empty.");
 			return;
 		} else {
 		Node temp = head;
@@ -54,7 +54,7 @@ class Steque{
 		}
 		public void print() {
 		if (size == 0) {
-			System.out.println("Steque is empty");
+			System.out.println("Steque is empty.");
 		} else if (size > 0) {
 			String str = "";
 			Node temp = head;
