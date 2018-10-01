@@ -24,7 +24,6 @@ class Steque{
 			head = obj;
 		}
 		size++;
-		print();
 	}
 
 	public void pop() {
@@ -35,7 +34,6 @@ class Steque{
 		Node temp = head;
 		head = temp.next;
 		size--;
-		print();
 		}
 	}
 	public void enqueue(int data)  {
@@ -50,7 +48,6 @@ class Steque{
 			tail = obj;
 			size++;
 		}
-		print();
 		}
 		public void print() {
 		if (size == 0) {
@@ -91,12 +88,15 @@ class Solution {
 			switch(tokens[0]) {
 				case "push":
 					object.push(Integer.parseInt(tokens[1]));
+					object.print();
 					break;
 				case "pop":
 					object.pop();
+					object.print();
 					break;
 				case "enqueue":
 					object.enqueue(Integer.parseInt(tokens[1]));
+					object.print();
 					break;
 				default: break;
 			}
