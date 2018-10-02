@@ -138,9 +138,9 @@ class LeaderBoard {
     public void sorting() {
         int flag = 0;
         for (int i = 0; i < list.size(); i++) {
-            for (int j = i ; j > 0; j--) {
+            for (int j = i; j > 0; j--) {
                 flag = compareTo(list.get(j - 1), list.get(j));
-                if (flag == -1){
+                if (flag == -1) {
                 Collections.swap(list, j, j - 1);
                 } else {
                     break;
