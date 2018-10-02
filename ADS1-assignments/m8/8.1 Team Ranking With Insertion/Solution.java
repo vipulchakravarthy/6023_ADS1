@@ -71,7 +71,7 @@ class LeaderBoard {
 				} else if (flag > 0) {
 					max = j;
 				} else {
-					continue;
+					max = i;
 				}
 			}
 			Collections.swap(list, i, max);
