@@ -1,0 +1,1 @@
+for the elements in reverse order also insertion sort is the efficient one.

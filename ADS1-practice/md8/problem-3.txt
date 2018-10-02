@@ -1,0 +1,2 @@
+for identical values also insertion sort is best because the insertion
+sort takes only N^2/2 as time complexiety.
