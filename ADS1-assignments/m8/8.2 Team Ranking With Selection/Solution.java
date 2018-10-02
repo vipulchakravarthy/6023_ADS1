@@ -129,11 +129,12 @@ class LeaderBoard {
     /**
      *this method is to perform the sorting.
      *operation.
-     *the time complexiety will be N + N^2/2.
+     *the time complexiety will be N^2/2.
      *N is the size of array.
      *it will iterate through out the array.
-     *for each comparision so we have N comparisons.
-     *and N^2/2.
+     *for each comparision so we have
+     *N^2 / 4 comparisons
+     *and N^2/4 swaping operations.
      */
     public void sorting() {
         int flag = 0;
