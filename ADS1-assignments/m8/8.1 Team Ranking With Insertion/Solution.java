@@ -94,6 +94,6 @@ class Solution {
 			object.addTo(obj);
 		}
 		object.sorting();
-		object.print();
+		System.out.println(object.print());
 	}
 }
