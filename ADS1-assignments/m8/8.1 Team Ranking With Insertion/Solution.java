@@ -66,7 +66,7 @@ class LeaderBoard {
 		for (int i = 0; i < list.size() - 1; i++) {
 			str += list.get(i).getName() + ", ";
 		}
-		str += list.get(list.size() - 1);
+		str += list.get(list.size() - 1).getName();
 		return str;
 	}
 }
