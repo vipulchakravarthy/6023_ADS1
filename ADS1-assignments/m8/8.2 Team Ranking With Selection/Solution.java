@@ -139,7 +139,7 @@ class LeaderBoard {
         int flag = 0;
         for (int i = 0; i < list.size(); i++) {
             for (int j = i ; j > 0; j--) {
-                flag = compareTo(list.get(j), list.get(j - 1));
+                flag = compareTo(list.get(j - 1), list.get(j));
                 if (flag == -1){
                 Collections.swap(list, j, j - 1);
                 } else {
