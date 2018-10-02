@@ -38,9 +38,9 @@ class LeaderBoard {
 		}
 		return 0;
 	}
-	public boolean high(int a, int b) {
-		return compareTo(a, b) > 0;
-	}
+	// public boolean high(int a, int b) {
+	// 	return compareTo(a, b) > 0;
+	// }
 	// public void swap(ArrayList<Team> list, int a, int b) {
 	// 	Team temp = list[a];
 	// 	list[a] = list[b];
@@ -51,11 +51,21 @@ class LeaderBoard {
 	}
 	public void sorting() {
 		int max = 0;
+		int flag = 0;
+		int temp = 0;
 		for (int i = 0; i < list.size(); i++) {
 			max = i;
 			for (int j = i + 1; j < list.size(); j++) {
-				if (high(list.get(j).getWins(), list.get(i).getWins())) {
+				flag = compareTo(list.get(j).getWins(), list.get(i).getWins());
+				if (flag == 0) {
+					temp = compareTo(list.get(j).getLosses(), list.get(i).getLosses());
+					if (temp > 0) {
+						max = i;
+					}
+				} else if (flag > 0) {
 					max = j;
+				} else {
+					continue;
 				}
 			}
 			Collections.swap(list, i, max);
