@@ -43,21 +43,13 @@ class LeaderBoard {
 			} else {
 				if (one.getDraw() < two.getDraw()) {
 					return -1;
-				} else if(one.getDraw() < two.getDraw()) {
+				} else if(one.getDraw() > two.getDraw()) {
 					return 1;
 				}
 			}
 		}
 		return 100;
 	}
-	// public boolean high(int a, int b) {
-	// 	return compareTo(a, b) > 0;
-	// }
-	// public void swap(ArrayList<Team> list, int a, int b) {
-	// 	Team temp = list[a];
-	// 	list[a] = list[b];
-	// 	list[b] = temp;
-	// }
 	public void addTo(Team obj) {
 		list.add(obj);
 	}
@@ -67,7 +59,7 @@ class LeaderBoard {
 		for (int i = 0; i < list.size(); i++) {
 			max = i;
 			for (int j = i + 1; j < list.size(); j++) {
-				flag = compareTo(list.get(i), list.get(j));
+				flag = compareTo(list.get(max), list.get(j));
 				if (flag == -1) {
 					max = j;
 				}
@@ -102,6 +94,6 @@ class Solution {
 			object.addTo(obj);
 		}
 		object.sorting();
-		System.out.println(object.print());
+		object.print();
 	}
 }
