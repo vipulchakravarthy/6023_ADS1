@@ -53,6 +53,7 @@ class LeaderBoard {
 		int max = 0;
 		int flag = 0;
 		int temp = 0;
+		int tempTwo = 0;
 		for (int i = 0; i < list.size(); i++) {
 			max = i;
 			for (int j = i + 1; j < list.size(); j++) {
@@ -61,6 +62,11 @@ class LeaderBoard {
 					temp = compareTo(list.get(j).getLosses(), list.get(i).getLosses());
 					if (temp > 0) {
 						max = i;
+					} else if(temp == 0) {
+						tempTwo = compareTo(list.get(j).getDraw(), list.get(i).getDraw());
+						if (tempTwo > 0) {
+							max = j;
+						}
 					}
 				} else if (flag > 0) {
 					max = j;
