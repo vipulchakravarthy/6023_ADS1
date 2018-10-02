@@ -151,7 +151,8 @@ class LeaderBoard {
     }
     /**
      *to print the string format of array.
-     *
+     *time complexiety is O(n)
+     *n is size of the array.
      * @return  str the objects in array.
      */
     public String print() {
