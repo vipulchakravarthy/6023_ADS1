@@ -1,99 +1,194 @@
-import java.util.Arrays;
 import java.util.Scanner;
-class Insertion{
-	private String[] array;
-	Insertion(String[] arr) {
-		this.array = arr;
-	}
-	public void swap(String[] array, int one, int two) {
-		String temp = array[one];
-		array[one] = array[two];
-		array[two] = temp;
-	}
-	 public boolean lesser(String a, String b) {
-         return a.compareTo(b) < 0;
+/**
+ * Class for merge.
+ */
+class Merge {
+    /**
+     * cutoff to insertion sort.
+     */
+    private final int cutoff = 7;
+    /**
+     * Constructs the object.
+     * Time complexity of this method is O(1).
+     */
+    Merge() {
+        //Unused Constructor.
     }
-	public void insertionSort(String[] array, int low, int high) {
-        for (int i = low; i < high; i++) {
-            for (int j = i; j > low && lesser(array[j], array[j - 1]); j--) {
-                swap(array , j, j - 1);
+    /**
+     * {Method to merge two arrays}.
+     * Time complexity of this method is O(N).
+     * @param      array  The array
+     * @param      aux    The auxiliary
+     * @param      low     The lower value
+     * @param      mid    The middle value
+     * @param      high     The higher value
+     */
+    public void merge(final Comparable[] array, final Comparable[] aux,
+        final int low, final int mid, final int high) {
+        assert isSorted(array, low, mid);
+        assert isSorted(array, mid + 1, high);
+        int start = low;
+        int begin = mid + 1;
+        for (int k = low; k <= high; k++) {
+            if (start > mid) {
+                aux[k] = array[begin++];
+            } else if (begin > high) {
+                aux[k] = array[start++];
+            } else if (less(array[begin], array[start])) {
+                aux[k] = array[begin++];
+            } else {
+                aux[k] = array[start++];
             }
-    	}
-	}
-	}
-class MergeSort{
-	MergeSort(){}
-    public boolean isSorted(String[] a, int low, int high) {
-        for (int i = low + 1; i <= high; i++) {
-            if (lesser(a[i], a[i - 1])) {
-          		return false;
-      		}
+        }
+        assert isSorted(aux, low, high);
     }
-    return true;
-	}
-    public boolean lesser(String a, String b) {
-         if (a.compareTo(b) < 0) {
-         	return true;
-    	} else {
-    		return false;
-    	}
-    }
-	public void sort(String[] array, String[] aux, int low, int high) {
-		final int cutoff = 7;
-		if (high - low <= cutoff) {
-			System.out.println("Insertion sort method invoked...");
-			Insertion obj = new Insertion(array);
-			obj.insertionSort(array, low, high);
-			return;
-		}
-		int mid = low + (high - low) / 2;
-		sort(array, aux, low, mid);
-		sort(array, aux, mid + 1, high);
-        if (!lesser(array[mid+1], array[mid])) {
-            System.arraycopy(array, low, aux, low, high - low + 1);
-            System.out.println("Array is already sorted. So, skipped the call to merge...");
+    /**
+     * {Method for sorting}.
+     * Time complexity of sorting is O(log(N)).
+     * @param      array  The array
+     * @param      aux    The auxiliary array
+     * @param      low     The lower value
+     * @param      high     The higher value
+     */
+    public void sort(final Comparable[] array, final Comparable[] aux,
+        final int low, final int high) {
+        if (high <= low + cutoff) {
+            insertionSort(aux, low, high);
+            System.out.println("Insertion sort method invoked...");
             return;
         }
-		merge(array, aux, low, mid, high);
-	}
-	public void merge(String[] array, String[] aux, int low, int mid, int high){
-		assert isSorted(array, low, mid);
-		assert isSorted(array, mid + 1, high);
-		for (int i = 0; i <=high; i++) {
-			aux[i] = array[i];
-		}
-		int start = low;
-		int begin = mid + 1;
-		for (int i = 0; i <= high; i++) {
-			if (start > mid) {
-				aux[i] = array[begin++];
-			} else if (begin > high) {
-				aux[i] = array[start++];
-			} else if(lesser(array[begin], array[start])) {
-				aux[i] = array[begin++];
-			} else {
-				aux[i] = array[start++];
-			}
-		}
-	}
+        int mid = low+ (high - low) / 2;
+        sort(aux, array, low, mid);
+        sort(aux, array, mid + 1, high);
+        if (!less(array[mid + 1], array[mid])) {
+            for (int i = low; i <= high; i++) {
+                aux[i] = array[i];
+            }
+            System.out.println(
+                "Array is already sorted. So, skipped the call to merge...");
+            return;
+        }
+        merge(array, aux, low, mid, high);
+    }
+    /**
+     * Rearranges the array in ascending order, using the natural order.
+     * Time complexity of this method is O(N).
+     * @param      a     {Comparable array}.
+     */
+    public void sort(final Comparable[] a) {
+        Comparable[] aux = a.clone();
+        sort(aux, a, 0, a.length - 1);
+        assert isSorted(a);
+    }
+    /**
+     * {Method for insertion sort}.
+     * sort from a[lo] to a[hi].
+     * Time complexity of insertion sort is O(N^2/2).
+     * @param      arr     {Comparable array}.
+     * @param      low   The lower value
+     * @param      high    The higher value
+     */
+    public void insertionSort(final Comparable[] arr,
+        final int low, final int high) {
+        for (int i = low; i <= high; i++) {
+            for (int j = i; j > low && less(arr[j], arr[j - 1]); j--) {
+                exchange(arr, j, j - 1);
+            }
+        }
+    }
+    /**
+     * {Method to exchange two elements in the array}.
+     * Time complexity of this method is O(N).
+     * @param      a     {Array of object}
+     * @param      i     {Integer i}
+     * @param      j     {Integer j}
+     */
+    public void exchange(final Comparable[] a,
+        final int i, final int j) {
+        Comparable swap = a[i];
+        a[i] = a[j];
+        a[j] = swap;
+    }
+    /**
+     * {Method to check which one is smaller of the two}.
+     * Time complextiy of this method is O(1).
+     * @param      a     {Comparable}.
+     * @param      b     {Comparable}.
+     *
+     * @return     {Boolean value}.
+     */
+    public boolean less(final Comparable a, final Comparable b) {
+        return a.compareTo(b) < 0;
+    }
+    /**
+     * Method to determine if the array is sorted (or) not.
+     * Time complexity of this method is O(1).
+     * @param      a     {Comparable array}
+     *
+     * @return     True if sorted, False otherwise.
+     */
+    public boolean isSorted(final Comparable[] a) {
+        return isSorted(a, 0, a.length - 1);
+    }
+    /**
+     * Method to determine if the array is sorted (or) not.
+     * Time complexity of this method is O(N).
+     * @param      a     {Comparable array}
+     * @param      low    The lower
+     * @param      high    The higher
+     *
+     * @return     True if sorted, False otherwise.
+     */
+    public boolean isSorted(final Comparable[] a,
+        final int low, final int high) {
+        for (int i = low + 1; i <= high; i++) {
+            if (less(a[i], a[i - 1])) {
+                return false;
+            }
+        }
+        return true;
+    }
+    /**
+     * {Method to print the values of the Comparable array}.
+     * Time complexity of this method is O(N).
+     * @param      a     {Name of object array}
+     *
+     * @return     {String}
+     */
+    public String print(final Comparable[] a) {
+        String str = "[";
+        int i;
+        for (i = 0; i < a.length - 1; i++) {
+            str += a[i] + ", ";
+        }
+        str += a[i] + "]";
+        return str;
+    }
 }
-class Solution{
-	Solution() {
-
-	}
-/*    public static int[] integerArray(final String str) {
-        return Arrays.stream(str.split(","))
-        .mapToInt(Integer::parseInt).toArray();
-    }*/
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		while (scan.hasNextLine()) {
-			MergeSort object = new MergeSort();
-			String[] array = scan.nextLine().split(",");
-			String[] aux = new String[array.length];
-			object.sort(array, aux, 0, array.length - 1);
-			System.out.println(Arrays.toString(array));
-			System.out.println();
-		}
-	}
+/**
+ * Class for solution.
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     * Time complexity of this method is O(1).
+     */
+    private Solution() {
+        //Unused Constructor.
+    }
+    /**
+     * {Client Program}.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Merge obj = new Merge();
+        while (scan.hasNext()) {
+            String[] tokens = scan.nextLine().split(",");
+            obj.sort(tokens);
+            System.out.println(obj.print(tokens));
+            System.out.println();
+        }
+    }
 }
