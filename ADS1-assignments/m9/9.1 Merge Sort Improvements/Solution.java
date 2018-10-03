@@ -73,12 +73,12 @@ class Merge {
     /**
      * Rearranges the array in ascending order, using the natural order.
      * Time complexity of this method is O(N).
-     * @param      a     {Comparable array}.
+     * @param      array     {Comparable array}.
      */
-    public void sort(final Comparable[] a) {
-        Comparable[] aux = a.clone();
-        sort(aux, a, 0, a.length - 1);
-        assert isSorted(a);
+    public void sort(final Comparable[] array) {
+        Comparable[] aux = array.clone();
+        sort(aux, array, 0, array.length - 1);
+        assert isSorted(array);
     }
     /**
      * {Method for insertion sort}.
@@ -99,15 +99,15 @@ class Merge {
     /**
      * {Method to exchange two elements in the array}.
      * Time complexity of this method is O(N).
-     * @param      a     {Array of object}
+     * @param      array     {Array of object}
      * @param      i     {Integer i}
      * @param      j     {Integer j}
      */
-    public void exchange(final Comparable[] a,
+    public void exchange(final Comparable[] array,
         final int i, final int j) {
-        Comparable swap = a[i];
-        a[i] = a[j];
-        a[j] = swap;
+        Comparable swap = array[i];
+        array[i] = array[j];
+        array[j] = swap;
     }
     /**
      * {Method to check which one is smaller of the two}.
@@ -123,26 +123,26 @@ class Merge {
     /**
      * Method to determine if the array is sorted (or) not.
      * Time complexity of this method is O(1).
-     * @param      a     {Comparable array}
+     * @param      arr     {Comparable array}
      *
      * @return     True if sorted, False otherwise.
      */
-    public boolean isSorted(final Comparable[] a) {
-        return isSorted(a, 0, a.length - 1);
+    public boolean isSorted(final Comparable[] arr) {
+        return isSorted(arr, 0, arr.length - 1);
     }
     /**
      * Method to determine if the array is sorted (or) not.
      * Time complexity of this method is O(N).
-     * @param      a     {Comparable array}
+     * @param      arr     {Comparable array}
      * @param      low    The lower
      * @param      high    The higher
      *
      * @return     True if sorted, False otherwise.
      */
-    public boolean isSorted(final Comparable[] a,
+    public boolean isSorted(final Comparable[] arr,
         final int low, final int high) {
         for (int i = low + 1; i <= high; i++) {
-            if (less(a[i], a[i - 1])) {
+            if (less(arr[i], arr[i - 1])) {
                 return false;
             }
         }
@@ -151,17 +151,17 @@ class Merge {
     /**
      * {Method to print the values of the Comparable array}.
      * Time complexity of this method is O(N).
-     * @param      a     {Name of object array}
+     * @param      arr     {Name of object array}
      *
      * @return     {String}
      */
-    public String print(final Comparable[] a) {
+    public String print(final Comparable[] arr) {
         String str = "[";
         int i;
-        for (i = 0; i < a.length - 1; i++) {
-            str += a[i] + ", ";
+        for (i = 0; i < arr.length - 1; i++) {
+            str += arr[i] + ", ";
         }
-        str += a[i] + "]";
+        str += arr[i] + "]";
         return str;
     }
 }
