@@ -23,6 +23,7 @@ class LinkedList{
 	int position;
 	int size;
 	Node temp;
+	Node before;
 	LinkedList() {
 		position = 0;
 		size = 0;
@@ -43,6 +44,7 @@ class LinkedList{
 		if (index == 0) {
 			obj.setNext(head);
 			head = obj;
+			temp = head;
 			size++;
 			return;
 		} else if(index == counter) {
@@ -57,8 +59,18 @@ class LinkedList{
 		counter++;
 		insertAt(index , element);
 	}
-	public void reverse() {
-
+	public void reverse() throws Exception{
+		if (size == 0) {
+			throw new Exception("No elements to reverse.");
+		}
+		Node after = temp.getNext();
+		if (after == null) {
+			return;
+		} else {
+			temp.setNext(before);
+			after = after.getNext();
+			reverse();
+		}
 	}
 	public String print() {
 		String str = "";
@@ -68,6 +80,7 @@ class LinkedList{
 			temp = temp.getNext();
 		}
 		str += temp.getData();
+		temp = head;
 		return str;
 	}
 }
@@ -86,11 +99,16 @@ class Solution{
 						Integer.parseInt(tokens[2]));
 					System.out.println(object.print());
 				} catch(Exception e) {
-						System.out.println(e);
+						System.out.println(e.getMessage());
 				}
 				break;
 				case "reverse":
-					// object.reverse();
+					try{
+						object.reverse();
+					System.out.println(object.print());
+					} catch (Exception e) {
+						System.out.println(e.getMessage());
+					}
 					break;
 				default: break;
 			}
