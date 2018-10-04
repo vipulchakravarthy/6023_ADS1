@@ -24,6 +24,7 @@ class LinkedList{
 	int size;
 	Node temp;
 	Node before;
+	Node after;
 	LinkedList() {
 		position = 0;
 		size = 0;
@@ -63,12 +64,14 @@ class LinkedList{
 		if (size == 0) {
 			throw new Exception("No elements to reverse.");
 		}
-		Node after = temp.getNext();
 		if (after == null) {
 			return;
 		} else {
+			after = temp.getNext();
 			temp.setNext(before);
-			after = after.getNext();
+			before = temp;
+			temp = after;
+			after = temp.getNext();
 			reverse();
 		}
 	}
