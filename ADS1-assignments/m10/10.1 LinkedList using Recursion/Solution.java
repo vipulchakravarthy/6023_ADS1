@@ -65,6 +65,8 @@ class LinkedList{
 			throw new Exception("No elements to reverse.");
 		}
 		if (after == null) {
+			head = temp;
+			before = null;
 			return;
 		} else {
 			after = temp.getNext();
