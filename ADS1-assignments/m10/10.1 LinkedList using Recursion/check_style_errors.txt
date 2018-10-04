@@ -1,13 +1,4 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:12:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:101: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:102:21: '(' is followed by whitespace. [ParenPad]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:128:31: ',' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:157:22: 'temp' hides a field. [HiddenField]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:170:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:174:21: '{' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:174:21: '}' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:189: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:190: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:171: Class Solution should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 1 errors.
