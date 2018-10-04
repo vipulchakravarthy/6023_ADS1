@@ -168,7 +168,7 @@ class LinkedList {
 /**
  *this is for main class.
  */
-class Solution {
+final class Solution {
     /**
      *empty constructor.
      */
