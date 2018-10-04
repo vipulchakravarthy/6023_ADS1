@@ -1,0 +1,23 @@
+the problem is to calculate the factorial of 5 using recursion
+
+fact(n) {
+	if (n == 1 || n == 0) return 1;
+	else n * fact(n - 1);
+}
+fact(5)
+the answer will be 120
+fact fucntion is called 5 times and the time complexiety will be O(N)
+N is given input.
+for 5
+we get the recursion as
+            5 * fact(4)
+                     |
+                     4 * fact(3)
+                     			|
+                     			3 * fact(2)
+                     					|
+                     				2 * fact(1)
+            answer = 120
+
+
+
