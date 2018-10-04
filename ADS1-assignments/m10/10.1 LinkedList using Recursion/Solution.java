@@ -130,7 +130,8 @@ class LinkedList {
     }
     /**
      * the reverses the complete linked list.
-     *
+     * the time complexiety is O(N)
+     * it should go through out the linked list
      * @throws     Exception  { exception_description }
      */
     public void reverse() throws Exception {
@@ -151,6 +152,7 @@ class LinkedList {
     /**
      * this method is to display all.
      * elements
+     * time complexiety is O(N)
      * @return string format of linked list
      */
     public String print() {
