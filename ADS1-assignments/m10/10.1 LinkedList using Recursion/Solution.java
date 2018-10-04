@@ -61,12 +61,12 @@ class LinkedList{
 		insertAt(index , element);
 	}
 	public void reverse() throws Exception{
-		after = temp.getNext();
-		temp.setNext(before);
-		before = temp;
 		if (size == 0) {
 			throw new Exception("No elements to reverse.");
 		}
+		after = temp.getNext();
+		temp.setNext(before);
+		before = temp;
 		if (after == null) {
 			head = temp;
 			before = null;
