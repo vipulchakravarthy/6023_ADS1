@@ -260,7 +260,7 @@ class Database {
                 vacancies--;
             }
             if (list.get(i).getCategory().equals("SC")
-                    && scSeats > 0 ) {
+                    && scSeats > 0) {
                 alloted.add(list.get(i));
                 scSeats--;
                 count++;
@@ -286,7 +286,7 @@ class Database {
  */
 final class Solution {
     /**
-     *empty constructor
+     *empty constructor.
      */
     private Solution() {
     }
