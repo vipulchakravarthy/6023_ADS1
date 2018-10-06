@@ -105,16 +105,16 @@ class Database{
   				vacancies--;
   			}
   		}
-  		for (int i = count; i < list.size() && scSeats > 0 && vacancies > 0; i++) {
-  			if (list.get(i).getCategory().equals("SC")) {
+   		for (int i = count; i < list.size() && stSeats > 0 && vacancies > 0; i++) {
+  			if (list.get(i).getCategory().equals("ST")) {
   				alloted.add(list.get(i));
   				scSeats--;
   				count++;
   				vacancies--;
   			}
   		}
-   		for (int i = count; i < list.size() && stSeats > 0 && vacancies > 0; i++) {
-  			if (list.get(i).getCategory().equals("ST")) {
+  		for (int i = count; i < list.size() && scSeats > 0 && vacancies > 0; i++) {
+  			if (list.get(i).getCategory().equals("SC")) {
   				alloted.add(list.get(i));
   				scSeats--;
   				count++;
