@@ -124,10 +124,6 @@ class Database{
   				scSeats--;
   				vacancies--;
   			}
-  			if (vacancies > 0) {
-  				alloted.add(list.get(i));
-  				vacancies--;
-  			}
   		}
   		for (int i = 0; i < alloted.size(); i++){
   		System.out.println(alloted.get(i).getName() + "," + alloted.get(i).getTotal() + "," + alloted.get(i).getCategory());
