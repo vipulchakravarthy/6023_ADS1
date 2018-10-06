@@ -112,20 +112,30 @@ class Database{
   		 	if (list.get(i).getCategory().equals("BC") && bcSeats > 0) {
   				alloted.add(list.get(i));
   				bcSeats--;
+  				count++;
   				vacancies--;
   			}
   			if (list.get(i).getCategory().equals("ST") && stSeats > 0) {
   				alloted.add(list.get(i));
   				stSeats--;
+  				count++;
   				vacancies--;
   			}
   			if (list.get(i).getCategory().equals("SC") && scSeats > 0 ) {
   				alloted.add(list.get(i));
   				scSeats--;
+  				count++;
   				vacancies--;
   			}
   		}
-  		for (int i = 0; i < alloted.size(); i++){
+  		int reserved = bcSeats + scSeats + stSeats;
+  		for (int i = count; i < list.size(); i++) {
+  			if ( reserved > 0) {
+				alloted.add(list.get(i));
+  				reserved--;
+  			}
+  		}
+   		for (int i = 0; i < alloted.size(); i++){
   		System.out.println(alloted.get(i).getName() + "," + alloted.get(i).getTotal() + "," + alloted.get(i).getCategory());
   		}
   	}
