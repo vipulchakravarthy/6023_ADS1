@@ -112,19 +112,16 @@ class Database{
   		 	if (list.get(i).getCategory().equals("BC") && bcSeats > 0) {
   				alloted.add(list.get(i));
   				bcSeats--;
-  				count++;
   				vacancies--;
   			}
   			if (list.get(i).getCategory().equals("ST") && stSeats > 0) {
   				alloted.add(list.get(i));
   				stSeats--;
-  				count++;
   				vacancies--;
   			}
   			if (list.get(i).getCategory().equals("SC") && scSeats > 0 ) {
   				alloted.add(list.get(i));
   				scSeats--;
-  				count++;
   				vacancies--;
   			}
   		}
