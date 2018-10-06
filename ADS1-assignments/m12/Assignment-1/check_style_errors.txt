@@ -1,4 +1,7 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\Solution.java:272:29: ')' is preceded with whitespace. [ParenPad]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\Solution.java:208:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\Solution.java:208:25: Parameter list should be final. [FinalParameters]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\Solution.java:208:44: 'list' hides a field. [HiddenField]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\Solution.java:286:29: ')' is preceded with whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 4 errors.

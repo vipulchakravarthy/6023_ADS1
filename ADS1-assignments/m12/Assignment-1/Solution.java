@@ -205,6 +205,20 @@ class Database {
             Collections.swap(list, i, max);
         }
     }
+    public void sorting(ArrayList<Student> list) {
+        int max = 0;
+        int flag = 0;
+        for (int i = 0; i < list.size(); i++) {
+            max = i;
+            for (int j = i + 1; j < list.size(); j++) {
+                flag = compareTo(list.get(max), list.get(j));
+                if (flag == -1) {
+                    max = j;
+                }
+            }
+            Collections.swap(list, i, max);
+        }
+    }
     /**
      *it prints the arrayList.
      */
@@ -278,6 +292,7 @@ class Database {
                 }
             }
         }
+        sorting(alloted);
         for (int i = 0; i < alloted.size(); i++) {
             System.out.println(alloted.get(i).getName()
                                + "," + alloted.get(i).getTotal() + ","
