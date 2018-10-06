@@ -97,29 +97,27 @@ class Database{
   				count++;
   		}
   		 for (int i = count; i < list.size() && bcSeats > 0; i++) {
+  		 	if (list.get(i).getCategory().equals("BC")) {
   				alloted.add(list.get(i));
   				bcSeats--;
+  				count++;
+  			}
   		}
-  		// 	while(bcSeats > 0) {
-  		// 		if (list.get(i).getCategory().equals("BC")) {
-  		// 			alloted.add(list.get(i));
-  		// 			bcSeats--;
-  		// 		}
-  		// 	}
-  		// 	while(scSeats > 0) {
-  		// 		if (list.get(i).getCategory().equals("SC")) {
-  		// 			alloted.add(list.get(i));
-  		// 			scSeats--;
-  		// 		}
-  		// 	}
-  		// 	while(stSeats > 0) {
-    // 			if (list.get(i).getCategory().equals("ST")) {
-  		// 			alloted.add(list.get(i));
-  		// 			stSeats--;
-  		// 		}
-  		// 	}
-  		// }
-  		for(int i = 0; i < alloted.size(); i++){
+  		for (int i = count; i < list.size() && scSeats > 0; i++) {
+  			if (list.get(i).getCategory().equals("SC")) {
+  				alloted.add(list.get(i));
+  				scSeats--;
+  				count++;
+  			}
+  		}
+   		for (int i = count; i < list.size() && stSeats > 0; i++) {
+  			if (list.get(i).getCategory().equals("ST")) {
+  				alloted.add(list.get(i));
+  				scSeats--;
+  				count++;
+  			}
+  		}
+  		for (int i = 0; i < alloted.size(); i++){
   		System.out.println(alloted.get(i).getName() + "," + alloted.get(i).getTotal() + "," + alloted.get(i).getCategory());
   		}
   	}
