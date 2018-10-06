@@ -38,6 +38,11 @@ class Student{
 	public String getCategory() {
 		return this.category;
 	}
+	public int getAge() {
+		String[] age = this.birth.split("-");
+		int month = Integer.parseInt(age[1]);
+		return month;
+	}
 }
 class Database{
 	private ArrayList<Student> list;
@@ -63,6 +68,12 @@ class Database{
                     return -1;
                 } else if (studentOne.getSubTwo() > studentTwo.getSubTwo()) {
                     return 1;
+                } else {
+                	if (studentOne.getAge() > studentTwo.getAge()) {
+                		return 1;
+                	} else if (studentOne.getAge() < studentTwo.getAge()) {
+                		return -1;
+                	}
                 }
             }
         }
