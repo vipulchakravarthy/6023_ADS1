@@ -1,0 +1,10 @@
+Starting audit...
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\temp.java:1: Missing a Javadoc comment. [JavadocType]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\temp.java:1:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\temp.java:1:7: Name 'temp' must match pattern '^[A-Z][a-zA-Z0-9]*$'. [TypeName]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\temp.java:1:11: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\temp.java:2:1: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\temp.java:2:25: Parameter args should be final. [FinalParameters]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\temp.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+Audit done.
+Checkstyle ends with 7 errors.
