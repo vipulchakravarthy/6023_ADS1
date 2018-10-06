@@ -91,30 +91,34 @@ class Database{
   	public void allotment(int vacancies, int openSeats, int bcSeats, int scSeats, int stSeats) {
   		ArrayList<Student> alloted = new ArrayList<Student>();
   		int count = 0;
-  		for (int i = 0; i < list.size() && openSeats > 0; i++) {
+  		for (int i = 0; i < list.size() && openSeats > 0 && vacancies > 0; i++) {
   				alloted.add(list.get(i));
   				openSeats--;
   				count++;
+  				vacancies--;
   		}
-  		 for (int i = count; i < list.size() && bcSeats > 0; i++) {
+  		 for (int i = count; i < list.size() && bcSeats > 0 && vacancies > 0; i++) {
   		 	if (list.get(i).getCategory().equals("BC")) {
   				alloted.add(list.get(i));
   				bcSeats--;
   				count++;
+  				vacancies--;
   			}
   		}
-  		for (int i = count; i < list.size() && scSeats > 0; i++) {
+  		for (int i = count; i < list.size() && scSeats > 0 && vacancies > 0; i++) {
   			if (list.get(i).getCategory().equals("SC")) {
   				alloted.add(list.get(i));
   				scSeats--;
   				count++;
+  				vacancies--;
   			}
   		}
-   		for (int i = count; i < list.size() && stSeats > 0; i++) {
+   		for (int i = count; i < list.size() && stSeats > 0 && vacancies > 0; i++) {
   			if (list.get(i).getCategory().equals("ST")) {
   				alloted.add(list.get(i));
   				scSeats--;
   				count++;
+  				vacancies--;
   			}
   		}
   		for (int i = 0; i < alloted.size(); i++){

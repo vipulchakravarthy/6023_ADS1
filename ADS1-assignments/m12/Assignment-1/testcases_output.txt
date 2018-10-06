@@ -61,8 +61,6 @@ Ira,93,ST
 tanvi,90,BC
 priya,72,SC
 Aditya,80,ST
-shyam,71,ST
-Aryan,32,ST
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -145,8 +143,6 @@ tanvi,90,BC
 Raj,87,BC
 priya,72,SC
 Aditya,80,ST
-shyam,71,ST
-Aryan,32,ST
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
