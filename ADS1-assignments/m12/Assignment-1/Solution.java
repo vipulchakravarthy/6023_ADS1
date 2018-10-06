@@ -95,24 +95,25 @@ class Database{
   				alloted.add(list.get(i));
   				openSeats--;
   			}
-  			while(bcSeats > 0) {
-  				if (list.get(i).getCategory().equals("BC")) {
-  					alloted.add(list.get(i));
-  					bcSeats--;
-  				}
-  			}
-  			while(scSeats > 0) {
-  				if (list.get(i).getCategory().equals("SC")) {
-  					alloted.add(list.get(i));
-  					scSeats--;
-  				}
-  			}
-  			while(stSeats > 0) {
-    			if (list.get(i).getCategory().equals("ST")) {
-  					alloted.add(list.get(i));
-  					stSeats--;
-  				}
-  			}
+  		// 	while(bcSeats > 0) {
+  		// 		if (list.get(i).getCategory().equals("BC")) {
+  		// 			alloted.add(list.get(i));
+  		// 			bcSeats--;
+  		// 		}
+  		// 	}
+  		// 	while(scSeats > 0) {
+  		// 		if (list.get(i).getCategory().equals("SC")) {
+  		// 			alloted.add(list.get(i));
+  		// 			scSeats--;
+  		// 		}
+  		// 	}
+  		// 	while(stSeats > 0) {
+    // 			if (list.get(i).getCategory().equals("ST")) {
+  		// 			alloted.add(list.get(i));
+  		// 			stSeats--;
+  		// 		}
+  		// 	}
+  		// }
   		}
   		for(int i = 0; i < alloted.size(); i++){
   		System.out.println(alloted.get(i).getName() + "," + alloted.get(i).getTotal() + "," + alloted.get(i).getCategory());
