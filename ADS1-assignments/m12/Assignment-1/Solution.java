@@ -205,18 +205,25 @@ class Database {
             Collections.swap(list, i, max);
         }
     }
-    public void sorting(ArrayList<Student> list) {
+    /**
+     *the method is to sort the objects.
+     *the time complexity will be N^2/ 2
+     *because every time it iterates through
+     *out the array.
+     *@param listOne of alloted seats.
+     */
+    public void sorting(final ArrayList<Student> listOne) {
         int max = 0;
         int flag = 0;
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < listOne.size(); i++) {
             max = i;
-            for (int j = i + 1; j < list.size(); j++) {
-                flag = compareTo(list.get(max), list.get(j));
+            for (int j = i + 1; j < listOne.size(); j++) {
+                flag = compareTo(listOne.get(max), listOne.get(j));
                 if (flag == -1) {
                     max = j;
                 }
             }
-            Collections.swap(list, i, max);
+            Collections.swap(listOne, i, max);
         }
     }
     /**
