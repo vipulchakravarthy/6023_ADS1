@@ -97,24 +97,20 @@ class Database{
   				count++;
   				vacancies--;
   		}
-  		 for (int i = count; i < list.size() && bcSeats > 0 && vacancies > 0; i++) {
-  		 	if (list.get(i).getCategory().equals("BC")) {
+  		 for (int i = count; i < list.size()  && vacancies > 0; i++) {
+  		 	if (list.get(i).getCategory().equals("BC") && bcSeats > 0) {
   				alloted.add(list.get(i));
   				bcSeats--;
   				count++;
   				vacancies--;
   			}
-  		}
-   		for (int i = count; i < list.size() && stSeats > 0 && vacancies > 0; i++) {
-  			if (list.get(i).getCategory().equals("ST")) {
+  			if (list.get(i).getCategory().equals("ST") && stSeats > 0) {
   				alloted.add(list.get(i));
-  				scSeats--;
+  				stSeats--;
   				count++;
   				vacancies--;
   			}
-  		}
-  		for (int i = count; i < list.size() && scSeats > 0 && vacancies > 0; i++) {
-  			if (list.get(i).getCategory().equals("SC")) {
+  			if (list.get(i).getCategory().equals("SC") && scSeats > 0 ) {
   				alloted.add(list.get(i));
   				scSeats--;
   				count++;
