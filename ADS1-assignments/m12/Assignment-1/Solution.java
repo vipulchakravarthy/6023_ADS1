@@ -153,31 +153,31 @@ class Database {
         final Student studentOne,
         final Student studentTwo) {
         if (studentOne.getTotal()
-            < studentTwo.getTotal()) {
+                < studentTwo.getTotal()) {
             return  -1;
         } else if (studentOne.getTotal()
-            > studentTwo.getTotal()) {
+                   > studentTwo.getTotal()) {
             return 1;
         } else {
             if (studentOne.getSubThree()
-                < studentTwo.getSubThree()) {
+                    < studentTwo.getSubThree()) {
                 return -1;
             } else if (studentOne.getSubThree()
-                > studentTwo.getSubThree()) {
+                       > studentTwo.getSubThree()) {
                 return 1;
             } else {
                 if (studentOne.getSubTwo()
-                    < studentTwo.getSubTwo()) {
+                        < studentTwo.getSubTwo()) {
                     return -1;
                 } else if (studentOne.getSubTwo()
-                    > studentTwo.getSubTwo()) {
+                           > studentTwo.getSubTwo()) {
                     return 1;
                 } else {
                     if (studentOne.getAge()
-                        > studentTwo.getAge()) {
+                            > studentTwo.getAge()) {
                         return 1;
                     } else if (studentOne.getAge()
-                        < studentTwo.getAge()) {
+                               < studentTwo.getAge()) {
                         return -1;
                     }
                 }
@@ -211,51 +211,56 @@ class Database {
     public void print() {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).getName()
-                + "," + list.get(i).getTotal()
-                + "," + list.get(i).getCategory());
+                               + "," + list.get(i).getTotal()
+                               + "," + list.get(i).getCategory());
         }
         System.out.println();
     }
     /**
      * the method is for allotment of candidates.
      *
-     * @param      vacancies  The vacancies
-     * @param      openSeats  The open seats
-     * @param      bcSeats    The bc seats
-     * @param      scSeats    The screen seats
-     * @param      stSeats    The st seats
+     * @param      vac  The vacancies
+     * @param      openS  The open seats
+     * @param      bcS    The bc seats
+     * @param      scS    The screen seats
+     * @param      stS    The st seats
      */
-    public void allotment(int vacancies,
-        int openSeats, int bcSeats,
-        int scSeats, int stSeats) {
+    public void allotment(final int vac,
+                          final int openS, final int bcS,
+                          final int scS, final int stS) {
+        int vacancies = vac;
+        int openSeats = openS;
+        int bcSeats = bcS;
+        int scSeats = scS;
+        int stSeats = stS;
         ArrayList<Student> alloted
-        = new ArrayList<Student>();
+            = new ArrayList<Student>();
         int count = 0;
         for (int i = 0; i < list.size()
-            && openSeats > 0 && vacancies > 0; i++) {
+                && openSeats > 0 && vacancies > 0; i++) {
             alloted.add(list.get(i));
             openSeats--;
             count++;
             vacancies--;
         }
         for (int i = count; i < list.size()
-            && vacancies > 0; i++) {
+                && vacancies > 0; i++) {
             if (list.get(i).getCategory().equals("BC")
-                && bcSeats > 0) {
+                    && bcSeats > 0) {
                 alloted.add(list.get(i));
                 bcSeats--;
                 count++;
                 vacancies--;
             }
             if (list.get(i).getCategory().equals("ST")
-                && stSeats > 0) {
+                    && stSeats > 0) {
                 alloted.add(list.get(i));
                 stSeats--;
                 count++;
                 vacancies--;
             }
             if (list.get(i).getCategory().equals("SC")
-                && scSeats > 0 ) {
+                    && scSeats > 0 ) {
                 alloted.add(list.get(i));
                 scSeats--;
                 count++;
@@ -271,19 +276,19 @@ class Database {
         }
         for (int i = 0; i < alloted.size(); i++) {
             System.out.println(alloted.get(i).getName()
-                + "," + alloted.get(i).getTotal() + ","
-                + alloted.get(i).getCategory());
+                               + "," + alloted.get(i).getTotal() + ","
+                               + alloted.get(i).getCategory());
         }
     }
 }
 /**
  *this the class for main.
  */
-class Solution {
+final class Solution {
     /**
      *empty constructor
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * the main to read the input.
@@ -292,6 +297,10 @@ class Solution {
      */
     public static void main(final String[] args) {
         Student obj;
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
         Scanner scan = new Scanner(System.in);
         Database object = new Database();
         int totalQualified = scan.nextInt();
@@ -305,13 +314,14 @@ class Solution {
             String line  =  scan.nextLine();
             String[] tokens = line.split(",");
             obj = new Student(
-            tokens[0], tokens[1], tokens[2],
-            tokens[3], tokens[4], tokens[5], tokens[6]);
+                tokens[0], tokens[1], tokens[2],
+                tokens[three], tokens[four],
+                tokens[five], tokens[six]);
             object.addData(obj);
         }
         object.sorting();
         object.print();
         object.allotment(vacancies,
-            openSeats, bcSeats, scSeats, stSeats);
+                         openSeats, bcSeats, scSeats, stSeats);
     }
 }
