@@ -1,2 +1,4 @@
 Starting audit...
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m12\Assignment-1\Solution.java:272:29: ')' is preceded with whitespace. [ParenPad]
 Audit done.
+Checkstyle ends with 1 errors.

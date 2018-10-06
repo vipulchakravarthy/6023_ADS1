@@ -268,10 +268,14 @@ class Database {
             }
         }
         int reserved = bcSeats + scSeats + stSeats;
-        for (int i = count; i < list.size(); i++) {
-            if (reserved > 0) {
+        for (int i = 0; i < list.size(); i++) {
+            if (reserved > 0 ) {
+                if (alloted.contains(list.get(i))) {
+                    int sum = 0;
+                } else {
                 alloted.add(list.get(i));
                 reserved--;
+                }
             }
         }
         for (int i = 0; i < alloted.size(); i++) {

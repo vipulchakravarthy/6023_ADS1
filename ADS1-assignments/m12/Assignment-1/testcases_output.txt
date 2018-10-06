@@ -212,7 +212,7 @@ tanvi,90,ST
 Aditya,80,Open
 priya,76,SC
 Tanya,66,BC
-rahul,73,Open
+Ajay,76,Open
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -397,8 +397,8 @@ riya,83,Open
 Aditya,80,ST
 priya,72,SC
 varsha,66,BC
+Ajay,76,Open
+Amit,76,Open
 Arjun,75,Open
 rahul,73,Open
-priya,72,SC
-shyam,71,ST
 ----------------------------------------
