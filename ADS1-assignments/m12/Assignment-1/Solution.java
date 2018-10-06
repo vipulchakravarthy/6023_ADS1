@@ -90,8 +90,7 @@ class Database{
     }
   	public void allotment(int vacancies, int openSeats, int bcSeats, int scSeats, int stSeats) {
   		ArrayList<Student> alloted = new ArrayList<Student>();
-  		for(int i = 0; i < list.size(); i++) {
-  			while(openSeats > 0) {
+  		for (int i = 0; i < list.size() && openSeats > 0; i++) {
   				alloted.add(list.get(i));
   				openSeats--;
   			}
@@ -114,7 +113,6 @@ class Database{
   		// 		}
   		// 	}
   		// }
-  		}
   		for(int i = 0; i < alloted.size(); i++){
   		System.out.println(alloted.get(i).getName() + "," + alloted.get(i).getTotal() + "," + alloted.get(i).getCategory());
   		}
