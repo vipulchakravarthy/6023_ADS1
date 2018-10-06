@@ -90,10 +90,16 @@ class Database{
     }
   	public void allotment(int vacancies, int openSeats, int bcSeats, int scSeats, int stSeats) {
   		ArrayList<Student> alloted = new ArrayList<Student>();
+  		int count = 0;
   		for (int i = 0; i < list.size() && openSeats > 0; i++) {
   				alloted.add(list.get(i));
   				openSeats--;
-  			}
+  				count++;
+  		}
+  		 for (int i = count; i < list.size() && bcSeats > 0; i++) {
+  				alloted.add(list.get(i));
+  				bcSeats--;
+  		}
   		// 	while(bcSeats > 0) {
   		// 		if (list.get(i).getCategory().equals("BC")) {
   		// 			alloted.add(list.get(i));
