@@ -114,6 +114,11 @@ class Student {
         int month = Integer.parseInt(age[1]);
         return month;
     }
+    public int getYear() {
+        String[] age = this.birth.split("-");
+        int year = Integer.parseInt(age[2]);
+        return year;
+    }
 }
 /**
  * Class for database.
@@ -173,6 +178,13 @@ class Database {
                            > studentTwo.getSubTwo()) {
                     return 1;
                 } else {
+                    if (studentOne.getYear() >
+                     studentTwo.getYear()) {
+                        return 1;
+                    } else if (studentOne.getYear() <
+                     studentTwo.getYear()) {
+                        return -1;
+                    } else {
                     if (studentOne.getAge()
                             > studentTwo.getAge()) {
                         return 1;
@@ -180,6 +192,7 @@ class Database {
                                < studentTwo.getAge()) {
                         return -1;
                     }
+                }
                 }
             }
         }
