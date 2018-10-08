@@ -14,7 +14,8 @@ class MinHeap<K extends Comparable<K>> {
     }
     /**
      * checks whether it is min heap or not.
-     *
+     *the time complexiety is N.
+     *N is the size of the array.
      * @param  array  which is given as input.
      */
     public void isMinHeap(final K[] array) {
