@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.Comparable;
 /**
  *the min heap class is to.
  *check whether the given
@@ -34,11 +33,11 @@ class MinHeap<K extends Comparable<K>> {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      *an empty constructor.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      *the main class to read the input from user.

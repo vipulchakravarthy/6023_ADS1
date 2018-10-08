@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m13\13.1 isMinHeap\Solution.java:2:1: Redundant import from the java.lang package - java.lang.Comparable. [RedundantImport]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m13\13.1 isMinHeap\Solution.java:2:8: Unused import - java.lang.Comparable. [UnusedImports]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m13\13.1 isMinHeap\Solution.java:37:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 Audit done.
-Checkstyle ends with 3 errors.
