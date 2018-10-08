@@ -63,6 +63,10 @@ class Solution{
 			    case "Float":
 					for (int i = 0; i < inputs; i++) {
 					String line = scan.nextLine();
+					if(line.length() == 0) {
+						System.out.println("false");
+						break;
+					}
 					String[] tokens = line.split(",");
 					Float[] floatArray = new Float[tokens.length + 1];
 					for(int j = 0; j < floatArray.length - 1; j++) {
