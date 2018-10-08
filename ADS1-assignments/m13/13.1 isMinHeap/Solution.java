@@ -22,8 +22,7 @@ class Solution{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String str = scan.nextLine();
-		int inputs = scan.nextInt();
-		scan.next();
+		int inputs = Integer.parseInt(scan.nextLine());
 		switch(str){
 				case "String":
 				for (int i = 0; i < inputs; i++) {
