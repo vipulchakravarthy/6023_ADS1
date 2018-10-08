@@ -41,7 +41,7 @@ class Solution{
 					String line = scan.nextLine();
 					String[] tokens = line.split(",");
 					Integer[] intArray = new Integer[tokens.length + 1];
-					for(int j = 0; j < intArray.length; j++) {
+					for(int j = 0; j < intArray.length - 1; j++) {
 						intArray[j + 1] = Integer.parseInt(tokens[j]);
 					}
 					MinHeap<Integer> obj = new MinHeap<Integer>();
@@ -53,7 +53,7 @@ class Solution{
 					String line = scan.nextLine();
 					String[] tokens = line.split(",");
 					Double[] doubleArray = new Double[tokens.length + 1];
-					for(int j = 0; j < doubleArray.length;j++) {
+					for(int j = 0; j < doubleArray.length - 1;j++) {
 						doubleArray[j + 1] = Double.parseDouble(tokens[j]);
 					}
 					MinHeap<Double> obj = new MinHeap<Double>();
@@ -65,7 +65,7 @@ class Solution{
 					String line = scan.nextLine();
 					String[] tokens = line.split(",");
 					Float[] floatArray = new Float[tokens.length + 1];
-					for(int j = 0; j < floatArray.length; j++) {
+					for(int j = 0; j < floatArray.length - 1; j++) {
 						floatArray[j + 1] = Float.parseFloat(tokens[j]);
 					}
 					MinHeap<Float> obj = new MinHeap<Float>();
