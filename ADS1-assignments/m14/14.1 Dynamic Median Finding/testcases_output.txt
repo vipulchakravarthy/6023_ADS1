@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 1.0
 1.5
@@ -11,6 +11,7 @@ Expected Output:
 5.0
 5.5
 Your Output: 
+1.0
 1.5
 2.0
 2.5
@@ -20,13 +21,8 @@ Your Output:
 4.5
 5.0
 5.5
-Exception in thread "main" java.util.NoSuchElementException
-	at java.base/java.util.Scanner.throwFor(Unknown Source)
-	at java.base/java.util.Scanner.next(Unknown Source)
-	at java.base/java.util.Scanner.nextDouble(Unknown Source)
-	at Solution.main(Solution.java:44)
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 80150.0
 60868.0
@@ -100029,6 +100025,7 @@ Expected Output:
 50402.0
 50402.0
 Your Output: 
+80150.0
 60868.0
 41586.0
 44747.0
@@ -200028,13 +200025,8 @@ Your Output:
 50402.5
 50402.0
 50402.0
-Exception in thread "main" java.util.NoSuchElementException
-	at java.base/java.util.Scanner.throwFor(Unknown Source)
-	at java.base/java.util.Scanner.next(Unknown Source)
-	at java.base/java.util.Scanner.nextDouble(Unknown Source)
-	at Solution.main(Solution.java:44)
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 90584.0
 82102.0
@@ -300037,6 +300029,7 @@ Expected Output:
 49704.0
 49703.0
 Your Output: 
+90584.0
 82102.0
 73620.0
 71546.5
@@ -400036,13 +400029,8 @@ Your Output:
 49704.5
 49704.0
 49703.0
-Exception in thread "main" java.util.NoSuchElementException
-	at java.base/java.util.Scanner.throwFor(Unknown Source)
-	at java.base/java.util.Scanner.next(Unknown Source)
-	at java.base/java.util.Scanner.nextDouble(Unknown Source)
-	at Solution.main(Solution.java:44)
 ----------------------------------------
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 29689.0
 45774.0
@@ -401045,6 +401033,7 @@ Expected Output:
 51013.0
 51034.0
 Your Output: 
+29689.0
 45774.0
 43888.0
 52873.5
@@ -402044,9 +402033,4 @@ Your Output:
 51034.0
 51013.0
 51034.0
-Exception in thread "main" java.util.NoSuchElementException
-	at java.base/java.util.Scanner.throwFor(Unknown Source)
-	at java.base/java.util.Scanner.next(Unknown Source)
-	at java.base/java.util.Scanner.nextDouble(Unknown Source)
-	at Solution.main(Solution.java:44)
 ----------------------------------------
