@@ -23,7 +23,7 @@ class DynamicMedian {
      *to minheap.
      * @param      item  The item
      */
-    public void insertAtMin(double item) {
+    public void insertAtMin(final double item) {
         minObj.insert(item);
     }
     /**
@@ -31,7 +31,7 @@ class DynamicMedian {
      *to maxheap.
      * @param      item  The item
      */
-    public void insertAtMax(double item) {
+    public void insertAtMax(final double item) {
         maxObj.insert(item);
     }
     /**
@@ -117,12 +117,12 @@ final class Solution {
             if (obj.getMinSize() - obj.getMaxSize() > 1) {
                 obj.insertAtMax(obj.delMin());
             }
-            if ( obj.getMaxSize() - obj.getMinSize()  > 1) {
+            if (obj.getMaxSize() - obj.getMinSize()  > 1) {
                 obj.insertAtMin(obj.delMax());
             }
             if (Math.abs(
                         obj.getMinSize() - obj.getMaxSize()) == 1) {
-                if ( obj.getMinSize() > obj.getMaxSize()) {
+                if (obj.getMinSize() > obj.getMaxSize()) {
                     median = obj.getMin();
                     System.out.println(median);
                 } else {
@@ -130,7 +130,7 @@ final class Solution {
                     System.out.println(median);
                 }
             }
-            if (obj.getMinSize()  == obj.getMaxSize() ) {
+            if (obj.getMinSize()  == obj.getMaxSize()) {
                 double min = obj.getMin();
                 double max = obj.getMax();
                 median = (min + max) / 2.0;

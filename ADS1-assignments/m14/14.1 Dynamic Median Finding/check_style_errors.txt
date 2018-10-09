@@ -1,8 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:26:29: Parameter item should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:34:29: Parameter item should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:120:17: '(' is followed by whitespace. [ParenPad]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:125:21: '(' is followed by whitespace. [ParenPad]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:133:54: ')' is preceded with whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 5 errors.
