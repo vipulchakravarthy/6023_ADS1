@@ -36,11 +36,11 @@ class Solution{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		DynamicMedian obj = new DynamicMedian();
-		long inputs = scan.nextLong();
+		long inputs = scan.nextInt();
 		double element = scan.nextDouble();
 		obj.insertAtMin(element);
 		double median = element;
-		for(long i = 1; i < inputs; i++) {
+		for(long i = 0; i < inputs; i++) {
 			double input = scan.nextDouble();
 			if (input > median) {
 				obj.insertAtMin(input);

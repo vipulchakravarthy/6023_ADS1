@@ -11,7 +11,11 @@ Expected Output:
 5.0
 5.5
 Your Output: 
-
+Exception in thread "main" java.util.NoSuchElementException
+	at java.base/java.util.Scanner.throwFor(Unknown Source)
+	at java.base/java.util.Scanner.next(Unknown Source)
+	at java.base/java.util.Scanner.nextDouble(Unknown Source)
+	at Solution.main(Solution.java:44)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -100016,7 +100020,11 @@ Expected Output:
 50402.0
 50402.0
 Your Output: 
-
+Exception in thread "main" java.util.NoSuchElementException
+	at java.base/java.util.Scanner.throwFor(Unknown Source)
+	at java.base/java.util.Scanner.next(Unknown Source)
+	at java.base/java.util.Scanner.nextDouble(Unknown Source)
+	at Solution.main(Solution.java:44)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -200021,7 +200029,11 @@ Expected Output:
 49704.0
 49703.0
 Your Output: 
-
+Exception in thread "main" java.util.NoSuchElementException
+	at java.base/java.util.Scanner.throwFor(Unknown Source)
+	at java.base/java.util.Scanner.next(Unknown Source)
+	at java.base/java.util.Scanner.nextDouble(Unknown Source)
+	at Solution.main(Solution.java:44)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -201026,5 +201038,9 @@ Expected Output:
 51013.0
 51034.0
 Your Output: 
-
+Exception in thread "main" java.util.NoSuchElementException
+	at java.base/java.util.Scanner.throwFor(Unknown Source)
+	at java.base/java.util.Scanner.next(Unknown Source)
+	at java.base/java.util.Scanner.nextDouble(Unknown Source)
+	at Solution.main(Solution.java:44)
 ----------------------------------------
