@@ -9,7 +9,7 @@ class DynamicMedian{
 		minObj.insert(item);
 	}
 	public void insertAtMax(double item){
-		minObj.insert(item);
+		maxObj.insert(item);
 	}
 	public double getMin(){
 	return minObj.min();
