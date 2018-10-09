@@ -36,7 +36,7 @@ class Solution{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		DynamicMedian obj = new DynamicMedian();
-		int inputs = scan.nextInt();
+		long inputs = scan.nextLong();
 		double element = scan.nextDouble();
 		obj.insertAtMin(element);
 		double median = element;
