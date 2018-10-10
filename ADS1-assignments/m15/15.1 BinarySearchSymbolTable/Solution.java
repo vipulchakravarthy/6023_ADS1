@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * the class is for performing
  * binarysearch symbol table.
@@ -36,18 +37,9 @@ class BinarySearchST
      *when it is full.
      * @param      cap  The capacity
      */
-    private void resize(final int cap) {
-        int capacity = cap;
-        Key[]   tempKey
-        = (Key[]) new Comparable[capacity];
-        Value[] tempValue
-        = (Value[]) new Object[capacity];
-        for (int i = 0; i < size; i++) {
-            tempKey[i] = keys[i];
-            tempValue[i] = values[i];
-        }
-        values = tempValue;
-        keys = tempKey;
+    private void resize() {
+        keys = Arrays.copyOf(keys, size + 1);
+        values = Arrays.copyOf(values, size + 1);
     }
     /**
      * it returns the size of array.
@@ -90,7 +82,7 @@ class BinarySearchST
             return;
         }
         if (size == keys.length) {
-            resize(2 * keys.length);
+            resize();
         }
         for (int j = size; j > rank; j--) {
             keys[j] = keys[j - 1];
@@ -203,10 +195,6 @@ class BinarySearchST
         size--;
         keys[size] = null;
         values[size] = null;
-        final int four = 4;
-        if (size > 0 && size == keys.length / four) {
-            resize(keys.length / 2);
-        }
     }
     /**
      *this method is to print the all key - value.
