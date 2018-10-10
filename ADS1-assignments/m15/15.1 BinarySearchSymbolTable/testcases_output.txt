@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 X
 R
@@ -17,13 +17,10 @@ null
 Your Output: 
 X
 R
-2
+1
 true
-A 2
 C 4
 E 12
-E 6
-E 1
 H 5
 L 11
 M 9
@@ -31,9 +28,9 @@ P 10
 R 3
 S 0
 X 7
-2
+null
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 Y
 O 10
@@ -52,11 +49,9 @@ false
 null
 Your Output: 
 Y
-N 11
 O 10
 Q 4
 S 7
-S 2
 T 8
 U 5
 Y 3
@@ -65,11 +60,11 @@ null
 Y
 null
 O
-2
+1
 false
 null
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 X
 E 10
@@ -94,7 +89,6 @@ T
 Your Output: 
 X
 E 10
-E 4
 L 9
 M 7
 O 1
@@ -107,14 +101,14 @@ X 5
 0
 0
 0
-1
-10
-10
+0
+9
+9
 true
 5
 T
 ----------------------------------------
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 B 0
 C 10
@@ -135,13 +129,9 @@ true
 13
 P
 Your Output: 
-A 14
-A 3
 B 0
 C 10
 E 18
-E 12
-E 7
 H 11
 I 1
 L 17
@@ -149,17 +139,16 @@ M 15
 N 2
 P 16
 R 9
-R 4
 S 6
 X 13
 Y 5
 Y
-17
+12
 true
 13
 P
 ----------------------------------------
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 M
 null
@@ -178,13 +167,11 @@ Your Output:
 M
 null
 Y
-9
+7
 true
 B 8
-B 3
 E 10
 L 9
-L 5
 M 2
 O 4
 S 0

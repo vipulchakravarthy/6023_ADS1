@@ -31,13 +31,15 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
         return null;
     }
 	public void put(Key key, Value value) {
-		if(key == null) {
-		}
 		if(value == null) {
 			delete(key);
 			return;
 		}
 		int rank = rank(key);
+        if (rank < size && keys[rank].compareTo(key) == 0) {
+            values[rank] = value;
+            return;
+        }
 		if(size == keys.length) {
 			resize(2 * keys.length);
 		}
@@ -75,11 +77,11 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
 	}
 	public Key floor(Key key){
 		int rank = rank(key);
-		if(rank < size && key.compareTo(keys[rank]) == 0) {
-			return keys[rank];
-		}
 		if(rank == 0) {
 			return null;
+		}
+		if(rank < size && key.compareTo(keys[rank]) == 0) {
+			return keys[rank];
 		} else {
 			return keys[rank - 1];
 		}
@@ -155,7 +157,5 @@ class Solution{
 				default: break;
 			}
 		}
-
-
 	}
 }
