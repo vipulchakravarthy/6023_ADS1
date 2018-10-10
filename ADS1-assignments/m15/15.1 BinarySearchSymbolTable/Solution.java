@@ -34,7 +34,7 @@ class BinarySearchST
     /**
      *the method is to resize the array.
      *when it is full.
-     * @param      capacity  The capacity
+     * @param      cap  The capacity
      */
     private void resize(final int cap) {
         int capacity = cap;
