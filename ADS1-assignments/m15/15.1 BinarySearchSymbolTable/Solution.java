@@ -36,7 +36,8 @@ class BinarySearchST
      *when it is full.
      * @param      capacity  The capacity
      */
-    private void resize(final int capacity) {
+    private void resize(final int cap) {
+        int capacity = cap;
         Key[]   tempKey
         = (Key[]) new Comparable[capacity];
         Value[] tempValue
