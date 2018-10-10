@@ -23,9 +23,8 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
 		return size;
 	}
     public Value get(Key key) {
-        if (isEmpty()) return null;
         int rank = rank(key);
-        if (rank < size && keys[rank].compareTo(key) == 0){
+        if (rank < size && (keys[rank].compareTo(key) == 0)){
         	 return values[rank];
         }
         return null;
@@ -94,11 +93,8 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
 		return get(key) != null;
 	}
 	public void delete(Key key) {
-		if(isEmpty()) {
-			return;
-		}
 		int rank = rank(key);
-		if( rank == size || keys[rank].compareTo(key) != 0) {
+		if( rank == size || (keys[rank].compareTo(key) != 0)) {
 			return;
 		}
 		for(int j = rank; j < size - 1; j++) {
@@ -108,6 +104,9 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
 		size--;
 		keys[size] = null;
 		values[size] = null;
+		if (size > 0 && size == keys.length/4) {
+			resize(keys.length/2);
+		}
 	}
 	public void keys(){
 		for(int i = 0; i < size; i++){
