@@ -7,6 +7,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
 	BinarySearchST(){
 		keys = (Key[]) new Comparable[2];
 		values = (Value[]) new Object[2];
+		size = 0;
 	}
 	private void resize(int capacity) {
         assert capacity >= size;
