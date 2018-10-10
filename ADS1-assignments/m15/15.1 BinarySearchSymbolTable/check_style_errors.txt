@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m15\15.1 BinarySearchSymbolTable\Solution.java:38:8: Unused @param tag for 'cap'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 1 errors.

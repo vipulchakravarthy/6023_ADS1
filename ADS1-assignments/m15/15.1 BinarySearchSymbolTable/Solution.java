@@ -35,7 +35,6 @@ class BinarySearchST
     /**
      *the method is to resize the array.
      *when it is full.
-     * @param      cap  The capacity
      */
     private void resize() {
         keys = Arrays.copyOf(keys, size + 1);
