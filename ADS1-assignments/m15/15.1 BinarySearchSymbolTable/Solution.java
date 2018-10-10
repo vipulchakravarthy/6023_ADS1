@@ -150,7 +150,7 @@ class Solution{
 					obj.keys();
 					break;
 				case "contains":
-					System.out.println(check[1]);
+					System.out.println(obj.contains(check[1]));
 					break;
 				default: break;
 			}
