@@ -50,9 +50,6 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
 		size++;
 	}
 	public int rank(Key key){
-		if (key == null){
-
-		}
 		int low = 0;
 		int high = size - 1;
 		while(low <= high) {
@@ -74,8 +71,6 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
 		return keys[size - 1];
 	}
 	public Key min(){
-		if(isEmpty()) {
-		}
 		return keys[0];
 	}
 	public Key floor(Key key){
@@ -99,9 +94,6 @@ class BinarySearchST<Key extends Comparable<Key>, Value>{
 		return get(key) != null;
 	}
 	public void delete(Key key) {
-		if(key == null){
-
-		}
 		if(isEmpty()) {
 			return;
 		}
