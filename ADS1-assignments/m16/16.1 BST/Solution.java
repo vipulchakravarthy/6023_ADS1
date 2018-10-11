@@ -87,7 +87,7 @@ class BinarySearchT<T
          * @param  keys  is of Book type.
          * @param  values  The value
          */
-        public Node(final Book keys,
+        Node(final Book keys,
          final Value values) {
             this.key = keys;
             this.value = values;

@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:90:9: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 1 errors.
