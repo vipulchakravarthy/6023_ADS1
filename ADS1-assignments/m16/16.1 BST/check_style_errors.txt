@@ -1,14 +1,8 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:67:9: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:68:9: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:69:9: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:70:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:77:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:77:32: 'key' hides a field. [HiddenField]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:78:22: 'value' hides a field. [HiddenField]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:156:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:177:55: '3' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:178:57: '4' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:182:58: '3' is a magic number. [MagicNumber]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:71:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\m16\16.1 BST\Solution.java:78:9: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 5 errors.

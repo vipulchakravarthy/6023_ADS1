@@ -58,7 +58,8 @@ class Book implements Comparable<Book> {
  * @param      <T>      { parameter_description }
  * @param      <Value>  The value
  */
-class BinarySearchT<T extends Comparable<T>, Value> {
+class BinarySearchT<T
+    extends Comparable<T>, Value> {
     /**
      * the class is for maintaining left and right element.
      * storing the key and value pair.
@@ -71,13 +72,13 @@ class BinarySearchT<T extends Comparable<T>, Value> {
         /**
          * the constructor is to initialize.
          *
-         * @param      key  is of Book type.
-         * @param      value  The value
+         * @param  keys  is of Book type.
+         * @param  values  The value
          */
-        public Node(final Book key,
-         final Value value) {
-            this.key = key;
-            this.value = value;
+        public Node(final Book keys,
+         final Value values) {
+            this.key = keys;
+            this.value = values;
         }
     }
     /**
@@ -127,7 +128,8 @@ class BinarySearchT<T extends Comparable<T>, Value> {
         return temp;
     }
     /**
-     *the method is to get the value of corresponding.
+     *the method is to get the value of.
+     *corresponding.
      *tree.
      *
      * @param      key   The key
@@ -153,11 +155,11 @@ class BinarySearchT<T extends Comparable<T>, Value> {
 /**
  *the class for main function.
  */
-class Solution {
+final class Solution {
     /**
      *an empty constructor.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      *this is the main function for reading.
@@ -166,6 +168,8 @@ class Solution {
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
+        final int three = 3;
+        final int four = 4;
         BinarySearchT<Book, Integer> object
         = new BinarySearchT<Book, Integer>();
         while (scan.hasNext()) {
@@ -174,12 +178,12 @@ class Solution {
             switch (tokens[0]) {
             case "put":
                 Book obj = new Book(tokens[1],
-                                    tokens[2], tokens[3]);
-                object.put(obj, Integer.parseInt(tokens[4]));
+                                    tokens[2], tokens[three]);
+                object.put(obj, Integer.parseInt(tokens[four]));
                 break;
             case "get":
                 Book getObj = new Book(tokens[1],
-                                       tokens[2], tokens[3]);
+                                       tokens[2], tokens[three]);
                 System.out.println(object.get(getObj));
                 break;
             default: break;
