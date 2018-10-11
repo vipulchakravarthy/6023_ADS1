@@ -1,15 +1,14 @@
 import java.util.Scanner;
 
-class Book{
+class Book implements Comparable<Book>{
 	String bookName;
 	String authorName;
 	String bookPrice;
 	int quantity;
-	Book(String name, String author, String price, String value){
+	Book(String name, String author, String price){
 		 this.bookName = name;
 		 this.authorName = author;
 		 this.bookPrice = price;
-		 this.quantity = Integer.parseInt(value);
 	}
 	public String getBook(){
 		return bookName;
@@ -20,17 +19,17 @@ class Book{
 	public String getPrice(){
 		return bookPrice;
 	}
-	public int quantity(){
-		return quantity;
+	public int compareTo(Book that){
+		return -1;
 	}
 }
-class BinarySearchT<Key extends Comparable<Key>, Value>{
+class BinarySearchT<T extends Comparable<T>, Value>{
 		 class Node{
-		 Key key;
+		 Book key;
 		 Value value;
 		Node left;
 		 Node right;
-		public Node(Key key, Value value){
+		public Node(Book key, Value value){
 			this.key = key;
 			this.value = value;
 		}
@@ -39,19 +38,15 @@ class BinarySearchT<Key extends Comparable<Key>, Value>{
 	BinarySearchT(){
 		root = null;
 	}
-
-	public void put(Key key, Value value){
-
+	public void put(Book key, Value value){
 		root = put(root, key, value);
-
 	}
-	private Node put(Node temp, Key key, Value value){
-		// System.out.println(key.toString() +""+ value.toString()+""+root);
+	private Node put(Node temp, Book key, Value value){
 		if(temp == null) {
 			return new Node(key, value);
 
 		}
-		int comp = key.compareTo(temp.key);
+		int comp = key.getBook().compareTo(temp.key.getBook());
 		if(comp < 0) {
 			temp.left = put(temp.left, key, value);
 		} else if(comp > 0) {
@@ -61,10 +56,10 @@ class BinarySearchT<Key extends Comparable<Key>, Value>{
 		}
 		return temp;
 	}
-	public Value get(Key key) {
+	public Value get(Book key) {
 		Node temp = root;
 		while(temp != null) {
-			int comp = key.compareTo(temp.key);
+			int comp = key.getBook().compareTo(temp.key.getBook());
 			if(comp < 0) {
 				temp = temp.left;
 			} else if(comp > 0) {
@@ -81,18 +76,20 @@ class Solution{
 	}
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		BinarySearchT<String, Integer> object = new BinarySearchT<String, Integer>();
+		BinarySearchT<Book, Integer> object = new BinarySearchT<Book, Integer>();
 		while(scan.hasNext()){
 			String line = scan.nextLine();
 			String[] tokens = line.split(",");
 			switch(tokens[0]) {
 				case "put":
 					Book obj = new Book(tokens[1],
-					 tokens[2], tokens[3], tokens[4]);
-					object.put(tokens[1], Integer.parseInt(tokens[4]));
+					 tokens[2], tokens[3]);
+					object.put(obj, Integer.parseInt(tokens[4]));
 					break;
 				case "get":
-					System.out.println(object.get(tokens[1]));
+					Book getObj = new Book(tokens[1],
+						tokens[2], tokens[3]);
+					System.out.println(object.get(getObj));
 					break;
 				default: break;
 			}
