@@ -65,9 +65,21 @@ class BinarySearchT<T
      * storing the key and value pair.
      */
     class Node {
+        /**
+         *the key variable to store the book obj.
+         */
         private Book key;
+        /**
+         *the variable to store the value.
+         */
         private Value value;
+        /**
+         *the method to store the left node.
+         */
         private Node left;
+        /**
+         *the method to store the right node.
+         */
         private Node right;
         /**
          * the constructor is to initialize.
@@ -94,7 +106,9 @@ class BinarySearchT<T
     /**
      *the method is to insert.
      * element in BST.
-     *
+     *the time complexity is N.
+     *it should go through the complete.
+     *tree to insert an element.
      * @param      key    The key
      * @param      value  The value
      */
@@ -131,7 +145,9 @@ class BinarySearchT<T
      *the method is to get the value of.
      *corresponding.
      *tree.
-     *
+     *the time complexity is N.
+     *it should go through the complete.
+     *tree to get value of an element.
      * @param      key   The key
      *
      * @return the value of respective key.
