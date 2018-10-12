@@ -98,8 +98,8 @@ public class MinPQ<Key> implements Iterable<Key> {
         n = keys.length;
         pq = (Key[]) new Object[keys.length + 1];
         for (int i = 0; i < n; i++)
-            pq[i+1] = keys[i];
-        for (int k = n/2; k >= 1; k--)
+            pq[i + 1] = keys[i];
+        for (int k = n / 2; k >= 1; k--)
             sink(k);
         assert isMinHeap();
     }
@@ -170,42 +170,41 @@ public class MinPQ<Key> implements Iterable<Key> {
         Key min = pq[1];
         exch(1, n--);
         sink(1);
-        pq[n+1] = null;     // to avoid loiterig and help with garbage collection
+        pq[n + 1] = null;   // to avoid loiterig and help with garbage collection
         if ((n > 0) && (n == (pq.length - 1) / 4)) resize(pq.length / 2);
         assert isMinHeap();
         return min;
     }
 
 
-   /***************************************************************************
-    * Helper functions to restore the heap invariant.
-    ***************************************************************************/
+    /***************************************************************************
+     * Helper functions to restore the heap invariant.
+     ***************************************************************************/
 
     private void swim(int k) {
-        while (k > 1 && greater(k/2, k)) {
-            exch(k, k/2);
-            k = k/2;
+        while (k > 1 && greater(k / 2, k)) {
+            exch(k, k / 2);
+            k = k / 2;
         }
     }
 
     private void sink(int k) {
-        while (2*k <= n) {
-            int j = 2*k;
-            if (j < n && greater(j, j+1)) j++;
+        while (2 * k <= n) {
+            int j = 2 * k;
+            if (j < n && greater(j, j + 1)) j++;
             if (!greater(k, j)) break;
             exch(k, j);
             k = j;
         }
     }
 
-   /***************************************************************************
-    * Helper functions for compares and swaps.
-    ***************************************************************************/
+    /***************************************************************************
+     * Helper functions for compares and swaps.
+     ***************************************************************************/
     private boolean greater(int i, int j) {
         if (comparator == null) {
             return ((Comparable<Key>) pq[i]).compareTo(pq[j]) > 0;
-        }
-        else {
+        } else {
             return comparator.compare(pq[i], pq[j]) > 0;
         }
     }
@@ -224,8 +223,8 @@ public class MinPQ<Key> implements Iterable<Key> {
     // is subtree of pq[1..n] rooted at k a min heap?
     private boolean isMinHeap(int k) {
         if (k > n) return true;
-        int left = 2*k;
-        int right = 2*k + 1;
+        int left = 2 * k;
+        int right = 2 * k + 1;
         if (left  <= n && greater(k, left))  return false;
         if (right <= n && greater(k, right)) return false;
         return isMinHeap(left) && isMinHeap(right);
