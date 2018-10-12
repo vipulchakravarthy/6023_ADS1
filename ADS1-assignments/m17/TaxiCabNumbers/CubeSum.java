@@ -44,7 +44,6 @@ public final class CubeSum
     }
     /**
      *this is main method for reading input.
-     *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -76,7 +75,8 @@ public final class CubeSum
             temp = result.sum;
             if (result.numberTwo < range) {
                 pqObj.insert(new CubeSum(
-                result.numberOne, result.numberTwo + 1));
+                result.numberOne,
+                result.numberTwo + 1));
             }
         }
     }
