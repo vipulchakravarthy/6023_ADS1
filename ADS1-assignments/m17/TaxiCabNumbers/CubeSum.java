@@ -78,3 +78,4 @@ public class CubeSum implements Comparable<CubeSum> {
             }
         }
     }
+
