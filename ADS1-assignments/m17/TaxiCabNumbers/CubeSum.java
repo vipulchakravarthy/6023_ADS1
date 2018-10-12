@@ -3,7 +3,8 @@ import java.util.Scanner;
  *the class for cubesum and print the.
  *taxi cab numbers.
  */
-public class CubeSum implements Comparable<CubeSum> {
+public class CubeSum
+    implements Comparable<CubeSum> {
     /**
      *the variable to store sum of the cubes.
      */
@@ -24,7 +25,7 @@ public class CubeSum implements Comparable<CubeSum> {
      */
     public CubeSum(final int numOne, final int numTwo) {
         this.sum = numOne * numOne * numOne
-        + numTwo * numTwo * numTwo;
+                   + numTwo * numTwo * numTwo;
         this.numberOne = numOne;
         this.numberTwo = numTwo;
     }
@@ -52,7 +53,8 @@ public class CubeSum implements Comparable<CubeSum> {
         int ways = scan.nextInt();
         int count = 0;
         int temp = -1;
-        MinPQ<CubeSum> pqObj = new MinPQ<CubeSum>();
+        MinPQ<CubeSum> pqObj
+            = new MinPQ<CubeSum>();
         for (int i = 0; i <= range; i++) {
             pqObj.insert(new CubeSum(i, i));
         }
@@ -63,7 +65,7 @@ public class CubeSum implements Comparable<CubeSum> {
             } else {
                 count = 0;
             }
-            if(count == ways - 1) {
+            if (count == ways - 1) {
                 number--;
                 if (number == 0) {
                     System.out.println(result.sum);
@@ -73,9 +75,9 @@ public class CubeSum implements Comparable<CubeSum> {
             temp = result.sum;
             if (result.numberTwo < range) {
                 pqObj.insert(new CubeSum(
-                    result.numberOne, result.numberTwo + 1));
-            }
+                                 result.numberOne, result.numberTwo + 1));
             }
         }
     }
+}
 
