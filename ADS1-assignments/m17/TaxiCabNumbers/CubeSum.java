@@ -1,83 +1,79 @@
-/******************************************************************************
- *  Compilation:  javac CubeSum.java
- *  Execution:    java CubeSum n
- *  Dependencies: MinPQ.java
- *
- *  Print out integers of the form a^3 + b^3 in sorted order, where
- *  0 <= a <= b <= n.
- *
- *  % java CubeSum 10
- *  0 = 0^3 + 0^3
- *  1 = 0^3 + 1^3
- *  2 = 1^3 + 1^3
- *  8 = 0^3 + 2^3
- *  9 = 1^3 + 2^3
- *  ...
- *  1729 = 9^3 + 10^3
- *  1729 = 1^3 + 12^3
- *  ...
- *  3456 = 12^3 + 12^3
- *
- *  Remarks
- *  -------
- *   - Easily extends to handle sums of the form f(a) + g(b)
- *   - Prints out a sum more than once if it can be obtained
- *     in more than one way, e.g., 1729 = 9^3 + 10^3 = 1^3 + 12^3
- *
- ******************************************************************************/
 import java.util.Scanner;
+/**
+ *the class for cubesum and print the.
+ *taxi cab numbers.
+ */
 public class CubeSum implements Comparable<CubeSum> {
+    /**
+     *the variable to store sum of the cubes.
+     */
     private final int sum;
-    private final int i;
-    private final int j;
-
-    public CubeSum(int i, int j) {
-        this.sum = i*i*i + j*j*j;
-        this.i = i;
-        this.j = j;
+    /**
+     *the element to store the first number.
+     */
+    private final int numberOne;
+    /**
+     *the element to store the second number.
+     */
+    private final int numberTwo;
+    /**
+     *the constructor is to initialize.
+     *
+     * @param      numOne  The number one
+     * @param      numTwo  The number two
+     */
+    public CubeSum(final int numOne, final int numTwo) {
+        this.sum = numOne * numOne * numOne
+        + numTwo * numTwo * numTwo;
+        this.numberOne = numOne;
+        this.numberTwo = numTwo;
     }
-
+    /**
+     * compare to method is to for comparing two sums.
+     *
+     * @param      that  The that
+     *
+     * @return  compare value as 1 or 0 or -1
+     */
     public int compareTo(CubeSum that) {
         if (this.sum < that.sum) return -1;
         if (this.sum > that.sum) return +1;
         return 0;
     }
-
-    public String toString() {
-        return sum + " = " + i + "^3" + " + " + j + "^3";
-    }
-
-
+    /**
+     *this is main method for reading input.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
-        int n = 600;
+        int range = 600;
         Scanner scan = new Scanner(System.in);
-        int N = scan.nextInt();
-        int M = scan.nextInt();
+        int number = scan.nextInt();
+        int ways = scan.nextInt();
         int count = 0;
         int temp = -1;
-        // initialize priority queue
-        MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-        for (int i = 0; i <= n; i++) {
-            pq.insert(new CubeSum(i, i));
+        MinPQ<CubeSum> pqObj = new MinPQ<CubeSum>();
+        for (int i = 0; i <= range; i++) {
+            pqObj.insert(new CubeSum(i, i));
         }
-        // find smallest sum, print it out, and update
-        while (!pq.isEmpty()) {
-            CubeSum s = pq.delMin();
-            if (temp == s.sum) {
+        while (!pqObj.isEmpty()) {
+            CubeSum result = pqObj.delMin();
+            if (temp == result.sum) {
                 count++;
             } else {
                 count = 0;
             }
-            if(count == M - 1) {
-                N--;
-                if (N == 0) {
-                    System.out.println(s.sum);
+            if(count == ways - 1) {
+                number--;
+                if (number == 0) {
+                    System.out.println(result.sum);
                     break;
                 }
             }
-            temp = s.sum;
-            if (s.j < n) {
-                pq.insert(new CubeSum(s.i, s.j + 1));
+            temp = result.sum;
+            if (result.numberTwo < range) {
+                pqObj.insert(new CubeSum(
+                    result.numberOne, result.numberTwo + 1));
             }
             }
         }
