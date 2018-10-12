@@ -33,21 +33,23 @@ class CubeSum
     /**
      *this method returns sum.
      *
-     * @return     The sum.
+     * @return    The sum.
      */
-    public int getSum(){
+    public int getSum() {
         return this.sum;
     }
     /**
      *this method returns the first number.
+     *@return returns the first number.
      */
-    public int getNumOne(){
+    public int getNumOne() {
         return this.numberOne;
     }
     /**
      *this method returns the second number.
+     *@return returns the second number.
      */
-    public int getNumTwo(){
+    public int getNumTwo() {
         return this.numberTwo;
     }
     /**
@@ -70,11 +72,11 @@ class CubeSum
 /**
  *the solution class for main method.
  */
-final class Solution{
+final class Solution {
     /**
      *an empty constructor.
      */
-    private Solution(){
+    private Solution() {
 
     }
     /**
@@ -110,8 +112,8 @@ final class Solution{
             temp = result.getSum();
             if (result.getNumTwo() < range) {
                 pqObj.insert(new CubeSum(
-                result.getNumOne(),
-                result.getNumTwo() + 1));
+                                 result.getNumOne(),
+                                 result.getNumTwo() + 1));
             }
         }
     }
