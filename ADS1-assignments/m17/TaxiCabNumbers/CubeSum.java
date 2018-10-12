@@ -36,7 +36,7 @@ public class CubeSum
      *
      * @return  compare value as 1 or 0 or -1
      */
-    public int compareTo(CubeSum that) {
+    public int compareTo(final CubeSum that) {
         if (this.sum < that.sum) return -1;
         if (this.sum > that.sum) return +1;
         return 0;
