@@ -49,7 +49,7 @@ public class CubeSum implements Comparable<CubeSum> {
 
 
     public static void main(final String[] args) {
-        int n = 500;
+        int n = 600;
         Scanner scan = new Scanner(System.in);
         int N = scan.nextInt();
         int M = scan.nextInt();
