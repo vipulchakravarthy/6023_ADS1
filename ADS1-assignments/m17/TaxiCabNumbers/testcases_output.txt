@@ -1,0 +1,35 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+1729
+Your Output: 
+Error: Could not find or load main class Solution
+Caused by: java.lang.ClassNotFoundException: Solution
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+4673088
+Your Output: 
+Error: Could not find or load main class Solution
+Caused by: java.lang.ClassNotFoundException: Solution
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+86488136
+Your Output: 
+Error: Could not find or load main class Solution
+Caused by: java.lang.ClassNotFoundException: Solution
+----------------------------------------
+########## Testcase 3: Failed ##########
+Expected Output: 
+87539319
+Your Output: 
+Error: Could not find or load main class Solution
+Caused by: java.lang.ClassNotFoundException: Solution
+----------------------------------------
+########## Testcase 4: Failed ##########
+Expected Output: 
+143604279
+Your Output: 
+Error: Could not find or load main class Solution
+Caused by: java.lang.ClassNotFoundException: Solution
+----------------------------------------
