@@ -3,7 +3,7 @@ import java.util.Scanner;
  *the class for cubesum and print the.
  *taxi cab numbers.
  */
-public class CubeSum
+public final class CubeSum
     implements Comparable<CubeSum> {
     /**
      *the variable to store sum of the cubes.
@@ -23,7 +23,7 @@ public class CubeSum
      * @param      numOne  The number one
      * @param      numTwo  The number two
      */
-    private CubeSum(
+    public CubeSum(
         final int numOne, final int numTwo) {
         this.sum = numOne * numOne * numOne
                    + numTwo * numTwo * numTwo;
