@@ -23,7 +23,8 @@ public class CubeSum
      * @param      numOne  The number one
      * @param      numTwo  The number two
      */
-    public CubeSum(final int numOne, final int numTwo) {
+    public CubeSum(
+        final int numOne, final int numTwo) {
         this.sum = numOne * numOne * numOne
                    + numTwo * numTwo * numTwo;
         this.numberOne = numOne;
@@ -75,7 +76,7 @@ public class CubeSum
             temp = result.sum;
             if (result.numberTwo < range) {
                 pqObj.insert(new CubeSum(
-                                 result.numberOne, result.numberTwo + 1));
+                result.numberOne, result.numberTwo + 1));
             }
         }
     }
