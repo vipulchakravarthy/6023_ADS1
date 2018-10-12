@@ -77,10 +77,13 @@ final class Solution {
      *an empty constructor.
      */
     private Solution() {
-
     }
     /**
      *this is main method for reading input.
+     *first it will add elements to the MinPQ.
+     *it will iterate through the PQ untill
+     *we find the taxicab number.
+     *time complexity is O(2N);
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
