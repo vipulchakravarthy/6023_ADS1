@@ -23,7 +23,7 @@ public class CubeSum
      * @param      numOne  The number one
      * @param      numTwo  The number two
      */
-    public CubeSum(
+    private CubeSum(
         final int numOne, final int numTwo) {
         this.sum = numOne * numOne * numOne
                    + numTwo * numTwo * numTwo;
