@@ -38,8 +38,12 @@ public final class CubeSum
      * @return  compare value as 1 or 0 or -1
      */
     public int compareTo(final CubeSum that) {
-        if (this.sum < that.sum) return -1;
-        if (this.sum > that.sum) return +1;
+        if (this.sum < that.sum) {
+            return -1;
+        }
+        if (this.sum > that.sum) {
+            return +1;
+        }
         return 0;
     }
     /**
@@ -47,7 +51,7 @@ public final class CubeSum
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        int range = 600;
+        final int range = 600;
         Scanner scan = new Scanner(System.in);
         int number = scan.nextInt();
         int ways = scan.nextInt();
