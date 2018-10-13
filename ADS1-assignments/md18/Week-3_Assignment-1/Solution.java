@@ -33,12 +33,12 @@ class Solution{
 	}
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
-		StockOrder obj = new StockOrder();
 		int range = scan.nextInt();
 		int hours = 6;
 		scan.nextLine();
 		while(hours > 0){
-			for(int i = 0; i <= range; i++) {
+			StockOrder obj = new StockOrder();
+			for(int i = 0; i < range; i++) {
 				String line = scan.nextLine();
 				String[] tokens = line.split(",");
 				obj.put(tokens[0], tokens[1]);
