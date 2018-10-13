@@ -159,6 +159,9 @@ class BinarySearchST
     public void deleteMin() {
         delete(min());
     }
+    public void deleteMax() {
+        delete(max());
+    }
     /**
      * whether the array is empty or not.
      * @return     True if empty, False otherwise.

@@ -20,41 +20,57 @@ class StockOrder{
 	MaxPQ<Double> maxObj;
 	MinPQ<Double> minObj;
 	ArrayList<Company> list;
+	BinarySearchST<Double, String> bst;
 	StockOrder(){
 		maxObj = new MaxPQ<Double>();
 		minObj = new MinPQ<Double>();
 		list = new ArrayList<Company>();
+		bst = new BinarySearchST<Double, String>();
 	}
 	public void put(Company object){
 		list.add(object);
+		bst.put(object.getCent(), object.getName());
 		maxObj.insert(object.getCent());
 		minObj.insert(object.getCent());
 	}
 	public void print(){
-		for(int j = 0; j < 5; j++){
-			Double temp = maxObj.delMax();
-			String name = "";
-			for(int i = 0; i < list.size(); i++) {
-				if(list.get(i).getCent() == temp){
-					name = list.get(i).getName();
-					list.remove(i);
-					break;
-				}
-			}
-			System.out.println(name +" " + temp);
+		// for(int j = 0; j < 5; j++){
+		// 	Double temp = maxObj.delMax();
+		// 	String name = "";
+		// 	for(int i = 0; i < list.size(); i++) {
+		// 		if(list.get(i).getCent() == temp){
+		// 			name = list.get(i).getName();
+		// 			list.remove(i);
+		// 			break;
+		// 		}
+		// 	}
+		// 	System.out.println(name +" " + temp);
+		// }
+		// System.out.println();
+		// for(int j = 0; j < 5; j++){
+		// 	Double tempMin = minObj.delMin();
+		// 	String nameMin = "";
+		// 	for(int i = 0; i < list.size(); i++) {
+		// 		if(list.get(i).getCent() == tempMin){
+		// 			nameMin = list.get(i).getName();
+		// 			list.remove(i);
+		// 			break;
+		// 		}
+		// 	}
+		// 	System.out.println(nameMin +" " + tempMin);
+		// }
+		for(int i = 0; i < 5; i++) {
+			Double temp = bst.max();
+			String nameMax = bst.get(temp);
+			bst.deleteMax();
+			System.out.println( nameMax+ " " + temp);
 		}
 		System.out.println();
-		for(int j = 0; j < 5; j++){
-			Double tempMin = minObj.delMin();
-			String nameMin = "";
-			for(int i = 0; i < list.size(); i++) {
-				if(list.get(i).getCent() == tempMin){
-					nameMin = list.get(i).getName();
-					list.remove(i);
-					break;
-				}
-			}
-			System.out.println(nameMin +" " + tempMin);
+		for(int i = 0; i < 5; i++){
+			Double tempMin = bst.min();
+			String name = bst.get(tempMin);
+			bst.deleteMin();
+			System.out.println(name + " " + tempMin);
 		}
 		System.out.println();
 	}
