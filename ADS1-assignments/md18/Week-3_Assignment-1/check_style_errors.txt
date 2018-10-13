@@ -25,8 +25,8 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:32:19: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:34:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:38:29: '6' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:40:22: 'while' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:40:22: 'while' is not followed by whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:40:33: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:41:28: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:41:28: 'for' is not followed by whitespace. [WhitespaceAround]
 Audit done.
 Checkstyle ends with 29 errors.

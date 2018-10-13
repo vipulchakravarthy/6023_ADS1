@@ -38,7 +38,7 @@ class Solution{
 		int hours = 6;
 		scan.nextLine();
 		while(hours > 0){
-			for(int i = 0; i < range; i++) {
+			for(int i = 0; i <= range; i++) {
 				String line = scan.nextLine();
 				String[] tokens = line.split(",");
 				obj.put(tokens[0], tokens[1]);
