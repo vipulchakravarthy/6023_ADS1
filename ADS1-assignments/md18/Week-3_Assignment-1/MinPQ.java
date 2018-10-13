@@ -16,6 +16,9 @@
  *  (ala insertion sort).
  *
  ******************************************************************************/
+
+// package edu.princeton.cs.algs4;
+
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -265,20 +268,20 @@ public class MinPQ<Key> implements Iterable<Key> {
         }
     }
 
-    /**
-     * Unit tests the {@code MinPQ} data type.
-     *
-     * @param args the command-line arguments
-     */
-//     public static void main(String[] args) {
-//         MinPQ<String> pq = new MinPQ<String>();
-//         while (!StdIn.isEmpty()) {
-//             String item = StdIn.readString();
-//             if (!item.equals("-")) pq.insert(item);
-//             else if (!pq.isEmpty()) StdOut.print(pq.delMin() + " ");
-//         }
-//         StdOut.println("(" + pq.size() + " left on pq)");
-//     }
+    // /**
+    //  * Unit tests the {@code MinPQ} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) {
+    //     MinPQ<String> pq = new MinPQ<String>();
+    //     while (!StdIn.isEmpty()) {
+    //         String item = StdIn.readString();
+    //         if (!item.equals("-")) pq.insert(item);
+    //         else if (!pq.isEmpty()) StdOut.print(pq.delMin() + " ");
+    //     }
+    //     StdOut.println("(" + pq.size() + " left on pq)");
+    // }
 
 }
 

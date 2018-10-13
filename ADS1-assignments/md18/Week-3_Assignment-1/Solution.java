@@ -1,47 +1,79 @@
 import java.util.Scanner;
-class StockOrder{
-	BST<Double, String> bstMaxObj;
-	BST<Double, String> bstMinObj;
-	StockOrder(){
-		bstMaxObj = new BST<Double, String>();
-		bstMinObj = new BST<Double, String>();
+import java.util.ArrayList;
+class Company{
+	private String name;
+	private double percent;
+	Company(){
 	}
-	public void put(String name, String percent){
-		bstMaxObj.put(Double.parseDouble(percent), name);
-		bstMinObj.put(Double.parseDouble(percent), name);
+	Company(String name, String percent){
+		this.name = name;
+		this.percent = Double.parseDouble(percent);
+	}
+	public String getName(){
+		return this.name;
+	}
+	public double getCent(){
+		return this.percent;
+	}
+}
+class StockOrder{
+	MaxPQ<Double> maxObj;
+	MinPQ<Double> minObj;
+	ArrayList<Company> list;
+	StockOrder(){
+		maxObj = new MaxPQ<Double>();
+		minObj = new MinPQ<Double>();
+		list = new ArrayList<Company>();
+	}
+	public void put(Company object){
+		list.add(object);
+		maxObj.insert(object.getCent());
+		minObj.insert(object.getCent());
 	}
 	public void print(){
-		for (int i = 0; i < 5; i++) {
-			Double tempMax = bstMaxObj.max();
-			String nameMax = bstMaxObj.get(tempMax);
-			bstMaxObj.deleteMax();
-			System.out.println(nameMax + " "+ tempMax);
+		for(int j = 0; j < 5; j++){
+			Double temp = maxObj.delMax();
+			String name = "";
+			for(int i = 0; i < list.size(); i++) {
+				if(list.get(i).getCent() == temp){
+					name = list.get(i).getName();
+					break;
+				}
+			}
+			System.out.println(name +" " + temp);
 		}
 		System.out.println();
-		for (int i = 0; i < 5; i++) {
-			Double tempMin = bstMinObj.min();
-			String nameMin = bstMinObj.get(tempMin);
-			bstMinObj.deleteMin();
-			System.out.println(nameMin + " "+ tempMin);
+		for(int j = 0; j < 5; j++){
+			Double tempMin = minObj.delMin();
+			String nameMin = "";
+			for(int i = 0; i < list.size(); i++) {
+				if(list.get(i).getCent() == tempMin){
+					nameMin = list.get(i).getName();
+					break;
+				}
+			}
+			System.out.println(nameMin +" " + tempMin);
 		}
 		System.out.println();
 	}
-
 }
 class Solution{
 	Solution(){
+
 	}
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
+		StockOrder obj = new StockOrder();
+		Company comDetails;
 		int range = scan.nextInt();
 		int hours = 6;
 		scan.nextLine();
 		while(hours > 0){
-			StockOrder obj = new StockOrder();
 			for(int i = 0; i < range; i++) {
 				String line = scan.nextLine();
 				String[] tokens = line.split(",");
-				obj.put(tokens[0], tokens[1]);
+				comDetails = new Company(tokens[0], tokens[1]);
+				obj.put(comDetails);
 			}
 			obj.print();
 			hours--;

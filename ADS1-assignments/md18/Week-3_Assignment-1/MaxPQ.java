@@ -17,6 +17,9 @@
  *  (ala insertion sort).
  *
  ******************************************************************************/
+
+// package edu.princeton.cs.algs4;
+
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -273,12 +276,13 @@ public class MaxPQ<Key> implements Iterable<Key> {
             return copy.delMax();
         }
     }
+}
 
-    /**
-     * Unit tests the {@code MaxPQ} data type.
-     *
-     * @param args the command-line arguments
-     */
+//     /**
+//      * Unit tests the {@code MaxPQ} data type.
+//      *
+//      * @param args the command-line arguments
+//      */
 //     public static void main(String[] args) {
 //         MaxPQ<String> pq = new MaxPQ<String>();
 //         while (!StdIn.isEmpty()) {
@@ -289,7 +293,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
 //         StdOut.println("(" + pq.size() + " left on pq)");
 //     }
 
-}
+// }
 
 /******************************************************************************
  *  Copyright 2002-2016, Robert Sedgewick and Kevin Wayne.
