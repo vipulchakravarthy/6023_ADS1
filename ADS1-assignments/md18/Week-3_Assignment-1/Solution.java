@@ -37,6 +37,7 @@ class StockOrder{
 			for(int i = 0; i < list.size(); i++) {
 				if(list.get(i).getCent() == temp){
 					name = list.get(i).getName();
+					list.remove(i);
 					break;
 				}
 			}
@@ -49,6 +50,7 @@ class StockOrder{
 			for(int i = 0; i < list.size(); i++) {
 				if(list.get(i).getCent() == tempMin){
 					nameMin = list.get(i).getName();
+					list.remove(i);
 					break;
 				}
 			}
@@ -59,7 +61,6 @@ class StockOrder{
 }
 class Solution{
 	Solution(){
-
 	}
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
