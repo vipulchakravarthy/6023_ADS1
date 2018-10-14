@@ -21,11 +21,10 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:17:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:17:52: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:19:26: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:22:76: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:24: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:22:74: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:24:26: 'else' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:24:26: '}' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:24:81: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:24:80: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:31: Missing a Javadoc comment. [JavadocType]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:31:13: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:32:9: Missing a Javadoc comment. [JavadocVariable]
@@ -57,4 +56,4 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:64:33: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:66:57: '{' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 57 errors.
+Checkstyle ends with 56 errors.
