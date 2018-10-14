@@ -38,10 +38,12 @@ class Stocks{
 			Company obj = maxObj.delMax();
 			System.out.println(obj.getName() + " " + obj.getCent());
 		}
+		System.out.println();
 		for(int i = 0; i < 5; i++){
 			Company object = minObj.delMin();
 			System.out.println(object.getName() + " " + object.getCent());
 		}
+		System.out.println();
 	}
 }
 class Solution{
