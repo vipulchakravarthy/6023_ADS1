@@ -31,22 +31,43 @@ class Company implements Comparable<Company>{
 class Stocks{
 	MaxPQ<Company> maxObj;
 	MinPQ<Company> minObj;
+	BinarySearchST<String, Integer> maxST;
+	BinarySearchST<String, Integer> minST;
 	Stocks(){
 		maxObj = new MaxPQ<Company>();
 		minObj = new MinPQ<Company>();
+		maxST = new BinarySearchST<String, Integer>();
+		minST = new BinarySearchST<String, Integer>();
 	}
 	public void put(Company obj){
 		maxObj.insert(obj);
 		minObj.insert(obj);
 	}
+	public void getFreq(String type, String name){
+		if(type.equals("maxST")){
+			System.out.println(maxST.get(name));
+		} else if(type.equals("minST")){
+			System.out.println(minST.get(name));
+		}
+	}
 	public void print(){
 		for(int i = 0; i < 5; i++){
 			Company obj = maxObj.delMax();
+			if(!(maxST.contains(obj.getName()))){
+				maxST.put(obj.getName(), 1);
+			} else {
+				maxST.put(obj.getName(), maxST.get(obj.getName()) + 1);
+			}
 			System.out.println(obj.getName() + " " + obj.getCent());
 		}
 		System.out.println();
 		for(int i = 0; i < 5; i++){
 			Company object = minObj.delMin();
+			if(!(minST.contains(object.getName()))){
+				minST.put(object.getName(), 1);
+			} else {
+				minST.put(object.getName(), minST.get(object.getName()) + 1);
+			}
 			System.out.println(object.getName() + " " + object.getCent());
 		}
 		System.out.println();
@@ -71,6 +92,19 @@ class Solution{
 			stockObj.print();
 			hours--;
 		}
+		System.out.println();
 		int queries = scan.nextInt();
+		Stocks stocks = new Stocks();
+		while(queries > 0) {
+			String[] tokens = scan.nextLine().split(",");
+			switch(tokens[0]){
+				case "get":
+					stocks.getFreq(tokens[1], tokens[2]);
+					break;
+				case "intersection":
+					break;
+			}
+			queries--;
+		}
 	}
 }
