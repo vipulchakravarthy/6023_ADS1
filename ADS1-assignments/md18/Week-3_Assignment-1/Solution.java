@@ -59,10 +59,10 @@ class Solution{
 		Scanner scan = new Scanner(System.in);
 		int range = scan.nextInt();
 		Company obj;
-		Stocks stockObj = new Stocks();
 		int hours = 6;
 		scan.nextLine();
 		while(hours > 0){
+			Stocks stockObj = new Stocks();
 			for (int  i = 0; i < range; i++){
 				String[] tokens = scan.nextLine().split(",");
 				obj = new Company(tokens[0], tokens[1]);

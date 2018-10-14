@@ -52,9 +52,9 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:56:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:56:19: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:58:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:63:29: '6' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:65:22: 'while' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:65:33: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:62:29: '6' is a magic number. [MagicNumber]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:64:22: 'while' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:64:33: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:66:57: '{' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
 Checkstyle ends with 57 errors.
