@@ -1,78 +1,47 @@
 import java.util.Scanner;
-import java.util.ArrayList;
-class Company{
-	private String name;
-	private double percent;
-	Company(){
-	}
-	Company(String name, String percent){
-		this.name = name;
-		this.percent = Double.parseDouble(percent);
+class Company implements Comparable<Company>{
+	String companyName;
+	Double percent;
+	Company(String name, String cent){
+		this.companyName = name;
+		this.percent = Double.parseDouble(cent);
 	}
 	public String getName(){
-		return this.name;
+		return this.companyName;
+
 	}
-	public double getCent(){
+	public Double getCent(){
 		return this.percent;
 	}
-}
-class StockOrder{
-	MaxPQ<Double> maxObj;
-	MinPQ<Double> minObj;
-	ArrayList<Company> list;
-	BinarySearchST<Double, String> bst;
-	StockOrder(){
-		maxObj = new MaxPQ<Double>();
-		minObj = new MinPQ<Double>();
-		list = new ArrayList<Company>();
-		bst = new BinarySearchST<Double, String>();
+	public int compareTo(Company that){
+		if(this.getCent() < that.getCent()){
+			return -1;
+		} else if(this.getCent() > that.getCent()) {
+			return 1;
+		}
+		return 0;
 	}
-	public void put(Company object){
-		list.add(object);
-		bst.put(object.getCent(), object.getName());
-		maxObj.insert(object.getCent());
-		minObj.insert(object.getCent());
+}
+class Stocks{
+	MaxPQ<Company> maxObj;
+	MinPQ<Company> minObj;
+	Stocks(){
+		maxObj = new MaxPQ<Company>();
+		minObj = new MinPQ<Company>();
+	}
+	public void put(Company obj){
+		maxObj.insert(obj);
+		minObj.insert(obj);
 	}
 	public void print(){
-		// for(int j = 0; j < 5; j++){
-		// 	Double temp = maxObj.delMax();
-		// 	String name = "";
-		// 	for(int i = 0; i < list.size(); i++) {
-		// 		if(list.get(i).getCent() == temp){
-		// 			name = list.get(i).getName();
-		// 			list.remove(i);
-		// 			break;
-		// 		}
-		// 	}
-		// 	System.out.println(name +" " + temp);
-		// }
-		// System.out.println();
-		// for(int j = 0; j < 5; j++){
-		// 	Double tempMin = minObj.delMin();
-		// 	String nameMin = "";
-		// 	for(int i = 0; i < list.size(); i++) {
-		// 		if(list.get(i).getCent() == tempMin){
-		// 			nameMin = list.get(i).getName();
-		// 			list.remove(i);
-		// 			break;
-		// 		}
-		// 	}
-		// 	System.out.println(nameMin +" " + tempMin);
-		// }
-		for(int i = 0; i < 5; i++) {
-			Double temp = bst.max();
-			String nameMax = bst.get(temp);
-			bst.deleteMax();
-			System.out.println( nameMax+ " " + temp);
-		}
-		System.out.println();
 		for(int i = 0; i < 5; i++){
-			Double tempMin = bst.min();
-			String name = bst.get(tempMin);
-			bst.deleteMin();
-			System.out.println(name + " " + tempMin);
+			Company obj = maxObj.delMax();
+			System.out.println(obj.getName() + " " + obj.getCent());
 		}
-		System.out.println();
+		for(int i = 0; i < 5; i++){
+			Company object = minObj.delMin();
+			System.out.println(object.getName() + " " + object.getCent());
+		}
 	}
 }
 class Solution{
@@ -80,19 +49,18 @@ class Solution{
 	}
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
-		StockOrder obj = new StockOrder();
-		Company comDetails;
 		int range = scan.nextInt();
+		Company obj;
+		Stocks stockObj = new Stocks();
 		int hours = 6;
 		scan.nextLine();
 		while(hours > 0){
-			for(int i = 0; i < range; i++) {
-				String line = scan.nextLine();
-				String[] tokens = line.split(",");
-				comDetails = new Company(tokens[0], tokens[1]);
-				obj.put(comDetails);
+			for (int  i = 0; i < range; i++){
+				String[] tokens = scan.nextLine().split(",");
+				obj = new Company(tokens[0], tokens[1]);
+				stockObj.put(obj);
 			}
-			obj.print();
+			stockObj.print();
 			hours--;
 		}
 		int queries = scan.nextInt();
