@@ -19,9 +19,9 @@ class Company implements Comparable<Company>{
 		} else if(this.getCent() > that.getCent()) {
 			return 1;
 		} else {
-			if (this.getName().compareTo(that.getName()) == 1){
+			if (this.getName().compareTo(that.getName()) == -1){
 				return 1;
-			}else if (this.getName().compareTo(that.getName()) == -1){
+			}else if (this.getName().compareTo(that.getName()) == 1){
 				return -1;
 			}
 		return 0;
