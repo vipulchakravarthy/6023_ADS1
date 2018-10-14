@@ -15,9 +15,9 @@ class Company implements Comparable<Company>{
 	}
 	public int compareTo(Company that){
 		if(this.getCent() < that.getCent()){
-			return -1;
-		} else if(this.getCent() > that.getCent()) {
 			return 1;
+		} else if(this.getCent() > that.getCent()) {
+			return -1;
 		}
 		return 0;
 	}
