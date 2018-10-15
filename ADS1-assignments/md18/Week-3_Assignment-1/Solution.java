@@ -44,6 +44,9 @@ class Stocks{
 		minObj.insert(obj);
 	}
 	public void getFreq(String type, String name){
+		System.out.println("$$$$$$");
+		maxST.keys();
+		System.out.println("$$$$$$");
 		if(type.equals("maxST")){
 			System.out.println(maxST.get(name));
 		} else if(type.equals("minST")){
@@ -53,14 +56,16 @@ class Stocks{
 	public void print(){
 		for(int i = 0; i < 5; i++){
 			Company obj = maxObj.delMax();
+			System.out.println(obj.getName() + " " + obj.getCent());
 			if(!(maxST.contains(obj.getName()))){
 				maxST.put(obj.getName(), 1);
 			} else {
 				maxST.put(obj.getName(), maxST.get(obj.getName()) + 1);
 			}
-			System.out.println(obj.getName() + " " + obj.getCent());
 		}
-		System.out.println();
+		System.out.println("$$$$$$");
+		maxST.keys();
+		System.out.println("$$$$$$");
 		for(int i = 0; i < 5; i++){
 			Company object = minObj.delMin();
 			if(!(minST.contains(object.getName()))){
@@ -70,8 +75,10 @@ class Stocks{
 			}
 			System.out.println(object.getName() + " " + object.getCent());
 		}
-		System.out.println();
-	}
+		System.out.println("*****");
+		minST.keys();
+		System.out.println("*****");
+		}
 }
 class Solution{
 	Solution(){
@@ -80,7 +87,7 @@ class Solution{
 		Scanner scan = new Scanner(System.in);
 		int range = scan.nextInt();
 		Company obj;
-		int hours = 6;
+		int hours = 2;
 		scan.nextLine();
 		while(hours > 0){
 			Stocks stockObj = new Stocks();
@@ -89,12 +96,12 @@ class Solution{
 				obj = new Company(tokens[0], tokens[1]);
 				stockObj.put(obj);
 			}
-			stockObj.print();
 			hours--;
 		}
 		System.out.println();
 		int queries = scan.nextInt();
 		Stocks stocks = new Stocks();
+		stocks.print();
 		while(queries > 0) {
 			String[] tokens = scan.nextLine().split(",");
 			switch(tokens[0]){
@@ -103,6 +110,7 @@ class Solution{
 					break;
 				case "intersection":
 					break;
+				default: break;
 			}
 			queries--;
 		}
