@@ -59,5 +59,7 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:86:72: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:87:51: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:90: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:94:27: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:96: Line is longer than 80 characters (found 81). [LineLength]
 Audit done.
-Checkstyle ends with 60 errors.
+Checkstyle ends with 62 errors.

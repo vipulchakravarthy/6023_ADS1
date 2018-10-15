@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 /**
  * the class is for performing
  * binarysearch symbol table.
@@ -46,6 +47,10 @@ class BinarySearchST
      */
     public int size() {
         return size;
+    }
+    public ArrayList<Key> getKeys() {
+        ArrayList<Key> ar = new ArrayList<>(Arrays.asList(keys));
+        return ar;
     }
     /**
      * this method gives the values.

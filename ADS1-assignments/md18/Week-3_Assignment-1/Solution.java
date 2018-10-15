@@ -90,7 +90,14 @@ class Solution{
 						System.out.println(minST.get(name));
 						}
 					}
+			}
+			if(tokens[0].equals("intersection")) {
+				for (String key: maxST.getKeys()) {
+					if (key != null && minST.contains(key)) {
+						System.out.println(key);
+					}
 				}
+			}
+			}
 		}
-		}
-	}
+}
