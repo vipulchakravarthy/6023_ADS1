@@ -63,9 +63,6 @@ class Stocks{
 				maxST.put(obj.getName(), maxST.get(obj.getName()) + 1);
 			}
 		}
-		System.out.println("$$$$$$");
-		maxST.keys();
-		System.out.println("$$$$$$");
 		for(int i = 0; i < 5; i++){
 			Company object = minObj.delMin();
 			if(!(minST.contains(object.getName()))){
@@ -75,9 +72,6 @@ class Stocks{
 			}
 			System.out.println(object.getName() + " " + object.getCent());
 		}
-		System.out.println("*****");
-		minST.keys();
-		System.out.println("*****");
 		}
 }
 class Solution{
@@ -86,6 +80,7 @@ class Solution{
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int range = scan.nextInt();
+				Stocks stocks = new Stocks();
 		Company obj;
 		int hours = 2;
 		scan.nextLine();
@@ -98,10 +93,10 @@ class Solution{
 			}
 			hours--;
 		}
+		stocks.print();
 		System.out.println();
 		int queries = scan.nextInt();
-		Stocks stocks = new Stocks();
-		stocks.print();
+
 		while(queries > 0) {
 			String[] tokens = scan.nextLine().split(",");
 			switch(tokens[0]){
