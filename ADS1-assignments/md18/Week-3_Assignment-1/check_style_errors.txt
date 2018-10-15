@@ -49,7 +49,7 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:64:27: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:64:61: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:70: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:75:22: 'while' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:75:20: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:77:27: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:80:43: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md18\Week-3_Assignment-1\Solution.java:80:65: '{' is not preceded with whitespace. [WhitespaceAround]
