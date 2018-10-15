@@ -74,8 +74,7 @@ class Solution{
 		int queries = scan.nextInt();
 		while(queries > 0) {
 			String[] tokens = scan.nextLine().split(",");
-			switch(tokens[0]){
-				case "get":
+			if(tokens[0].equals("get")) {
 					String type = tokens[1];
 					String name = tokens[2];
 					if(type.equals("maxST")){
@@ -90,10 +89,9 @@ class Solution{
 						} else {
 						System.out.println(minST.get(name));
 						}
-						break;
+					}
+				}
+				queries--;
+				}
 			}
-			}
-			queries--;
-		}
 	}
-}
