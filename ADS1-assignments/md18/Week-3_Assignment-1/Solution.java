@@ -72,6 +72,7 @@ class Solution{
 		System.out.println();
 		}
 		int queries = scan.nextInt();
+		scan.nextLine();
 		for(int i = 0; i < queries; i++) {
 			String[] tokens = scan.nextLine().split(",");
 			if(tokens[0].equals("get")) {
