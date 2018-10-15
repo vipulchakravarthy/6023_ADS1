@@ -44,9 +44,6 @@ class Stocks{
 		minObj.insert(obj);
 	}
 	public void getFreq(String type, String name){
-		System.out.println("$$$$$$");
-		maxST.keys();
-		System.out.println("$$$$$$");
 		if(type.equals("maxST")){
 			System.out.println(maxST.get(name));
 		} else if(type.equals("minST")){
@@ -91,9 +88,9 @@ class Solution{
 				obj = new Company(tokens[0], tokens[1]);
 				stockObj.put(obj);
 			}
+			stockObj.print();
 			hours--;
 		}
-		stocks.print();
 		System.out.println();
 		int queries = scan.nextInt();
 		while(queries > 0) {
