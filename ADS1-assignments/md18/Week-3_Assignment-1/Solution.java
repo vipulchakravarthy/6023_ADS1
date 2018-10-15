@@ -60,6 +60,7 @@ class Stocks{
 				maxST.put(obj.getName(), maxST.get(obj.getName()) + 1);
 			}
 		}
+		System.out.println();
 		for(int i = 0; i < 5; i++){
 			Company object = minObj.delMin();
 			if(!(minST.contains(object.getName()))){
@@ -69,6 +70,7 @@ class Stocks{
 			}
 			System.out.println(object.getName() + " " + object.getCent());
 		}
+		System.out.println();
 		}
 }
 class Solution{
