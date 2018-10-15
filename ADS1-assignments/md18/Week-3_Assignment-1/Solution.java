@@ -80,7 +80,7 @@ class Solution{
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int range = scan.nextInt();
-				Stocks stocks = new Stocks();
+		Stocks stocks = new Stocks();
 		Company obj;
 		int hours = 6;
 		scan.nextLine();
@@ -96,7 +96,6 @@ class Solution{
 		stocks.print();
 		System.out.println();
 		int queries = scan.nextInt();
-
 		while(queries > 0) {
 			String[] tokens = scan.nextLine().split(",");
 			switch(tokens[0]){
