@@ -45,28 +45,38 @@ class Stocks{
 	}
 	public void getFreq(String type, String name){
 		if(type.equals("maxST")){
+			if(!(maxST.contains(name))) {
+				System.out.println("0");
+			} else {
 			System.out.println(maxST.get(name));
+			}
 		} else if(type.equals("minST")){
+			if(!(minST.contains(name))) {
+				System.out.println("0");
+			} else {
 			System.out.println(minST.get(name));
 		}
+	}
 	}
 	public void print(){
 		for(int i = 0; i < 5; i++){
 			Company obj = maxObj.delMax();
-			System.out.println(obj.getName() + " " + obj.getCent());
-			if(!(maxST.contains(obj.getName()))){
-				maxST.put(obj.getName(), 1);
+			if(maxST.contains(obj.getName())){
+				int value = maxST.get(obj.getName());
+				maxST.put(obj.getName(), ++value);
 			} else {
-				maxST.put(obj.getName(), maxST.get(obj.getName()) + 1);
+				maxST.put(obj.getName(), 1);
 			}
+			System.out.println(obj.getName() + " " + obj.getCent());
 		}
 		System.out.println();
 		for(int i = 0; i < 5; i++){
 			Company object = minObj.delMin();
-			if(!(minST.contains(object.getName()))){
-				minST.put(object.getName(), 1);
+			if(minST.contains(object.getName())){
+				int valueMin = minST.get(object.getName());
+				minST.put(object.getName(), ++valueMin);
 			} else {
-				minST.put(object.getName(), minST.get(object.getName()) + 1);
+				minST.put(object.getName(), 1);
 			}
 			System.out.println(object.getName() + " " + object.getCent());
 		}
@@ -93,7 +103,6 @@ class Solution{
 			stockObj.print();
 			hours--;
 		}
-		System.out.println();
 		int queries = scan.nextInt();
 		while(queries > 0) {
 			String[] tokens = scan.nextLine().split(",");
