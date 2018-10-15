@@ -82,7 +82,7 @@ class Solution{
 		int range = scan.nextInt();
 				Stocks stocks = new Stocks();
 		Company obj;
-		int hours = 2;
+		int hours = 6;
 		scan.nextLine();
 		while(hours > 0){
 			Stocks stockObj = new Stocks();
