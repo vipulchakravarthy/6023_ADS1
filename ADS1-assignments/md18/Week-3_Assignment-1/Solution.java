@@ -72,7 +72,7 @@ class Solution{
 		System.out.println();
 		}
 		int queries = scan.nextInt();
-		while(queries > 0) {
+		while(queries >= 0) {
 			String[] tokens = scan.nextLine().split(",");
 			if(tokens[0].equals("get")) {
 					String type = tokens[1];
