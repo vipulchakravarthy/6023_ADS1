@@ -3,18 +3,18 @@ import java.util.Scanner;
  *the class to store the book.
  *details.
  */
-class Book implements Comparable<Book>{
-    /**
-     *the book name.
-     */
+class Book implements Comparable<Book> {
+	/**
+	 *the book name.
+	 */
 	private String bookName;
 	/**
-     *the variable to author name.
-    */
+	 *the variable to author name.
+	*/
 	private String authorName;
-	 /**
-     *the variable to store book price.
-     */
+	/**
+	*the variable to store book price.
+	*/
 	private double price;
 	/**
 	 *constructor to initialize the object.
@@ -23,7 +23,7 @@ class Book implements Comparable<Book>{
 	 * @param      cost    The cost
 	 */
 	Book(final String book,
-	 final String author, final String cost){
+	     final String author, final String cost) {
 		bookName = book;
 		authorName = author;
 		price = Double.parseDouble(cost);
@@ -33,7 +33,7 @@ class Book implements Comparable<Book>{
 	 *
 	 * @return     The book name.
 	 */
-	public String getBook(){
+	public String getBook() {
 		return this.bookName;
 	}
 	/**
@@ -43,7 +43,7 @@ class Book implements Comparable<Book>{
 	 *
 	 * @return -1 value.
 	 */
-	public int compareTo(Book that){
+	public int compareTo(Book that) {
 		return -1;
 	}
 	/**
@@ -51,9 +51,9 @@ class Book implements Comparable<Book>{
 	 *author name.
 	 * @return     String representation of the object.
 	 */
-	public String toString(){
+	public String toString() {
 		return this.bookName + ", " + this.authorName
-		+ ", " + this.price;
+		       + ", " + this.price;
 	}
 }
 /**
@@ -62,30 +62,30 @@ class Book implements Comparable<Book>{
  * @param      <Value>  The value is of integer type
  */
 class BST<Key extends Comparable<Key>, Value> {
-		/**
-		 * the variable is to store the root of tree.
-		 */
-		private Node root;
 	/**
-     * the class is for maintaining left and right element.
-     * storing the key and value pair.
-     */
-	private class Node{
-        /**
-         *the method to store the left node.
-         */
+	 * the variable is to store the root of tree.
+	 */
+	private Node root;
+	/**
+	 * the class is for maintaining left and right element.
+	 * storing the key and value pair.
+	 */
+	private class Node {
+		/**
+		 *the method to store the left node.
+		 */
 		private Node left;
 		/**
-         *the method to store the right node.
-         */
+		 *the method to store the right node.
+		 */
 		private Node right;
-	    /**
-         *the key variable to store the book obj.
-         */
+		/**
+		 *the key variable to store the book obj.
+		 */
 		private Book key;
-        /**
-         *the variable to store the value.
-         */
+		/**
+		 *the variable to store the value.
+		 */
 		private Value value;
 		/**
 		 *the variable stores the size of the node.
@@ -98,7 +98,7 @@ class BST<Key extends Comparable<Key>, Value> {
 		 * @param      val     The value
 		 * @param      length  The length
 		 */
-		public Node(Book keys, Value val, int length){
+		public Node(Book keys, Value val, int length) {
 			key = keys;
 			value = val;
 			size = length;
@@ -107,14 +107,14 @@ class BST<Key extends Comparable<Key>, Value> {
 	/**
 	 *an empty constructor.
 	 */
-	BST(){
+	BST() {
 	}
 	/**
 	 *the method is to find the size of tree.
 	 *
 	 * @return size of the tree.
 	 */
-	public int size(){
+	public int size() {
 		return size(root);
 	}
 	/**
@@ -124,8 +124,8 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *
 	 * @return  size of tree.
 	 */
-	private int size(Node tempRoot){
-		if(tempRoot == null){
+	private int size(Node tempRoot) {
+		if (tempRoot == null) {
 			return 0;
 		}
 		return tempRoot.size;
@@ -140,8 +140,8 @@ class BST<Key extends Comparable<Key>, Value> {
 	 * N is the size of the tree.
 	 */
 	public void put(final Book key,
-		final Value value){
-		root = put(root,key, value);
+	                final Value value) {
+		root = put(root, key, value);
 	}
 	/**
 	 *the put function is to perform the.
@@ -156,63 +156,63 @@ class BST<Key extends Comparable<Key>, Value> {
 	 * @return  root of the tree.
 	 */
 	private Node put(final Node tempRoot,
-	 final Book key, final Value value) {
-		if(tempRoot == null){
+	                 final Book key, final Value value) {
+		if (tempRoot == null) {
 			return new Node(key, value, 1);
 		}
 		int cmp = key.getBook().
-		compareTo(tempRoot.key.getBook());
-		if(cmp < 0){
-		  tempRoot.left = put(
-		  	tempRoot.left, key, value);
-		} else if(cmp > 0){
+		          compareTo(tempRoot.key.getBook());
+		if (cmp < 0) {
+			tempRoot.left = put(
+			                    tempRoot.left, key, value);
+		} else if (cmp > 0) {
 			tempRoot.right = put(
-				tempRoot.right, key, value);
-		} else{
+			                     tempRoot.right, key, value);
+		} else {
 			tempRoot.value = value;
 		}
-	    tempRoot.size = 1+ size(tempRoot.left)
-	    + size(tempRoot.right);
-	    return tempRoot;
+		tempRoot.size = 1 + size(tempRoot.left)
+		                + size(tempRoot.right);
+		return tempRoot;
 	}
-    /**
-     *the method is to get the value of.
-     *corresponding.
-     *tree.
-     *the time complexity is O(logN).
-     *N is number of nodes.
-     *it should go through the complete.
-     *tree to get value of an element.
-     * @param      key   The key is of book
-     * type.
-     * @return the value of respective key.
-     */
-	public Value get(final Book key){
+	/**
+	 *the method is to get the value of.
+	 *corresponding.
+	 *tree.
+	 *the time complexity is O(logN).
+	 *N is number of nodes.
+	 *it should go through the complete.
+	 *tree to get value of an element.
+	 * @param      key   The key is of book
+	 * type.
+	 * @return the value of respective key.
+	 */
+	public Value get(final Book key) {
 		return get(root, key);
 	}
-    /**
-     *the method is to get the value of.
-     *corresponding.
-     *tree.
-     *the time complexity is O(logN).
-     *N is number of nodes.
-     *it should go through the complete.
-     *tree to get value of an element.
-     * @param      key   The key is of book
-     * type.
-     * @
-     * @return the value of respective key.
-     */
+	/**
+	 *the method is to get the value of.
+	 *corresponding.
+	 *tree.
+	 *the time complexity is O(logN).
+	 *N is number of nodes.
+	 *it should go through the complete.
+	 *tree to get value of an element.
+	 * @param      key   The key is of book
+	 * type.
+	 * @
+	 * @return the value of respective key.
+	 */
 	private Value get(final Node tempRoot,
-		final Book key) {
-		if(tempRoot == null) {
+	                  final Book key) {
+		if (tempRoot == null) {
 			return null;
 		}
 		int cmp = key.getBook().compareTo(
-			tempRoot.key.getBook());
-		if(cmp < 0){
+		              tempRoot.key.getBook());
+		if (cmp < 0) {
 			return get(tempRoot.left, key);
-		} else if(cmp > 0){
+		} else if (cmp > 0) {
 			return get(tempRoot.right, key);
 		} else {
 			return tempRoot.value;
@@ -223,7 +223,7 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *value of tree.
 	 * @return minimum element in tree.
 	 */
-	public Book min(){
+	public Book min() {
 		return min(root).key;
 	}
 	/**
@@ -234,11 +234,11 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *tree.
 	 * @return  minimum node in tree.
 	 */
-	private Node min(final Node tempRoot){
-		if(tempRoot.left == null) {
+	private Node min(final Node tempRoot) {
+		if (tempRoot.left == null) {
 			return tempRoot;
 		} else {
-		return	min(tempRoot.left);
+			return	min(tempRoot.left);
 		}
 	}
 	/**
@@ -246,7 +246,7 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *value of tree.
 	 * @return maximum element in tree.
 	 */
-	public Book max(){
+	public Book max() {
 		return max(root).key;
 	}
 	/**
@@ -257,8 +257,8 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *tree.
 	 * @return  maximum node in tree.
 	 */
-	private Node max(final Node tempRoot){
-		if(tempRoot.right == null) {
+	private Node max(final Node tempRoot) {
+		if (tempRoot.right == null) {
 			return tempRoot;
 		} else {
 			return max(tempRoot.right);
@@ -268,17 +268,17 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *this method returns the.
 	 *less than or equal to given key.
 	 *of tree
-     *the time complexity is O(logN).
-     *N is number of nodes
+	 *the time complexity is O(logN).
+	 *N is number of nodes
 	 * @param      key   The key which is
 	 *of book type
 	 * @return floor element.
 	 *returns the.
 	 *less than or equal to given key.
 	 */
-	public Book floor(final Book key){
-		Node floorKey = floor(root,key);
-		if(floorKey == null){
+	public Book floor(final Book key) {
+		Node floorKey = floor(root, key);
+		if (floorKey == null) {
 			return null;
 		}
 		return floorKey.key;
@@ -287,8 +287,8 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *this method returns the.
 	 *less than or equal to given key.
 	 *of tree
-     *the time complexity is O(logN).
-     *N is number of nodes
+	 *the time complexity is O(logN).
+	 *N is number of nodes
 	 * @param   key   The key which is
 	 *of book type
 	 *@param tempRoot  root variable of
@@ -298,21 +298,21 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *less than or equal to given key.
 	 */
 	private Node floor(final Node tempRoot,
-		final Book key){
-		if(tempRoot == null) {
+	                   final Book key) {
+		if (tempRoot == null) {
 			return null;
 		}
 		int cmp = key.getBook().compareTo(
-			tempRoot.key.getBook());
-		if(cmp == 0){
+		              tempRoot.key.getBook());
+		if (cmp == 0) {
 			return tempRoot;
-		} else if(cmp < 0){
-			return floor(tempRoot.left,key);
+		} else if (cmp < 0) {
+			return floor(tempRoot.left, key);
 		}
 		Node temp = floor(tempRoot.right, key);
-		if(temp != null) {
+		if (temp != null) {
 			return temp;
-		} else{
+		} else {
 			return tempRoot;
 		}
 	}
@@ -320,17 +320,17 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *this method returns the.
 	 *greater than or equal to given key.
 	 *of tree
-     *the time complexity is O(logN).
-     *N is number of nodes
+	 *the time complexity is O(logN).
+	 *N is number of nodes
 	 * @param      key   The key which is
 	 *of book type
 	 * @return ceiling element.
 	 *returns the.
 	 *greater than or equal to given key.
 	 */
-	public Book ceiling(Book key){
+	public Book ceiling(Book key) {
 		Node ceilKey = ceiling(root, key);
-		if(ceilKey == null) {
+		if (ceilKey == null) {
 			return null;
 		}
 		return ceilKey.key;
@@ -339,8 +339,8 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *this method returns the.
 	 *greater than or equal to given key.
 	 *of tree
-     *the time complexity is O(logN).
-     *N is number of nodes
+	 *the time complexity is O(logN).
+	 *N is number of nodes
 	 * @param      key   The key which is
 	 *of book type
 	 *@param tempRoot  root variable of
@@ -350,23 +350,23 @@ class BST<Key extends Comparable<Key>, Value> {
 	 *greater than or equal to given key.
 	 */
 	private Node ceiling(final Node tempRoot,
-		final Book key){
-		if(tempRoot == null) {
+	                     final Book key) {
+		if (tempRoot == null) {
 			return null;
 		}
 		int cmp = key.getBook().compareTo(
-			tempRoot.key.getBook());
-		if(cmp == 0){
+		              tempRoot.key.getBook());
+		if (cmp == 0) {
 			return tempRoot;
-		} else if(cmp < 0){
-			Node temp = ceiling(tempRoot.left,key);
-			if(temp != null) {
+		} else if (cmp < 0) {
+			Node temp = ceiling(tempRoot.left, key);
+			if (temp != null) {
 				return temp;
-			} else{
+			} else {
 				return tempRoot;
 			}
 		}
-		return ceiling(tempRoot.right,key);
+		return ceiling(tempRoot.right, key);
 	}
 	/**
 	 * the select method gives the smallest
@@ -375,8 +375,8 @@ class BST<Key extends Comparable<Key>, Value> {
 	 * @param      index  The given value.
 	 * @return key info which is required.
 	 */
-	public Book select(final int index){
-		Node temp = select(root,index);
+	public Book select(final int index) {
+		Node temp = select(root, index);
 		return temp.key;
 	}
 	/**
@@ -393,14 +393,14 @@ class BST<Key extends Comparable<Key>, Value> {
 	 * N is the number of nodes.
 	 */
 	private Node select(final Node tempRoot,
-	 final int index){
-		if(tempRoot == null){
+	                    final int index) {
+		if (tempRoot == null) {
 			return null;
 		}
 		int length = size(tempRoot.left);
-		if(length > index){
-			return select(tempRoot.left,index);
-		} else if(length < index){
+		if (length > index) {
+			return select(tempRoot.left, index);
+		} else if (length < index) {
 			return select(tempRoot.right, index - length - 1);
 		} else {
 			return tempRoot;
@@ -410,11 +410,11 @@ class BST<Key extends Comparable<Key>, Value> {
 /**
  *the class is for main method.
  */
-final class Solution{
+final class Solution {
 	/**
 	 *an empty constructor.
 	 */
-	Solution(){
+	Solution() {
 	}
 	/**
 	 *main method is for
@@ -424,41 +424,41 @@ final class Solution{
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		BST<Book, Integer> object =
-			new BST<Book, Integer>();
-		while(scan.hasNext()){
+		    new BST<Book, Integer>();
+		while (scan.hasNext()) {
 			String[] tokens = scan.nextLine().split(",");
-			switch(tokens[0]){
-				case"put":
-					Book obj = new Book(
-						tokens[1], tokens[2], tokens[3]);
-					object.put(obj, Integer.parseInt(tokens[4]));
-					break;
-				case "get":
-					Book getObj = new Book(
-						tokens[1], tokens[2], tokens[3]);
-					System.out.println(object.get(getObj));
-					break;
-				case "max":
-					System.out.println(object.max());
-					break;
-				case "min":
-					System.out.println(object.min());
-					break;
-				case "select":
-					System.out.println(object.select(
-						Integer.parseInt(tokens[1])));
-					break;
-				case "floor":
-					Book floorObj = new Book(
-						tokens[1], tokens[2], tokens[3]);
-					System.out.println(object.floor(floorObj));
-					break;
-				case "ceiling":
-					Book ceilObj = new Book(
-						tokens[1], tokens[2], tokens[3]);
-					System.out.println(object.ceiling(ceilObj));
-					break;
-				default: break;
+			switch (tokens[0]) {
+			case"put":
+				Book obj = new Book(
+				    tokens[1], tokens[2], tokens[3]);
+				object.put(obj, Integer.parseInt(tokens[4]));
+				break;
+			case "get":
+				Book getObj = new Book(
+				    tokens[1], tokens[2], tokens[3]);
+				System.out.println(object.get(getObj));
+				break;
+			case "max":
+				System.out.println(object.max());
+				break;
+			case "min":
+				System.out.println(object.min());
+				break;
+			case "select":
+				System.out.println(object.select(
+				                       Integer.parseInt(tokens[1])));
+				break;
+			case "floor":
+				Book floorObj = new Book(
+				    tokens[1], tokens[2], tokens[3]);
+				System.out.println(object.floor(floorObj));
+				break;
+			case "ceiling":
+				Book ceilObj = new Book(
+				    tokens[1], tokens[2], tokens[3]);
+				System.out.println(object.ceiling(ceilObj));
+				break;
+			default: break;
 			}
 		}
 	}
