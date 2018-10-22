@@ -98,7 +98,7 @@ class BST<Key extends Comparable<Key>, Value> {
          * @param      val     The value
          * @param      length  The length
          */
-        public Node(final Book keys,
+        Node(final Book keys,
             final Value val, final int length) {
             key = keys;
             value = val;
