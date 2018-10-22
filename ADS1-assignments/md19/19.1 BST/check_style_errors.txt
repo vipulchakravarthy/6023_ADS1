@@ -1,19 +1,4 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:46:30: Parameter that should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:101:17: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:101:29: Parameter keys should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:101:40: Parameter val should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:101:51: Parameter length should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:127:26: Parameter tempRoot should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:206:38: Expected @param tag for 'tempRoot'. [JavadocMethod]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:331:29: Parameter key should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:413:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:433:66: '3' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:434:73: '4' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:438:66: '3' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:449: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:453:66: '3' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:458:66: '3' is a magic number. [MagicNumber]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md19\19.1 BST\Solution.java:101:9: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 16 errors.
+Checkstyle ends with 1 errors.
