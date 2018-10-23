@@ -98,7 +98,7 @@ class BST<Key extends Comparable<Key>, Value> {
          * @param      val     The value
          * @param      length  The length
          */
-        Node(final Book keys,
+         Node(final Book keys,
             final Value val, final int length) {
             key = keys;
             value = val;
@@ -137,8 +137,8 @@ class BST<Key extends Comparable<Key>, Value> {
      * @param  key  is of book type
      * @param value  The value
      * time complexiety of this method is.
-     * O(logN)
-     * N is the size of the tree.
+     * h
+     * h is the height of the tree.
      */
     public void put(final Book key,
                     final Value value) {
@@ -148,8 +148,8 @@ class BST<Key extends Comparable<Key>, Value> {
      *the put function is to perform the.
      *insert an element into tree.
      * time complexiety of this method is.
-     * O(logN)
-     * N is no.of nodes in tree.
+     * h
+     * h is height of tree.
      * @param      tempRoot  The temporary root
      * @param      key  which is of book type
      * @param      value  is to store the quantity
@@ -180,8 +180,8 @@ class BST<Key extends Comparable<Key>, Value> {
      *the method is to get the value of.
      *corresponding.
      *tree.
-     *the time complexity is O(logN).
-     *N is number of nodes.
+     *the time complexity is h.
+     *h is height of tree.
      *it should go through the complete.
      *tree to get value of an element.
      * @param      key   The key is of book
@@ -195,8 +195,8 @@ class BST<Key extends Comparable<Key>, Value> {
      *the method is to get the value of.
      *corresponding.
      *tree.
-     *the time complexity is O(logN).
-     *N is number of nodes.
+     *the time complexity is h.
+     *h is height of tree.
      *it should go through the complete.
      *tree to get value of an element.
      * @param      key   The key is of book
@@ -269,8 +269,8 @@ class BST<Key extends Comparable<Key>, Value> {
      *this method returns the.
      *less than or equal to given key.
      *of tree
-     *the time complexity is O(logN).
-     *N is number of nodes
+     *the time complexity is h
+     *h is height of tree
      * @param      key   The key which is
      *of book type
      * @return floor element.
@@ -288,8 +288,8 @@ class BST<Key extends Comparable<Key>, Value> {
      *this method returns the.
      *less than or equal to given key.
      *of tree
-     *the time complexity is O(logN).
-     *N is number of nodes
+     *the time complexity is h
+     *h is height of tree
      * @param   key   The key which is
      *of book type
      *@param tempRoot  root variable of
@@ -321,8 +321,8 @@ class BST<Key extends Comparable<Key>, Value> {
      *this method returns the.
      *greater than or equal to given key.
      *of tree
-     *the time complexity is O(logN).
-     *N is number of nodes
+     *the time complexity is h
+     *h is height of tree
      * @param      key   The key which is
      *of book type
      * @return ceiling element.
@@ -340,8 +340,8 @@ class BST<Key extends Comparable<Key>, Value> {
      *this method returns the.
      *greater than or equal to given key.
      *of tree
-     *the time complexity is O(logN).
-     *N is number of nodes
+     *the time complexity is h
+     *h is the height of tree
      * @param      key   The key which is
      *of book type
      *@param tempRoot  root variable of
