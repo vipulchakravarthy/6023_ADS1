@@ -137,7 +137,7 @@ class BST<Key extends Comparable<Key>, Value> {
      * @param  key  is of book type
      * @param value  The value
      * time complexiety of this method is.
-     * h
+     * O(h)
      * h is the height of the tree.
      */
     public void put(final Book key,
@@ -148,7 +148,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *the put function is to perform the.
      *insert an element into tree.
      * time complexiety of this method is.
-     * h
+     * O(h)
      * h is height of tree.
      * @param      tempRoot  The temporary root
      * @param      key  which is of book type
@@ -180,7 +180,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *the method is to get the value of.
      *corresponding.
      *tree.
-     *the time complexity is h.
+     *the time complexity is O(h).
      *h is height of tree.
      *it should go through the complete.
      *tree to get value of an element.
@@ -195,7 +195,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *the method is to get the value of.
      *corresponding.
      *tree.
-     *the time complexity is h.
+     *the time complexity is O(h).
      *h is height of tree.
      *it should go through the complete.
      *tree to get value of an element.
@@ -222,6 +222,8 @@ class BST<Key extends Comparable<Key>, Value> {
     /**
      *this method is to return the minimum.
      *value of tree.
+     *the time complexity is O(h)
+     *h is height of tree
      * @return minimum element in tree.
      */
     public Book min() {
@@ -230,7 +232,8 @@ class BST<Key extends Comparable<Key>, Value> {
     /**
      *this method is to return the minimum.
      *value of tree.
-     *
+     *the time complexity is O(h)
+     *h is height of tree
      * @param      tempRoot  root variable of
      *tree.
      * @return  minimum node in tree.
@@ -245,6 +248,8 @@ class BST<Key extends Comparable<Key>, Value> {
     /**
      *this method is to return the maximum.
      *value of tree.
+     *the time complexity is O(h)
+     *h is height of tree
      * @return maximum element in tree.
      */
     public Book max() {
@@ -253,7 +258,8 @@ class BST<Key extends Comparable<Key>, Value> {
     /**
      *this method is to return the minimum.
      *value of tree.
-     *
+     *the time complexity is O(h)
+     *h is height of tree
      * @param   tempRoot  root variable of
      *tree.
      * @return  maximum node in tree.
@@ -269,7 +275,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *this method returns the.
      *less than or equal to given key.
      *of tree
-     *the time complexity is h
+     *the time complexity is O(h)
      *h is height of tree
      * @param      key   The key which is
      *of book type
@@ -288,7 +294,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *this method returns the.
      *less than or equal to given key.
      *of tree
-     *the time complexity is h
+     *the time complexity is O(h)
      *h is height of tree
      * @param   key   The key which is
      *of book type
@@ -321,7 +327,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *this method returns the.
      *greater than or equal to given key.
      *of tree
-     *the time complexity is h
+     *the time complexity is O(h)
      *h is height of tree
      * @param      key   The key which is
      *of book type
@@ -340,7 +346,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *this method returns the.
      *greater than or equal to given key.
      *of tree
-     *the time complexity is h
+     *the time complexity is O(h)
      *h is the height of tree
      * @param      key   The key which is
      *of book type
@@ -373,6 +379,9 @@ class BST<Key extends Comparable<Key>, Value> {
      * the select method gives the smallest
      * k-1th.
      *element k is the given value.
+     * the time complexiety of this method is
+     * O(h)
+     * h is the height of tree.
      * @param      index  The given value.
      * @return key info which is required.
      */
@@ -390,8 +399,8 @@ class BST<Key extends Comparable<Key>, Value> {
      * @return node which has the k-1th smallest
      * value.
      * the time complexiety of this method is
-     * O(logN)
-     * N is the number of nodes.
+     * O(h)
+     * h is the height of tree.
      */
     private Node select(final Node tempRoot,
                         final int index) {
