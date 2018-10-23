@@ -1,8 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:428:28: Parameter tempRoot should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:455:28: Parameter tempRoot should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:470:24: Parameter key should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:483:25: Parameter tempRoot should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:483:40: Parameter key should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 5 errors.

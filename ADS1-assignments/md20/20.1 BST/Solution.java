@@ -425,7 +425,8 @@ class BST<Key extends Comparable<Key>, Value> {
      *
      * @return root of tree.
      */
-    private Node deleteMin(Node tempRoot) {
+    private Node deleteMin(
+        final Node tempRoot) {
         if (tempRoot.left == null) {
             return tempRoot.right;
         }
@@ -452,7 +453,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *
      * @return root of tree.
      */
-    private Node deleteMax(Node tempRoot) {
+    private Node deleteMax(final Node tempRoot) {
         if (tempRoot.right == null) {
             return tempRoot.left;
         }
@@ -467,7 +468,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *h is the height of tree
      * @param      key   The key to be deleted
      */
-    public void delete(Book key) {
+    public void delete(final Book key) {
         root = delete(root, key);
     }
     /**
@@ -475,12 +476,14 @@ class BST<Key extends Comparable<Key>, Value> {
      *time complexity is O(h)
      *h is the height of tree
      *
-     * @param   tempRoot  The temporary root
+     * @param   tempRootOne  The temporary root
      * @param   key  the key which is to be deleted
      *
      * @return root of the tree after delete operation.
      */
-    private Node delete(Node tempRoot, Book key) {
+    private Node delete(final Node tempRootOne,
+    final Book key) {
+        Node tempRoot = tempRootOne;
         if (tempRoot == null) {
             return null;
         }
