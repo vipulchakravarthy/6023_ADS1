@@ -407,9 +407,24 @@ class BST<Key extends Comparable<Key>, Value> {
             return tempRoot;
         }
     }
+    /**
+     *the method is to delete the minimum.
+     *element in tree.
+     *time complexity is O(h)
+     *h is the height of tree
+     */
     public void deleteMin(){
         root = deleteMin(root);
     }
+    /**
+    *the method is to delete the minimum.
+     *element in tree.
+     *time complexity is O(h)
+     *h is the height of tree
+     * @param tempRoot  The temporary root
+     *
+     * @return root of tree.
+     */
     private Node deleteMin(Node tempRoot){
         if(tempRoot.left == null) {
             return tempRoot.right;
@@ -419,9 +434,24 @@ class BST<Key extends Comparable<Key>, Value> {
         + size(tempRoot.left);
         return tempRoot;
     }
+    /**
+     *the method is to delete the maxmum.
+     *element in tree.
+     *time complexity is O(h)
+     *h is the height of tree
+     */
     public void deleteMax(){
         root = deleteMax(root);
     }
+    /**
+    *the method is to delete the maxmum.
+     *element in tree.
+     *time complexity is O(h)
+     *h is the height of tree
+     * @param tempRoot  The temporary root
+     *
+     * @return root of tree.
+     */
     private Node deleteMax(Node tempRoot){
         if(tempRoot.right == null) {
             return tempRoot.left;
@@ -431,9 +461,25 @@ class BST<Key extends Comparable<Key>, Value> {
         + size(tempRoot.left);
         return tempRoot;
     }
+    /**
+     *the method is to delete the given key.
+     *time complexity is O(h)
+     *h is the height of tree
+     * @param      key   The key to be deleted
+     */
     public void delete(Book key){
         root = delete(root, key);
     }
+    /**
+    *the method is to delete the given key.
+     *time complexity is O(h)
+     *h is the height of tree
+     *
+     * @param   tempRoot  The temporary root
+     * @param   key  the key which is to be deleted
+     *
+     * @return root of the tree after delete operation.
+     */
     private Node delete(Node tempRoot, Book key){
         if(tempRoot == null) {
             return null;
