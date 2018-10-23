@@ -98,8 +98,8 @@ class BST<Key extends Comparable<Key>, Value> {
          * @param      val     The value
          * @param      length  The length
          */
-         Node(final Book keys,
-            final Value val, final int length) {
+        Node(final Book keys,
+             final Value val, final int length) {
             key = keys;
             value = val;
             size = length;
@@ -413,7 +413,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *time complexity is O(h)
      *h is the height of tree
      */
-    public void deleteMin(){
+    public void deleteMin() {
         root = deleteMin(root);
     }
     /**
@@ -425,13 +425,13 @@ class BST<Key extends Comparable<Key>, Value> {
      *
      * @return root of tree.
      */
-    private Node deleteMin(Node tempRoot){
-        if(tempRoot.left == null) {
+    private Node deleteMin(Node tempRoot) {
+        if (tempRoot.left == null) {
             return tempRoot.right;
         }
         tempRoot.left = deleteMin(tempRoot.left);
         tempRoot.size = 1 + size(tempRoot.right)
-        + size(tempRoot.left);
+                        + size(tempRoot.left);
         return tempRoot;
     }
     /**
@@ -440,7 +440,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *time complexity is O(h)
      *h is the height of tree
      */
-    public void deleteMax(){
+    public void deleteMax() {
         root = deleteMax(root);
     }
     /**
@@ -452,13 +452,13 @@ class BST<Key extends Comparable<Key>, Value> {
      *
      * @return root of tree.
      */
-    private Node deleteMax(Node tempRoot){
-        if(tempRoot.right == null) {
+    private Node deleteMax(Node tempRoot) {
+        if (tempRoot.right == null) {
             return tempRoot.left;
         }
         tempRoot.right = deleteMax(tempRoot.right);
         tempRoot.size = 1 + size(tempRoot.right)
-        + size(tempRoot.left);
+                        + size(tempRoot.left);
         return tempRoot;
     }
     /**
@@ -467,7 +467,7 @@ class BST<Key extends Comparable<Key>, Value> {
      *h is the height of tree
      * @param      key   The key to be deleted
      */
-    public void delete(Book key){
+    public void delete(Book key) {
         root = delete(root, key);
     }
     /**
@@ -480,18 +480,18 @@ class BST<Key extends Comparable<Key>, Value> {
      *
      * @return root of the tree after delete operation.
      */
-    private Node delete(Node tempRoot, Book key){
-        if(tempRoot == null) {
+    private Node delete(Node tempRoot, Book key) {
+        if (tempRoot == null) {
             return null;
         }
         int cmp = key.getBook().compareTo(
                       tempRoot.key.getBook());
-        if(cmp < 0) {
+        if (cmp < 0) {
             tempRoot.left = delete(tempRoot.left, key);
-        } else if(cmp > 0) {
+        } else if (cmp > 0) {
             tempRoot.right = delete(tempRoot.right, key);
         } else {
-            if(tempRoot.right == null) {
+            if (tempRoot.right == null) {
                 return tempRoot.left;
             } else if (tempRoot.left == null) {
                 return tempRoot.right;
@@ -502,10 +502,10 @@ class BST<Key extends Comparable<Key>, Value> {
             tempRoot.left = temp.left;
         }
         tempRoot.size = 1 + size(tempRoot.right)
-        + size(tempRoot.left);
+                        + size(tempRoot.left);
         return tempRoot;
-        }
     }
+}
 /**
  *the class is for main method.
  */
@@ -533,7 +533,7 @@ final class Solution {
                 Book obj = new Book(
                     tokens[1], tokens[2], tokens[three]);
                 object.put(obj, Integer.parseInt(
-                    tokens[four]));
+                               tokens[four]));
                 break;
             case "get":
                 Book getObj = new Book(
@@ -548,7 +548,7 @@ final class Solution {
                 break;
             case "select":
                 System.out.println(
-                object.select(Integer.parseInt(tokens[1])));
+                    object.select(Integer.parseInt(tokens[1])));
                 break;
             case "floor":
                 Book floorObj = new Book(

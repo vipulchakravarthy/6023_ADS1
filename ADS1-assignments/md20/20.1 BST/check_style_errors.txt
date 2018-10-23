@@ -1,20 +1,8 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:416:28: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:428:28: Parameter tempRoot should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:428:42: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:429:11: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:443:28: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:455:28: Parameter tempRoot should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:455:42: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:456:11: 'if' is not followed by whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:470:24: Parameter key should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:470:33: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:483:25: Parameter tempRoot should be final. [FinalParameters]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:483:40: Parameter key should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:483:49: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:484:11: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:489:11: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:491:18: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md20\20.1 BST\Solution.java:494:15: 'if' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 17 errors.
+Checkstyle ends with 5 errors.
