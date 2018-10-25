@@ -1,0 +1,1 @@
+yes this method is legal for getting the hash function
