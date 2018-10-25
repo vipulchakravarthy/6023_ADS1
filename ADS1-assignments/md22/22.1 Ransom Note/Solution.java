@@ -1,13 +1,14 @@
 import java.util.Scanner;
 /**
- *the class for ransomNote
+ *the class for ransomNote.
  */
 class RansomNote {
     /**
      *the hashObj is for building a symbol table.
      *
      */
-    SeparateChainingHashST<String, Integer> hashObj;
+    private SeparateChainingHashST<String,
+     Integer> hashObj;
     /**
      *the constructor is to initialize the.
      *hash table object.
@@ -62,7 +63,7 @@ class Solution {
     /**
      *an empty constructor.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      *the main for reading input.
