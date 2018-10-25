@@ -1,32 +1,47 @@
 import java.util.Scanner;
+/**
+ *the class for ransomNote
+ */
 class RansomNote{
+	/**
+	 *the hashObj is for building a symbol table.
+	 *
+	 */
 	SeparateChainingHashST<String, Integer> hashObj;
+	/**
+	 *the constructor is to initialize the.
+	 *hash table object.
+	 */
 	RansomNote(){
-		hashObj = new SeparateChainingHashST<String, Integer>();
+		hashObj = new SeparateChainingHashST<String,
+		 Integer>();
 	}
-	public void addTo(String item){
+	/**
+	 *the method is to put the element into.
+	 *hashTable
+	 *time complexity is O(logN)
+	 *
+	 * @param      item  The item
+	 */
+	public void addTo(final String item){
 		if(hashObj.contains(item)) {
 			hashObj.put(item, hashObj.get(item)  + 1);
 		} else{
 			hashObj.put(item, 1);
 		}
 	}
-	public String check(String[] array){
-		for(int i = 0; i < array.length; i++){
-			if(!hashObj.contains(array[i])) {
-				return "No";
+	public String check(final String word){
+			if(!hashObj.contains(word)) {
+				return "N";
 			}
-			int counter = hashObj.get(array[i]) - 1;
+			int counter = hashObj.get(word) - 1;
 			if(counter == 0){
-				hashObj.delete(array[i]);
+				hashObj.delete(word);
 			}else{
-				hashObj.put(array[i],counter);
+				hashObj.put(word,counter);
 			}
-		}
-		return "Yes";
+			return "Y";
 	}
-
-
 }
 class Solution{
 	Solution(){
@@ -41,9 +56,17 @@ class Solution{
 			String variable = scan.next();
 			obj.addTo(variable);
 		}
+		int flag = 0;
 		for(int i = 0; i < ransomCount; i++){
-			ransomWords[i] = scan.next();
+			String result = obj.check(scan.next());
+			if(result == "N"){
+				System.out.println("No");
+				flag = 1;
+				break;
+			}
 		}
-		System.out.println(obj.check(ransomWords));
-	}
+		if(flag == 0) {
+		System.out.println("Yes");
+		}
+}
 }
