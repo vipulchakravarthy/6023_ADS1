@@ -59,7 +59,7 @@ class RansomNote {
 /**
  *the class is to read the input from user.
  */
-class Solution {
+final class Solution {
     /**
      *an empty constructor.
      */
