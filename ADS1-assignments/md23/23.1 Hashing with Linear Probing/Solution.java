@@ -1,8 +1,17 @@
 import java.util.Scanner;
 import java.io.File;
 class LinearProbing<Key, Value>{
+	/**
+	 *the variable for initial capacity.
+	 */
 	private static final  int capacity = 4;
+	/**
+	 *the array for storing keys.
+	 */
 	private Key[] keys;
+	/**
+	 *the array for storing values.
+	 */
 	private Value[] values;
 	/**
 	 *number of key-value pairs in table.
@@ -12,22 +21,53 @@ class LinearProbing<Key, Value>{
 	 *size of the table.
 	 */
 	private int length;
+	/**
+	 *constructor to initialize the array.
+	 *length.
+	 */
 	public LinearProbing(){
 		this(capacity);
 	}
-	LinearProbing(int capacity){
+	/**
+	 *another constructor to initialize all.
+	 * keys array and value array
+	 * @param      capacity  The capacity
+	 */
+	LinearProbing(final int capacity){
 		length = capacity;
 		keyValuePairs = 0;
 		keys = (Key[]) new Object[length];
 		values = (Value[]) new Object[length];
 	}
-	private int hash(Key key){
+	/**
+	 *this method returns the hash value.
+	 * @param      key   The key
+	 *
+	 * @return hash value of particular key.
+	 */
+	private int hash(final Key key){
 		return ((11 * key.hashCode()) % length);
 	}
-	public boolean contains(Key key){
+	/**
+	 *this returns whether the key is present.
+	 *in hash table or not.
+	 * @param      key  to be checked.
+	 *
+	 * @return  whether the key is present
+	 * or not.
+	 */
+	public boolean contains(final Key key){
 		return get(key) != null;
 	}
-	public void resize(int capacity){
+	/**
+	 *this method resizes the array.
+	 *whenever the array is half filled the  we.
+	 *double the array size. and whenever the
+	 *array is just 12.5% filled then we reduce
+	 *the size of array.
+	 * @param     capacity  The capacity
+	 */
+	public void resize(final int capacity){
 	LinearProbing<Key, Value> temp
 	= new LinearProbing<Key, Value>(capacity);
 	for(int i = 0; i < length; i++){
@@ -39,7 +79,15 @@ class LinearProbing<Key, Value>{
 	values = temp.values;
 	length = temp.length;
 	}
-	public void put(Key key, Value value){
+	/**
+	 *this method is to put the
+	 * element in table.
+	 * time complexity is O(N)
+	 *
+	 * @param   key    The key
+	 * @param   value  The value
+	 */
+	public void put(final Key key, final Value value){
 		if(keyValuePairs >= (length / 2)) {
 			resize(2 * length);
 		}
@@ -54,7 +102,15 @@ class LinearProbing<Key, Value>{
 		values[i] = value;
 		keyValuePairs++;
 	}
-	public Value get(Key key){
+	/**
+	 *the method is to search for the key.
+	 *time complexity is O(N)
+	 * @param      key   The key
+	 *
+	 * @return it returns the value of
+	 * particular key.
+	 */
+	public Value get(final Key key){
 		int i;
 		for(i = hash(key); keys[i] != null; i = (i + 1) % length){
 			if(keys[i].equals(key)){
@@ -63,7 +119,13 @@ class LinearProbing<Key, Value>{
 		}
 		return null;
 	}
-	public void delete(Key key){
+	/**
+	 *the method is to delete the key
+	 *from the table.
+	 *time complexity is O(N)
+	 * @param      key   The key
+	 */
+	public void delete(final Key key){
 		if (!contains(key)) return;
 		int i;
 		for(i = hash(key); !keys[i].equals(key); i = (i + 1) % length){
@@ -85,6 +147,11 @@ class LinearProbing<Key, Value>{
 			resize(length / 2);
 		}
 	}
+	/**
+	 *method is to add the key- value pair to the.
+	 *queue to print the elements.
+	 * @return  queue which is filled with key-value.
+	 */
 	public Iterable<Key> keys() {
         Queue<Key> queue = new Queue<Key>();
         for (int i = 0; i < length; i++) {
@@ -94,26 +161,41 @@ class LinearProbing<Key, Value>{
     	}
         return queue;
     }
+    /**
+     *this method is to give all key value pairs.
+     *time complexity is O(N)
+     */
 	public void display(){
 		String str = "{";
 		if(keyValuePairs == 0){
 			System.out.println("{}");
 			return;
 		}
-		for(Key s : keys()) {
-			str += s + ":" + get(s) + ", ";
+		for(Key key : keys()) {
+			str += key + ":" + get(key) + ", ";
 		}
 		String strOne = str.substring(0, str.length() - 2) + "}";
 		System.out.println(strOne);
 	}
 }
-class Solution{
-	Solution(){
-
+/**
+ *the class is for main method.
+ */
+final class Solution{
+	/**
+	 *an empty constructor.
+	 */
+	private Solution(){
 	}
+	/**
+	 *the main method to take input.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
-		LinearProbing<String, Integer> object = new LinearProbing<String, Integer>();
+		LinearProbing<String, Integer> object
+		= new LinearProbing<String, Integer>();
 		while(scan.hasNext()){
 			String[] tokens = scan.nextLine().split(" ");
 			switch(tokens[0]) {
