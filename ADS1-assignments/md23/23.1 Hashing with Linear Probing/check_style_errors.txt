@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:2: Missing a Javadoc comment. [JavadocType]
 Audit done.
-Checkstyle ends with 1 errors.

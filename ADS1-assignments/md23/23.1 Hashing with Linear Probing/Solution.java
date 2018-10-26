@@ -1,4 +1,12 @@
 import java.util.Scanner;
+/**
+ *the class to build up linear probing
+ *hash table.
+ * @param      <Key>    The Key type to store
+ * keys
+ * @param      <Value>  The Value type
+ * to store values.
+ */
 class LinearProbing<Key, Value> {
     /**
      *the variable for initial capacity.
