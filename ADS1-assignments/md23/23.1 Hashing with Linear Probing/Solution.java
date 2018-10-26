@@ -64,6 +64,7 @@ class LinearProbing<Key, Value>{
 		return null;
 	}
 	public void delete(Key key){
+		if (!contains(key)) return;
 		int i;
 		for(i = hash(key); !keys[i].equals(key); i = (i + 1) % length){
 		}
