@@ -96,6 +96,10 @@ class LinearProbing<Key, Value>{
     }
 	public void display(){
 		String str = "{";
+		if(keyValuePairs == 0){
+			System.out.println("{}");
+			return;
+		}
 		for(Key s : keys()) {
 			str += s + ":" + get(s) + ", ";
 		}
