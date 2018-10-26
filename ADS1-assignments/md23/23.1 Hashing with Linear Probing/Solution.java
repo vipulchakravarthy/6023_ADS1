@@ -1,10 +1,9 @@
 import java.util.Scanner;
-import java.io.File;
 class LinearProbing<Key, Value> {
     /**
      *the variable for initial capacity.
      */
-    private static final  int capacity = 4;
+    private static final  int CAPACITY = 4;
     /**
      *the array for storing keys.
      */
@@ -25,8 +24,8 @@ class LinearProbing<Key, Value> {
      *constructor to initialize the array.
      *length.
      */
-    public LinearProbing() {
-        this(capacity);
+    LinearProbing() {
+        this(CAPACITY);
     }
     /**
      *another constructor to initialize all.
@@ -46,7 +45,8 @@ class LinearProbing<Key, Value> {
      * @return hash value of particular key.
      */
     private int hash(final Key key) {
-        return ((11 * key.hashCode()) % length);
+        final int eleven = 11;
+        return ((eleven * key.hashCode()) % length);
     }
     /**
      *this returns whether the key is present.
@@ -131,9 +131,12 @@ class LinearProbing<Key, Value> {
      * @param      key   The key
      */
     public void delete(final Key key) {
-        if (!contains(key)) return;
+        if (!contains(key)) {
+            return;
+        }
         int i;
         for (i = hash(key); !keys[i].equals(key); i = (i + 1) % length) {
+            int variable = 1;
         }
         keys[i] = null;
         values[i] = null;
@@ -148,7 +151,8 @@ class LinearProbing<Key, Value> {
             i = (i + 1) % length;
         }
         keyValuePairs--;
-        if (keyValuePairs >= 0 && keyValuePairs <= length / 8) {
+        final int eight = 8;
+        if (keyValuePairs >= 0 && keyValuePairs <= length / eight) {
             resize(length / 2);
         }
     }

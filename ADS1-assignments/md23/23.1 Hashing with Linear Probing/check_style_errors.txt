@@ -1,13 +1,4 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:2:8: Unused import - java.io.File. [UnusedImports]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:3: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:7:31: Name 'capacity' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:28:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:36:29: 'capacity' hides a field. [HiddenField]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:49:18: '11' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:73:34: 'capacity' hides a field. [HiddenField]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:134: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:136:73: Must have at least one statement. [EmptyBlock]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:151:61: '8' is a magic number. [MagicNumber]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:2: Missing a Javadoc comment. [JavadocType]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 1 errors.
