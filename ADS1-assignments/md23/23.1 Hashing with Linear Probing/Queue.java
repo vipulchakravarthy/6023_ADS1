@@ -120,7 +120,8 @@ public class Queue<Item> implements Iterable<Item> {
 
     /**
      * Returns a string representation of this queue.
-     *
+     * time complexity is O(N)
+     *  N is the size of the queue.
      * @return the sequence of items in FIFO order, separated by spaces
      */
     public String toString() {

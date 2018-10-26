@@ -65,7 +65,10 @@ class LinearProbing<Key, Value> {
      *double the array size. and whenever the
      *array is just 12.5% filled then we reduce
      *the size of array.
-     * @param     capacity  The capacity
+     *time complexity is O(N).
+     *N is the size of the array.
+     * @param     capacity  The capacity to which
+     * the array to be modified.
      */
     public void resize(final int capacity) {
         LinearProbing<Key, Value> temp
@@ -83,7 +86,7 @@ class LinearProbing<Key, Value> {
      *this method is to put the
      * element in table.
      * time complexity is O(N)
-     *
+     *N is the size of the array.
      * @param   key    The key
      * @param   value  The value
      */
@@ -105,6 +108,7 @@ class LinearProbing<Key, Value> {
     /**
      *the method is to search for the key.
      *time complexity is O(N)
+     *N is the size of the array.
      * @param      key   The key
      *
      * @return it returns the value of
@@ -123,6 +127,7 @@ class LinearProbing<Key, Value> {
      *the method is to delete the key
      *from the table.
      *time complexity is O(N)
+     *N is the size of the array.
      * @param      key   The key
      */
     public void delete(final Key key) {
@@ -150,6 +155,8 @@ class LinearProbing<Key, Value> {
     /**
      *method is to add the key- value pair to the.
      *queue to print the elements.
+     *time complexity is O(N)
+     *N is the size of the array.
      * @return  queue which is filled with key-value.
      */
     public Iterable<Key> keys() {
@@ -164,6 +171,7 @@ class LinearProbing<Key, Value> {
     /**
      *this method is to give all key value pairs.
      *time complexity is O(N)
+     *N is the size of the array.
      */
     public void display() {
         String str = "{";

@@ -5,9 +5,9 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:28:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:36:29: 'capacity' hides a field. [HiddenField]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:49:18: '11' is a magic number. [MagicNumber]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:70:34: 'capacity' hides a field. [HiddenField]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:129: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:131:73: Must have at least one statement. [EmptyBlock]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:146:61: '8' is a magic number. [MagicNumber]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:73:34: 'capacity' hides a field. [HiddenField]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:134: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:136:73: Must have at least one statement. [EmptyBlock]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md23\23.1 Hashing with Linear Probing\Solution.java:151:61: '8' is a magic number. [MagicNumber]
 Audit done.
 Checkstyle ends with 10 errors.
