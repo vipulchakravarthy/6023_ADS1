@@ -97,7 +97,7 @@ class LinearProbing<Key, Value>{
 	public void display(){
 		String str = "{";
 		for(Key s : keys()) {
-			str += s + ": " + get(s) + ", ";
+			str += s + ":" + get(s) + ", ";
 		}
 		String strOne = str.substring(0, str.length() - 2) + "}";
 		System.out.println(strOne);
