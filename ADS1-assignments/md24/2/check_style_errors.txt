@@ -1,16 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:5:45: '>' is followed by an illegal character. [GenericWhitespace]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:5:45: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:55:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:55:26: Parameter that should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:55:39: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:56:11: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:56:46: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:58:18: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:97:65: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:98:15: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:98:73: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:112:15: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:127:15: 'if' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 13 errors.
