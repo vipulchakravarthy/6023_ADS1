@@ -52,15 +52,6 @@ class Student {
     public Double getTotal() {
         return this.marks;
     }
-    // public int compareTo(Student that){
-    //     if(this.getTotal() < that.getTotal()) {
-    //         return -1;
-    //     } else if(this.getTotal() > that.getTotal()) {
-    //         return 1;
-    //     } else {
-    //         return 0;
-    //     }
-    // }
 }
 /**
  *the class to maintain the database.
@@ -97,16 +88,18 @@ class DataBase {
         return strOne;
     }
     public String getLesser(Double mark){
+        Double key = stObj.floor(mark);
         String str = "";
-        for(Double marks: stObj.keys(stObj.min(), mark)){
+        for(Double marks: stObj.keys(stObj.min(), key)){
             str += stObj.get(marks).getName() + "\n";
         }
         String strOne = str.substring(0, str.length() - 1);
         return strOne;
    }
     public String getGreater(Double mark){
+        Double key = stObj.ceiling(mark);
         String str = "";
-        for(Double marks: stObj.keys(mark, stObj.max())){
+        for(Double marks: stObj.keys(key, stObj.max())){
             str += stObj.get(marks).getName() + "\n";
         }
         String strOne = str.substring(0, str.length() - 1);
@@ -154,9 +147,9 @@ final class Solution {
                     Double.parseDouble(check[1])));
                     break;
                 case "GE":
-                System.out.println(dataObj.getGreater(
+                    System.out.println(dataObj.getGreater(
                     Double.parseDouble(check[1])));
-                break;
+                    break;
                 default: break;
             }
             queries--;
