@@ -1,9 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\1\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\1\Solution.java:63:46: Variable 'hashObj' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\1\Solution.java:112:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\1\Solution.java:131: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\1\Solution.java:140: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\1\Solution.java:145: Line is longer than 80 characters (found 88). [LineLength]
 Audit done.
-Checkstyle ends with 6 errors.
