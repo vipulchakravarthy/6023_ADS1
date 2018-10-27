@@ -102,8 +102,11 @@ class DataBase {
         for(Double marks: stObj.keys(key, stObj.max())){
             str += stObj.get(marks).getName() + "\n";
         }
+        if(str.length() != 0){
         String strOne = str.substring(0, str.length());
         return strOne;
+        }
+        return str;
     }
 
 }

@@ -18,7 +18,9 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:99:42: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:102:12: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:102:56: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:140:19: 'switch' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:140:29: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:105:11: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:105:30: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:143:19: 'switch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:143:29: '{' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 21 errors.
+Checkstyle ends with 23 errors.
