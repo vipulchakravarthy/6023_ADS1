@@ -62,9 +62,9 @@ class Student implements Comparable<Student> {
      */
     public int compareTo(final Student that) {
         int cmp = this.getName().compareTo(that.getName());
-        if (cmp < 0) {
+        if (cmp > 0) {
             return -1;
-        } else if (cmp > 0) {
+        } else if (cmp < 0) {
             return 1;
         } else {
             return 0;
