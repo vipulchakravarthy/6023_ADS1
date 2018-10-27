@@ -60,7 +60,7 @@ class DataBase {
     /**
      *the object to create the symbol table.
      */
-    RedBlackBST<Double, Student> stObj;
+    private RedBlackBST<Double, Student> stObj;
     /**
      *the constructor to initlialize the object.
      */
@@ -76,10 +76,10 @@ class DataBase {
         stObj.put(studentObj.getTotal(), studentObj);
     }
     /**
-     *the method is to find the between members
+     *the method is to find the between members.
      *the average time complexity is logN*
      *@param marksOne lower limit
-     *@param makrsTwo upper limit
+     *@param marksTwo upper limit
      */
     public void getBetween(final Double marksOne,
     final Double marksTwo) {
