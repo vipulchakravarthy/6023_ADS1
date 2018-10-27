@@ -1,23 +1,7 @@
 Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:63:34: Variable 'stObj' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:82:28: Parameter marksOne should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:82:35: Expected @param tag for 'marksOne'. [JavadocMethod]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:82:45: Parameter marksTwo should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:82:52: Expected @param tag for 'marksTwo'. [JavadocMethod]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:82:61: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:85:12: 'for' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:85:54: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:89:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:89:27: Parameter mark should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:89:39: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:91:12: 'for' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:91:56: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:95:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:95:28: Parameter mark should be final. [FinalParameters]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:95:40: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:98:12: 'for' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:98:56: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:134:19: 'switch' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:134:29: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:78: First sentence should end with a period. [JavadocStyle]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:82:7: Unused @param tag for 'makrsTwo'. [JavadocMethod]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:85:18: Expected @param tag for 'marksTwo'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 20 errors.
+Checkstyle ends with 4 errors.

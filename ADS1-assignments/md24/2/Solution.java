@@ -68,38 +68,52 @@ class DataBase {
         stObj = new RedBlackBST<Double, Student>();
     }
     /**
-     *the method to add the values to the hashtable.
-     *the average time complexity is 3-5*
-     *under the uniform hashing assumption
+     *the method to add the values to the symboltable.
+     *the average time complexity is logN*
      * @param      studentObj  The student object
      */
     public void addTo(final Student studentObj) {
         stObj.put(studentObj.getTotal(), studentObj);
     }
     /**
-     *
+     *the method is to find the between members
+     *the average time complexity is logN*
+     *@param marksOne lower limit
+     *@param makrsTwo upper limit
      */
-    public void getBetween(Double marksOne, Double marksTwo){
+    public void getBetween(final Double marksOne,
+    final Double marksTwo) {
         Double keyOne = stObj.ceiling(marksOne);
         Double keyTwo = stObj.floor(marksTwo);
-        for(Double marks: stObj.keys(keyOne, keyTwo)){
+        for (Double marks : stObj.keys(keyOne, keyTwo)) {
             System.out.println(stObj.get(marks).getName());
         }
     }
-    public void getLesser(Double mark){
+    /**
+     *the method is to find the people who got less than
+     *the given marks.
+     *the average time complexity is logN*
+     * @param      mark  The mark
+     */
+    public void getLesser(final Double mark) {
         Double key = stObj.floor(mark);
-        for(Double marks: stObj.keys(stObj.min(), key)){
+        for (Double marks : stObj.keys(stObj.min(), key)) {
             System.out.println(stObj.get(marks).getName());
         }
-   }
-    public void getGreater(Double mark){
+    }
+    /**
+     *the method is to find the people who got greater than.
+     *given mark.
+     *the average time complexity is logN*
+     * @param      mark  The mark
+     */
+    public void getGreater(final Double mark) {
         Double key = stObj.ceiling(mark);
         String str = "";
-        for(Double marks: stObj.keys(key, stObj.max())){
+        for (Double marks : stObj.keys(key, stObj.max())) {
             System.out.println(stObj.get(marks).getName());
         }
     }
-
 }
 /**
  *the class for main method.
@@ -131,20 +145,20 @@ final class Solution {
         scan.nextLine();
         while (queries > 0) {
             String[] check = scan.nextLine().split(" ");
-            switch(check[0]){
-                case "BE":
+            switch (check[0]) {
+            case "BE":
                 dataObj.getBetween(Double.parseDouble(
-                        check[1]), Double.parseDouble(check[2]));
-                    break;
-                case "LE":
+                                       check[1]), Double.parseDouble(check[2]));
+                break;
+            case "LE":
                 dataObj.getLesser(
                     Double.parseDouble(check[1]));
-                    break;
-                case "GE":
-                    dataObj.getGreater(
+                break;
+            case "GE":
+                dataObj.getGreater(
                     Double.parseDouble(check[1]));
-                    break;
-                default: break;
+                break;
+            default: break;
             }
             queries--;
         }
