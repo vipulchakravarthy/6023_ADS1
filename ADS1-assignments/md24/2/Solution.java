@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  *the class for storing the data of student.
  */
-class Student {
+class Student implements Comparable<Student>{
     /**
      *the variable to store the rollnumber.
      */
@@ -52,6 +52,14 @@ class Student {
     public Double getTotal() {
         return this.marks;
     }
+    public int compareTo(Student that){
+        if(this.getTotal() < that.getTotal()){
+            return -1;
+        } else if(this.getTotal() > that.getTotal()) {
+            return 1;
+        }
+        return 0;
+    }
 }
 /**
  *the class to maintain the database.
@@ -60,12 +68,12 @@ class DataBase {
     /**
      *the object to create the symbol table.
      */
-    private RedBlackBST<Double, Student> stObj;
+    private RedBlackBST<Student, String> stObj;
     /**
      *the constructor to initlialize the object.
      */
     DataBase() {
-        stObj = new RedBlackBST<Double, Student>();
+        stObj = new RedBlackBST<Student, String>();
     }
     /**
      *the method to add the values to the symboltable.
@@ -73,7 +81,7 @@ class DataBase {
      * @param      studentObj  The student object
      */
     public void addTo(final Student studentObj) {
-        stObj.put(studentObj.getTotal(), studentObj);
+        stObj.put(studentObj, studentObj.getName());
     }
     /**
      *the method is to find the between members.
@@ -83,11 +91,13 @@ class DataBase {
      */
     public void getBetween(final Double marksOne,
     final Double marksTwo) {
-        Double keyOne = stObj.ceiling(marksOne);
-        Double keyTwo = stObj.floor(marksTwo);
-        for (Double marks : stObj.keys(keyOne, keyTwo)) {
-            System.out.println(stObj.get(marks).getName());
+        // Double keyOne = stObj.ceiling(marksOne);
+        // Double keyTwo = stObj.floor(marksTwo);
+        for (Student obj : stObj.keys(stObj.min(), stObj.max())){
+            if(obj.getTotal() >= marksOne && obj.getTotal() <= marksTwo){
+            System.out.println(obj.getName());
         }
+    }
     }
     /**
      *the method is to find the people who got less than
@@ -96,9 +106,11 @@ class DataBase {
      * @param      mark  The mark
      */
     public void getLesser(final Double mark) {
-        Double key = stObj.floor(mark);
-        for (Double marks : stObj.keys(stObj.min(), key)) {
-            System.out.println(stObj.get(marks).getName());
+        // Double key = stObj.floor(mark);
+        for (Student obj : stObj.keys(stObj.min(), stObj.max())) {
+            if(obj.getTotal() <= mark) {
+            System.out.println(obj.getName());
+        }
         }
     }
     /**
@@ -108,12 +120,14 @@ class DataBase {
      * @param      mark  The mark
      */
     public void getGreater(final Double mark) {
-        Double key = stObj.ceiling(mark);
-        String str = "";
-        for (Double marks : stObj.keys(key, stObj.max())) {
-            System.out.println(stObj.get(marks).getName());
+        // Double key = stObj.ceiling(mark);
+        // String str = "";
+       for (Student obj : stObj.keys(stObj.min(), stObj.max())) {
+            if(obj.getTotal() >= mark) {
+            System.out.println(obj.getName());
         }
     }
+}
 }
 /**
  *the class for main method.
