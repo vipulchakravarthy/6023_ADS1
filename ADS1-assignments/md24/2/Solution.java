@@ -79,15 +79,12 @@ class DataBase {
     /**
      *
      */
-    public String getBetween(Double marksOne, Double marksTwo){
-        String str = "";
+    public void getBetween(Double marksOne, Double marksTwo){
         Double keyOne = stObj.ceiling(marksOne);
         Double keyTwo = stObj.floor(marksTwo);
         for(Double marks: stObj.keys(keyOne, keyTwo)){
-            str += stObj.get(marks).getName() + "\n";
+            System.out.println(stObj.get(marks).getName());
         }
-        String strOne = str.substring(0, str.length() - 1);
-        return strOne;
     }
     public void getLesser(Double mark){
         Double key = stObj.floor(mark);
@@ -136,8 +133,8 @@ final class Solution {
             String[] check = scan.nextLine().split(" ");
             switch(check[0]){
                 case "BE":
-                System.out.println(dataObj.getBetween(Double.parseDouble(
-                        check[1]), Double.parseDouble(check[2])));
+                dataObj.getBetween(Double.parseDouble(
+                        check[1]), Double.parseDouble(check[2]));
                     break;
                 case "LE":
                 dataObj.getLesser(
