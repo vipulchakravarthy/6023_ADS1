@@ -62,7 +62,7 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, e
 	at java.base/java.lang.String.checkBoundsBeginEnd(Unknown Source)
 	at java.base/java.lang.String.substring(Unknown Source)
 	at DataBase.getBetween(Solution.java:89)
-	at Solution.main(Solution.java:144)
+	at Solution.main(Solution.java:139)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 

@@ -89,23 +89,18 @@ class DataBase {
         String strOne = str.substring(0, str.length() - 1);
         return strOne;
     }
-    public String getLesser(Double mark){
+    public void getLesser(Double mark){
         Double key = stObj.floor(mark);
-        String str = "";
         for(Double marks: stObj.keys(stObj.min(), key)){
-            str += stObj.get(marks).getName() + "\n";
+            System.out.println(stObj.get(marks).getName());
         }
-        String strOne = str.substring(0, str.length() - 1);
-        return strOne;
    }
-    public String getGreater(Double mark){
+    public void getGreater(Double mark){
         Double key = stObj.ceiling(mark);
         String str = "";
         for(Double marks: stObj.keys(key, stObj.max())){
-            str += stObj.get(marks).getName() + "\n";
+            System.out.println(stObj.get(marks).getName());
         }
-        String strOne = str.substring(0, str.length() - 1);
-        return strOne;
     }
 
 }
@@ -145,12 +140,12 @@ final class Solution {
                         check[1]), Double.parseDouble(check[2])));
                     break;
                 case "LE":
-                System.out.println(dataObj.getLesser(
-                    Double.parseDouble(check[1])));
+                dataObj.getLesser(
+                    Double.parseDouble(check[1]));
                     break;
                 case "GE":
-                    System.out.println(dataObj.getGreater(
-                    Double.parseDouble(check[1])));
+                    dataObj.getGreater(
+                    Double.parseDouble(check[1]));
                     break;
                 default: break;
             }
