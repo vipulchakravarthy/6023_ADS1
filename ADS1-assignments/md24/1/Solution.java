@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  *the class for storing the data of student.
  */
-class Student{
+class Student {
 	/**
 	 *the variable to store the rollnumber.
 	 */
@@ -23,17 +23,17 @@ class Student{
 	 * @param      total        The total
 	 */
 	Student(final String roll,
-	final String studentName, final String total){
+	        final String studentName, final String total) {
 		rollNumber = roll;
 		name = studentName;
 		marks = Double.parseDouble(total);
 	}
 	/**
-	 *returns the rollNumber of student
+	 *returns the rollNumber of student.
 	 *
 	 * @return     The roll.
 	 */
-	public String getRoll(){
+	public String getRoll() {
 		return this.rollNumber;
 	}
 	/**
@@ -41,22 +41,22 @@ class Student{
 	 *
 	 * @return     The name.
 	 */
-	public String getName(){
+	public String getName() {
 		return this.name;
 	}
 	/**
-	 *returns the total of the student
+	 *returns the total of the student.
 	 *
 	 * @return     The total.
 	 */
-	public Double getTotal(){
+	public Double getTotal() {
 		return this.marks;
 	}
 }
 /**
  *the class to maintain the database.
  */
-class DataBase{
+class DataBase {
 	/**
 	 *the object to create the hash table.
 	 */
@@ -64,7 +64,7 @@ class DataBase{
 	/**
 	 *the constructor to initlialize the object.
 	 */
-	DataBase(){
+	DataBase() {
 		hashObj = new LinearProbingHashST<String, Student>();
 	}
 	/**
@@ -73,7 +73,7 @@ class DataBase{
 	 *under the uniform hashing assumption
 	 * @param      studentObj  The student object
 	 */
-	public void addTo(final Student studentObj){
+	public void addTo(final Student studentObj) {
 		hashObj.put(studentObj.getRoll(), studentObj);
 	}
 	/**
@@ -83,24 +83,24 @@ class DataBase{
 	 *@param rollNumber the roll number of student
 	 *@return the name of the student.
 	 */
-	public String getStudent(final String rollNumber){
+	public String getStudent(final String rollNumber) {
 		Student student = hashObj.get(rollNumber);
-		if(student == null) {
+		if (student == null) {
 			return "Student doesn't exists...";
 		}
 		return student.getName();
 	}
 	/**
-	 *this method returns the total marks
+	 *this method returns the total marks.
 	*the average time complexity is 3-5*
 	 *under the uniform hashing assumption
 	 * @param      rollNumber  The roll number of student
 	 *
 	 * @return     The total marks of students.
 	 */
-	public Double getTotalMarks(final String rollNumber){
+	public Double getTotalMarks(final String rollNumber) {
 		Student student = hashObj.get(rollNumber);
-		if(student == null) {
+		if (student == null) {
 			return 1.0;
 		}
 		return student.getTotal();
@@ -109,11 +109,11 @@ class DataBase{
 /**
  *the class for main method.
  */
-class Solution{
+class Solution {
 	/**
 	 *an empty constructor.
 	 */
-	Solution(){
+	Solution() {
 	}
 	/**
 	 *the main method to read the input.
@@ -126,28 +126,28 @@ class Solution{
 		Student studentDetails;
 		int students = scan.nextInt();
 		scan.nextLine();
-		for(int i = 0; i < students; i++){
+		for (int i = 0; i < students; i++) {
 			String[] tokens = scan.nextLine().split(",");
 			studentDetails = new Student(tokens[0], tokens[1], tokens[2]);
 			dataObj.addTo(studentDetails);
 		}
 		int queries = scan.nextInt();
 		scan.nextLine();
-		while(queries > 0){
+		while (queries > 0) {
 			String[] check = scan.nextLine().split(" ");
-			switch(check[2]){
-				case "1":
-					System.out.println(dataObj.getStudent(check[1]));
-					break;
-				case "2":
-					Double result = dataObj.getTotalMarks(check[1]);
-						if(result == 1.0){
-							System.out.println("Student doesn't exists...");
-						} else {
-							System.out.println(result);
-						}
-					break;
-				default:break;
+			switch (check[2]) {
+			case "1":
+				System.out.println(dataObj.getStudent(check[1]));
+				break;
+			case "2":
+				Double result = dataObj.getTotalMarks(check[1]);
+				if (result == 1.0) {
+					System.out.println("Student doesn't exists...");
+				} else {
+					System.out.println(result);
+				}
+				break;
+			default: break;
 			}
 			queries--;
 		}
