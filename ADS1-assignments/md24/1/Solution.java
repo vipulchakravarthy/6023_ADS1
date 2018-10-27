@@ -128,7 +128,8 @@ final class Solution {
         scan.nextLine();
         for (int i = 0; i < students; i++) {
             String[] tokens = scan.nextLine().split(",");
-            studentDetails = new Student(tokens[0], tokens[1], tokens[2]);
+            studentDetails = new Student(
+                tokens[0], tokens[1], tokens[2]);
             dataObj.addTo(studentDetails);
         }
         int queries = scan.nextInt();

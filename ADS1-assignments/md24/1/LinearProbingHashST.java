@@ -104,7 +104,9 @@ public class LinearProbingHashST<Key, Value> {
     private int hash(Key key) {
         return (key.hashCode() & 0x7fffffff) % m;
     }
-
+     /*the average time complexity is 3-5*
+     *under the uniform hashing assumption
+     */
     // resizes the hash table to the given capacity by re-hashing all of the keys
     private void resize(int capacity) {
         LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
@@ -123,7 +125,8 @@ public class LinearProbingHashST<Key, Value> {
      * value with the new value if the symbol table already contains the specified key.
      * Deletes the specified key (and its associated value) from this symbol table
      * if the specified value is {@code null}.
-     *
+     *the average time complexity is 3-5*
+     *under the uniform hashing assumption
      * @param  key the key
      * @param  val the value
      * @throws IllegalArgumentException if {@code key} is {@code null}
@@ -154,6 +157,8 @@ public class LinearProbingHashST<Key, Value> {
     /**
      * Returns the value associated with the specified key.
      * @param key the key
+     *the average time complexity is 3-5*
+     *under the uniform hashing assumption
      * @return the value associated with {@code key};
      *         {@code null} if no such value
      * @throws IllegalArgumentException if {@code key} is {@code null}
@@ -169,7 +174,8 @@ public class LinearProbingHashST<Key, Value> {
     /**
      * Removes the specified key and its associated value from this symbol table
      * (if the key is in this symbol table).
-     *
+     *the average time complexity is 3-5*
+     *under the uniform hashing assumption
      * @param  key the key
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
