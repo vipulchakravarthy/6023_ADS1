@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Clark
 Rivest
@@ -8,7 +8,6 @@ Your Output:
 Clark
 Rivest
 Dan
-
 Abegg
 ----------------------------------------
 ########## Testcase 1: Failed ##########
@@ -59,51 +58,11 @@ Tim Cahill
 Abegg
 Brian Caffrey
 Your Output: 
-
-Clark
-Rhian Cahill
-Sasha Cagen
-Rivest
-Access
-Rachel Caine
-Alice
-Biba Caggiano
-Peter
-David Cabot
-Adams
-Yassi
-Wayne
-Jonathan Cainer
-Jeannette Caines
-Charles
-Bob
-Knuth
-Maria Cabezas
-
-Steve Cafferty
-Hank
-Deborah Cadbury
-Dan Caddy
-Neil Cadigan
-Megon
-Meili Cady
-Daniel
-James Cain
-Simon
-George Cain
-Greig Caigou
-Tony
-Keith
-Meg Cabot
-Douglas
-Fred
-Sally Cabot
-Rovina Cai
-Tim Cain
-John
-Tim Cahill
-Abegg
-Brian Caffrey
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, end -1, length 0
+	at java.base/java.lang.String.checkBoundsBeginEnd(Unknown Source)
+	at java.base/java.lang.String.substring(Unknown Source)
+	at DataBase.getBetween(Solution.java:96)
+	at Solution.main(Solution.java:149)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -194,7 +153,6 @@ John
 Tim Cahill
 Abegg
 Brian Caffrey
-
 Steve Cafferty
 Hank
 Deborah Cadbury
@@ -223,7 +181,6 @@ Clark
 Rhian Cahill
 Sasha Cagen
 Rivest
-
 Steve Cafferty
 Hank
 Deborah Cadbury
@@ -961,7 +918,6 @@ Sammy Hagar
 Keith Habersberger
 Yamile Saied Méndez
 Namita Jain
-
 Ed J. Paine
 Macky Pamintuan
 Laurence Packer
@@ -1148,7 +1104,6 @@ Charles B. Macdonald
 Greg Page
 Andrew Macdonald
 Alex James
-
 Fiona MacKenzie
 Mark Haddon
 Julie Mac
@@ -1246,7 +1201,6 @@ Sammy Hagar
 Keith Habersberger
 Yamile Saied Méndez
 Namita Jain
-
 Ed J. Paine
 Macky Pamintuan
 Laurence Packer
@@ -1280,7 +1234,6 @@ David Packard
 Meredith Jaeger
 Rebecca Pacheco
 Scott Palmer
-
 Christopher N. Page
 Ellie Macdonald
 Portia MacIntosh
@@ -1429,7 +1382,6 @@ Sammy Hagar
 Keith Habersberger
 Yamile Saied Méndez
 Namita Jain
-
 Ruby Jackson
 Charles B. Macdonald
 Greg Page
@@ -1440,7 +1392,6 @@ David Jacobs
 Jeannette Haien
 Daniel Hahn
 Sara Palacios
-
 Ed J. Paine
 Macky Pamintuan
 Laurence Packer
@@ -1525,7 +1476,6 @@ Kevin MacAllister
 Cynthia Jabar
 Howard Jacobson
 D. J. MacHale
-
 Charles Panati
 Fiona MacKenzie
 Mark Haddon
@@ -1561,7 +1511,6 @@ Kinley MacGregor
 Liza Palmer
 Libby Jackson
 Kristin Halbrook
-
 Ed J. Paine
 Macky Pamintuan
 Laurence Packer
@@ -1625,7 +1574,6 @@ Richard Jackson
 Carrington MacDuffie
 Katherine Hall Page
 Chuck Hagel
-
 Auston Habershaw
 Chris Packham
 Nafisa Haji

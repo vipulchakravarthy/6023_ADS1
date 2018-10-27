@@ -93,21 +93,24 @@ class DataBase {
         for(Double marks: stObj.keys(marksOne, marksTwo)){
             str += stObj.get(marks).getName() + "\n";
         }
-        return str;
+        String strOne = str.substring(0, str.length() - 1);
+        return strOne;
     }
     public String getLesser(Double mark){
         String str = "";
         for(Double marks: stObj.keys(stObj.min(), mark)){
             str += stObj.get(marks).getName() + "\n";
         }
-        return str;
-    }
+        String strOne = str.substring(0, str.length() - 1);
+        return strOne;
+   }
     public String getGreater(Double mark){
         String str = "";
         for(Double marks: stObj.keys(mark, stObj.max())){
             str += stObj.get(marks).getName() + "\n";
         }
-        return str;
+        String strOne = str.substring(0, str.length() - 1);
+        return strOne;
     }
 
 }
