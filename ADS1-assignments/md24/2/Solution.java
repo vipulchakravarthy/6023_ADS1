@@ -61,9 +61,10 @@ class Student implements Comparable<Student> {
      * @return whether it is lesser or greater.
      */
     public int compareTo(final Student that) {
-        if (this.getTotal() < that.getTotal()) {
+        int cmp = this.getName().compareTo(that.getName());
+        if (cmp < 0) {
             return -1;
-        } else if (this.getTotal() > that.getTotal()) {
+        } else if (cmp > 0) {
             return 1;
         } else {
             return 0;
