@@ -93,7 +93,7 @@ class DataBase {
         for(Double marks: stObj.keys(stObj.min(), key)){
             str += stObj.get(marks).getName() + "\n";
         }
-        String strOne = str.substring(0, str.length() - 1);
+        String strOne = str.substring(0, str.length());
         return strOne;
    }
     public String getGreater(Double mark){
@@ -102,7 +102,7 @@ class DataBase {
         for(Double marks: stObj.keys(key, stObj.max())){
             str += stObj.get(marks).getName() + "\n";
         }
-        String strOne = str.substring(0, str.length() - 1);
+        String strOne = str.substring(0, str.length());
         return strOne;
     }
 
