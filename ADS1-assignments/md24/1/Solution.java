@@ -29,10 +29,16 @@ class DataBase{
 	}
 	public String getStudent(String rollNumber){
 		Student student = hashObj.get(rollNumber);
+		if(student == null) {
+			return "Student doesn't exists...";
+		}
 		return student.getName();
 	}
 	public Double getTotalMarks(String rollNumber){
 		Student student = hashObj.get(rollNumber);
+		if(student == null) {
+			return 1.0;
+		}
 		return student.getTotal();
 	}
 
@@ -60,7 +66,12 @@ class Solution{
 					System.out.println(dataObj.getStudent(check[1]));
 					break;
 				case "2":
-					System.out.println(dataObj.getTotalMarks(check[1]));
+					Double result = dataObj.getTotalMarks(check[1]);
+						if(result == 1.0){
+							System.out.println("Student doesn't exists...");
+						} else {
+							System.out.println(result);
+						}
 					break;
 				default:break;
 			}
