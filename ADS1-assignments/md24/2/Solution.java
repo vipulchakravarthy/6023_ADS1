@@ -57,8 +57,9 @@ class Student implements Comparable<Student>{
             return -1;
         } else if(this.getTotal() > that.getTotal()) {
             return 1;
-        }
+        } else {
         return 0;
+        }
     }
 }
 /**

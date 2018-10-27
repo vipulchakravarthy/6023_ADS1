@@ -7,10 +7,10 @@ Starting audit...
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:56:11: 'if' is not followed by whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:56:46: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:58:18: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:96:65: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:97:15: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:97:73: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:111:15: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:126:15: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:97:65: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:98:15: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:98:73: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:112:15: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS1\6023_ADS1\ADS1-assignments\md24\2\Solution.java:127:15: 'if' is not followed by whitespace. [WhitespaceAround]
 Audit done.
 Checkstyle ends with 13 errors.
