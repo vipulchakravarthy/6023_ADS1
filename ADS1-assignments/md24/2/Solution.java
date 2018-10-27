@@ -81,7 +81,9 @@ class DataBase {
      */
     public String getBetween(Double marksOne, Double marksTwo){
         String str = "";
-        for(Double marks: stObj.keys(marksOne, marksTwo)){
+        Double keyOne = stObj.ceiling(marksOne);
+        Double keyTwo = stObj.floor(marksTwo);
+        for(Double marks: stObj.keys(keyOne, keyTwo)){
             str += stObj.get(marks).getName() + "\n";
         }
         String strOne = str.substring(0, str.length() - 1);
@@ -93,7 +95,7 @@ class DataBase {
         for(Double marks: stObj.keys(stObj.min(), key)){
             str += stObj.get(marks).getName() + "\n";
         }
-        String strOne = str.substring(0, str.length());
+        String strOne = str.substring(0, str.length() - 1);
         return strOne;
    }
     public String getGreater(Double mark){
@@ -102,11 +104,8 @@ class DataBase {
         for(Double marks: stObj.keys(key, stObj.max())){
             str += stObj.get(marks).getName() + "\n";
         }
-        if(str.length() != 0){
-        String strOne = str.substring(0, str.length());
+        String strOne = str.substring(0, str.length() - 1);
         return strOne;
-        }
-        return str;
     }
 
 }
